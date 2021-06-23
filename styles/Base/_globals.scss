@@ -1,0 +1,248 @@
+html {
+	box-sizing: border-box;
+	overflow-x: hidden;
+	background: $linear-bg-light;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: $myFont;
+}
+p {
+	color: $color-maincolors-dark-1;
+	font-size: 1.5rem;
+}
+.container {
+	width: 328px;
+	height: 100%;
+	margin: 0 auto;
+
+	@include tablet {
+		width: 704px;
+	}
+
+	@include desktop {
+		width: 1024px;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+img,
+picture {
+	width: 100%;
+	display: block;
+}
+
+h1,
+h2,
+h3 {
+	font-family: $myFont;
+	text-align: center;
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: 900;
+	font-style: normal;
+	line-height: 150%;
+}
+h2 {
+	font-size: 2.5rem;
+	font-weight: bolder;
+	line-height: 150%;
+}
+h3 {
+	font-size: 2rem;
+	font-weight: bolder;
+	line-height: 150%;
+}
+h4 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	line-height: 150%;
+}
+
+.subtitle {
+	font-size: 1.5rem;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 150%;
+	letter-spacing: 0.05em;
+}
+
+button {
+	font-family: $myFont;
+	font-size: 1.5rem;
+	font-weight: 600;
+	line-height: 100%;
+	letter-spacing: 0.08em;
+}
+
+.overline {
+	font-size: 1rem;
+	font-weight: bold;
+	color: rgba($color: #000000, $alpha: 0.6);
+	letter-spacing: 0.4em;
+}
+
+.light-theme {
+	background: $linear-bg-light;
+}
+
+.dark-theme {
+	background: $linear-bg-dark;
+}
+
+
+//Hero animation 
+
+
+.process-steps-container {
+	.process-step-container {
+		.process-step-title-container {
+			margin-top: -16px; //To adjust for the line-height
+			position: relative;
+			.process-step-title,
+			.process-step-title-overlay {
+				font-size: 3.5rem;
+				font-weight: 900;
+				margin: 0;
+				line-height: 150%; //If too short, g might get cut off
+				letter-spacing: -4px;
+				color: $color-maincolors-dark-1;
+
+				@include tablet {
+					font-size: 6rem;
+				}
+
+				@include desktop {
+					font-size: 7rem;
+				}
+			}
+			.process-step-title {
+			}
+			.process-step-title-overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				padding-right: 0px; //Adding some space on the right otherwise gradient may be cut off depending on the font.
+				height: 100%;
+				opacity: 1;
+				-webkit-text-fill-color: transparent;
+				-webkit-background-clip: text;
+			}
+		}
+
+		&.process-step-1 {
+			.process-step-title-overlay {
+				background-image: linear-gradient(
+					90deg,
+					$color-maincolors-first,
+					$color-maincolors-second
+				);
+				animation: animated-gradient-title-1 8s infinite;
+			}
+		}
+
+		&.process-step-2 {
+			.process-step-title-overlay {
+				background-image: $linear-sunshine;
+				animation: animated-gradient-title-2 8s infinite;
+			}
+		}
+
+		&.process-step-3 {
+			.process-step-title-overlay {
+				background-image: linear-gradient(
+					90deg,
+					$color-maincolors-first,
+					$color-maincolors-second
+				);
+				animation: animated-gradient-title-3 8s infinite;
+			}
+		}
+	}
+}
+
+
+@keyframes animated-gradient-title-1 {
+	0%, 16.667%, 100% {
+		opacity:1
+	}
+
+	33.333%, 83.333% {
+		opacity:0
+	}
+}
+
+
+@keyframes animated-gradient-title-2 {
+	0%, 16.667%, 66.667%, 100% {
+		opacity:0
+	}
+
+	33.333%, 50% {
+		opacity:1
+	}
+
+}
+
+
+@keyframes animated-gradient-title-3 {
+	0%, 50%, 100% {
+		opacity:0
+	}
+
+	66.667%, 83.333% {
+		opacity:1
+	}
+}
+
+/* Botones */
+
+.btn {
+	width: 100%;
+	padding: 1rem;
+	line-height: 100%;
+	@include effect-style-main-shadow;
+	border-radius: 1rem;
+	transition: all 0.2s ease-in-out;
+	outline: thin;
+	border: none;
+	&:hover {
+		@include desktop {
+			transform: scale(1.05);
+		}
+	}
+	&:active {
+		transform: translateY(0.2rem);
+	}
+}
+
+.btn-contact {
+	background: $linear-bg-dark;
+	color: $color-maincolors-white;
+}
+
+.btn-brand {
+	background: $linear-brand;
+	color: $color-maincolors-white;
+}
+
+.btn-positive {
+	background: $color-maincolors-first;
+
+	a {
+		color: $color-maincolors-white;
+	}
+}

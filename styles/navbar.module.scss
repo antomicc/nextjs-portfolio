@@ -1,0 +1,107 @@
+@import '../styles/Base/variables';
+@import '../styles/Base/mixins';
+.nav {
+	background: $linear-bg-light;
+	position: fixed;
+	width: 100%;
+	height: 6rem;
+	z-index: 999;
+	@include effect-style-main-shadow;
+}
+
+.logo {
+	width: 4rem;
+	margin: 0 auto;
+	padding: 1rem 0;
+
+	@include desktop {
+		width: 18rem;
+		height: 100%;
+		padding: 1.5rem 0;
+		margin: 0;
+	}
+}
+
+.logoNav {
+	height: 100% !important;
+}
+
+.navItem {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: relative;
+	height: 100%;
+}
+
+.menuItems {
+	position: fixed;
+	width: 100%;
+	right: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 3rem;
+	background: $linear-bg-dark;
+	transform: translateX(100%);
+	transition: all 0.8s;
+	a {
+		text-align: center;
+		width: 20%;
+		margin: 0 auto;
+		color: $color-maincolors-white;
+		position: relative;
+
+		&:after {
+			position: absolute;
+			left: 0;
+			bottom: -5px;
+			content: '';
+			width: 100%;
+			height: 3px;
+			background: $color-maincolors-second;
+			opacity: 0;
+			transform-origin: left;
+			transition: all 0.6s;
+			-webkit-transition: opacity 0.6s, -webkit-transform 0.6s;
+			transition: opacity 0.35s, transform 0.6s;
+			-webkit-transform: scale(0, 1);
+			transform: scale(0, 1);
+		}
+		&:hover::after {
+			opacity: 1;
+			-webkit-transform: scale(1);
+			transform: scale(1);
+		}
+	}
+
+	@include desktop {
+		position: relative;
+		flex-direction: row;
+		height: 100%;
+		width: 40%;
+		gap: 2rem;
+		align-items: center;
+		background: transparent;
+		transform: translateX(30%);
+
+		a {
+			width: unset;
+			margin: 0;
+			color: transparent;
+			transition: all 0.1s ease-in-out;
+		}
+	}
+}
+
+.activeNav {
+	transform: translateX(0);
+
+	@include desktop {
+		transform: translateX(-10%);
+		a {
+			color: $color-maincolors-dark-1;
+		}
+	}
+}

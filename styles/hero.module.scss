@@ -1,0 +1,49 @@
+@import 'Base/variables';
+@import 'Base/mixins';
+
+.hero {
+	width: 100%;
+}
+
+.intro {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding-top: 10rem;
+
+	h3 {
+		height: 100%;
+		padding: 0;
+		line-height: 150%;
+	}
+}
+
+.buttonsGroup {
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+
+	@include tablet {
+		flex-direction: row;
+	}
+}
+
+
+
+/*
+
+@keyframes animatedGradient {
+	0%,
+	16.667%,
+	to {
+		opacity: 1;
+	}
+
+	33.333%,
+	83.333% {
+		opacity: 0;
+	}
+}
+*/

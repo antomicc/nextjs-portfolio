@@ -1,0 +1,26 @@
+@import 'Base/mixins';
+@import 'Base/variables';
+
+.techSection {
+	width: 100%;
+	padding-top: 7rem;
+}
+
+.gridTec {
+	@include grid(2, 1rem);
+	text-align: center;
+}
+
+.svgTec {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.flexOther {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 1.5rem;
+	margin-top: 1rem;
+	text-align: center;
+}

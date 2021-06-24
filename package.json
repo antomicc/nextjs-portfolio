@@ -9,6 +9,7 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@formspree/react": "^2.2.3",
 		"@sanity/block-content-to-react": "^2.0.7",
 		"@sanity/image-url": "^0.140.19",
 		"hamburgers": "^1.1.3",

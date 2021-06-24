@@ -1,50 +1,60 @@
-import cssIcon from '../public/Icons/tecs/Css.svg';
-import figmaIcon from '../public/Icons/tecs/Figma.svg';
-import firebaseIcon from '../public/Icons/tecs/firebase.svg';
-import gitIcon from '../public/Icons/tecs/Git.svg';
-import htmlIcon from '../public/Icons/tecs/Html.svg';
-import jsIcon from '../public/Icons/tecs/Js.svg';
-import nextIcon from '../public/Icons/tecs/Next.svg';
-import phpIcon from '../public/Icons/tecs/Php.svg';
-import reactIcon from '../public/Icons/tecs/React.svg';
-import sassIcon from '../public/Icons/tecs/Sass.svg';
-import webpackIcon from '../public/Icons/tecs/Webpack.svg';
-import wordpressIcon from '../public/Icons/tecs/Wordpress.svg';
+import CssIcon from '../components/svgs/tecs/Css';
+import FigmaIcon from '../components/svgs/tecs/Figma';
+import FirebaseIcon from './svgs/tecs/Firebase';
+import GitIcon from '../components/svgs/tecs/Git';
+import HtmlIcon from '../components/svgs/tecs/Html';
+import JsIcon from '../components/svgs/tecs/Js';
+import NextIcon from '../components/svgs/tecs/Next';
+import PhpIcon from '../components/svgs/tecs/Php';
+import ReactIcon from '../components/svgs/tecs/React';
+import SassIcon from '../components/svgs/tecs/Sass';
+import WebpackIcon from '../components/svgs/tecs/WebpackSVG';
+import WordpressIcon from '../components/svgs/tecs/Wordpress';
+import style from '../styles/tech.module.scss';
 
 const Technologys = () => {
 	const tecsIcons = [
-		{ name: 'JS', icon: jsIcon },
-		{ name: 'React', icon: reactIcon },
-		{ name: 'NextJS', icon: nextIcon },
-		{ name: 'HTML', icon: htmlIcon },
-		{ name: 'CSS', icon: cssIcon },
-		{ name: 'Figma', icon: figmaIcon },
-		{ name: 'Sass', icon: sassIcon },
-		{ name: 'Webpack', icon: webpackIcon },
-		{ name: 'Git', icon: gitIcon },
+		JsIcon,
+		ReactIcon,
+		NextIcon,
+		HtmlIcon,
+		CssIcon,
+		FigmaIcon,
+		WebpackIcon,
+		SassIcon,
+		GitIcon,
 	];
 
-	const otherTecIcons = [
-		{ name: 'PHP', icon: phpIcon },
-		{ name: 'WordPress', icon: wordpressIcon },
-		{ name: 'Firebase', icon: firebaseIcon },
+	const tecsTitle = [
+		'Js',
+		'ReactJS',
+		'NextJS',
+		'HTML',
+		'CSS',
+		'Figma',
+		'Webpack',
+		'Sass',
+		'Git',
 	];
+
+	const otherTecIcons = [PhpIcon, WordpressIcon, FirebaseIcon];
 	return (
-		<section>
+		<section className={style.techSection}>
 			<article className='container'>
-				<div className='grid'>
-					{tecsIcons.map((tecs, index) => (
+				<h2>Technologys i use </h2>
+				<div className={style.gridTec}>
+					{tecsIcons.map((Tecs, index) => (
 						<div key={index}>
-							<img src={tecs.icon.src} alt={tecs.name} />
-							<h3> {tecs.name} </h3>
+							<Tecs className={style.svgTec} />
+							<h3> {tecsTitle[index]} </h3>
 						</div>
 					))}
 				</div>
 				<h2> Other technologys that i use</h2>
-				<div className='other-icons'>
-					{otherTecIcons.map((el, index) => (
+				<div className={style.flexOther}>
+					{otherTecIcons.map((TecO, index) => (
 						<div key={index}>
-							<img src={el.icon.src} alt={el.name} />
+							<TecO />
 						</div>
 					))}
 				</div>

@@ -25,7 +25,7 @@ export default function Home({ projects }) {
 				projects.map((p) => {
 					return {
 						...p,
-						imageP: imgBuilder.image(p.imageP).width(500).height(250),
+						imageP: imgBuilder.image(p.imageP).width(500).height(500),
 					};
 				})
 			);
@@ -41,25 +41,30 @@ export default function Home({ projects }) {
 				<AboutCard />
 				<Technologys />
 				<Services />
-				<div className='container'>
-					<h1>Projects </h1>
-					<h3>Recents projects: </h3>
-
-					<div className='grid'>
-						{mappedProjects.map((p, index) => (
-							<div key={index} className='project'>
-								<h3>{p.title}</h3>
-								<img src={p.imageP} alt={p.title} />
-								<Link href={`project/${p.slug.current}`}>
-									<a> See Project </a>
-								</Link>
+				<section className={styles.projects}>
+					<div className='container'>
+						<h1>Projects </h1>
+						<h3>Recents projects: </h3>
+						<div className={styles.contentProjects}>
+							<div className={styles.scrollProjects}>
+								{mappedProjects.map((p, index) => (
+									<div key={index} className={styles.cardProject}>
+										<img src={p.imageP} alt={p.title} />
+										<div className={styles.infoContent}>
+											<h3>{p.title}</h3>
+											<Link href={`project/${p.slug.current}`}>
+												<a className='btn btn-sutil'> See Project </a>
+											</Link>
+										</div>
+									</div>
+								))}
 							</div>
-						))}
+						</div>
+						<Link href='/projects'>
+							<a className='btn btn-sutil'> See more </a>
+						</Link>
 					</div>
-					<Link href='/projects'>
-						<a> See more </a>
-					</Link>
-				</div>
+				</section>
 				<FormContact />
 				<Footer />
 			</main>
@@ -68,7 +73,7 @@ export default function Home({ projects }) {
 }
 
 export const getServerSideProps = async (pageContext) => {
-	const query = encodeURIComponent('*[ _type == "project"]');
+	const query = encodeURIComponent('*[ _type == "project"][0..1]');
 	const url = `https://${process.env.PROJECT_API_KEY}.api.sanity.io/v1/data/query/production?query=${query}`;
 	const result = await fetch(url).then((res) => res.json());
 	console.log(result);

@@ -1,0 +1,54 @@
+.clouds {
+	animation: cloudOpacity 5s infinite;
+}
+
+.rocket {
+	z-index: 999;
+	animation: RocketMove 25s infinite linear;
+	position: absolute;
+	top: 0;
+}
+
+@keyframes cloudOpacity {
+	0% {
+		opacity: 1;
+	}
+
+	25% {
+		opacity: 0.6;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	75% {
+		opacity: 0.6;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes RocketMove {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-16rem);
+	}
+
+	75% {
+		transform: translateY(-15rem);
+	}
+
+	85% {
+		transform: translateY(-18rem);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}

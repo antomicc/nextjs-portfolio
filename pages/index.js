@@ -61,7 +61,7 @@ export default function Home({ projects }) {
 							</div>
 						</div>
 						<Link href='/projects'>
-							<a className='btn btn-sutil'> See more </a>
+							<a className='btn btn-sutil btn-out'> See more </a>
 						</Link>
 					</div>
 				</section>

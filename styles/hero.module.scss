@@ -3,6 +3,7 @@
 
 .hero {
 	width: 100%;
+	position: relative;
 }
 
 .intro {
@@ -28,9 +29,48 @@
 	@include tablet {
 		flex-direction: row;
 	}
+
+	@include desktop {
+		justify-content: center;
+	}
 }
 
+.particle {
+	position: absolute;
+}
 
+.dotsContainer {
+	left: 8rem;
+	top: 25rem;
+	position: absolute;
+	z-index: -1;
+	display: none;
+	@include desktop {
+		display: initial;
+	}
+}
+
+.circleContainer {
+	position: absolute;
+	z-index: -1;
+	left: 15rem;
+	top: 7rem;
+	display: none;
+	@include desktop {
+		display: initial;
+	}
+}
+
+.triangleContainer {
+	position: absolute;
+	z-index: -1;
+	right: 5rem;
+	top: 18rem;
+	display: none;
+	@include desktop {
+		display: initial;
+	}
+}
 
 /*
 

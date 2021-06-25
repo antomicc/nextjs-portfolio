@@ -50,7 +50,7 @@ const Technologys = () => {
 						</div>
 					))}
 				</div>
-				<h2> Other technologys that i use</h2>
+				<h3> Other technologys that i use</h3>
 				<div className={style.flexOther}>
 					{otherTecIcons.map((TecO, index) => (
 						<div key={index}>

@@ -18,23 +18,24 @@ const AboutCard = () => {
 				<div className={styles.aboutContent}>
 					<div className={styles.imageContainer}>
 						<Image className={styles.imageProfile} src={me} />
+						<div className={styles.socialMedia}>
+							<a href={git_HL}>
+								<GithubS />
+							</a>
+							<a href={Behance_link}>
+								<BehanceS />
+							</a>
+							<a href={Linkedin_link}>
+								<LinkedinS />
+							</a>
+							<a href={Instagram_link}>
+								<InstaS />
+							</a>
+						</div>
 					</div>
-					<div className={styles.socialMedia}>
-						<a href={git_HL}>
-							<GithubS />
-						</a>
-						<a href={Behance_link}>
-							<BehanceS />
-						</a>
-						<a href={Linkedin_link}>
-							<LinkedinS />
-						</a>
-						<a href={Instagram_link}>
-							<InstaS />
-						</a>
-					</div>
-					<h2> Angel Ruiz</h2>
-					<div className='text-about'>
+
+					<div className={styles.textAbout}>
+						<h2> Angel Ruiz</h2>
 						<p>
 							Hello, my name is Angel, i’m from Guatemala City, i’m a technology
 							enthusiast and a lover of development and design

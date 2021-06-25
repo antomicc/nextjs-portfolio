@@ -4,11 +4,20 @@
 .techSection {
 	width: 100%;
 	padding-top: 7rem;
+	margin-bottom: 1rem;
+
+	h3 {
+		margin: 1rem 0;
+	}
 }
 
 .gridTec {
 	@include grid(2, 1rem);
 	text-align: center;
+
+	@include tablet {
+		@include grid(3, 1rem);
+	}
 }
 
 .svgTec {

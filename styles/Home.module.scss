@@ -44,4 +44,9 @@
 		object-fit: contain !important;
 		border-radius: 1rem;
 	}
+
+	@include tablet {
+		width: 60%;
+		height: 60%;
+	}
 }

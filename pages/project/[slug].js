@@ -51,7 +51,7 @@ const Project = ({
 					See the repo!{' '}
 				</a>
 				<h4>Tags</h4>
-				<ul>{tags && tags.map((el) => <li> {el} </li>)}</ul>
+				<ul>{tags && tags.map((el, index) => <li key={index}> {el} </li>)}</ul>
 			</div>
 		</>
 	);

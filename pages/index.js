@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import sanityClient from '@sanity/client';
+import { useNextSanityImage } from 'next-sanity-image';
 import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
 import imageUrlBuilder from '@sanity/image-url';
@@ -17,18 +19,19 @@ import flechaPNG from '../public/Images/Particles/FLECHA.png';
 export default function Home({ projects }) {
 	const [mappedProjects, setMappedProjects] = useState([]);
 	const [slideCuantity, setslideCuantity] = useState(1);
+
 	useEffect(() => {
 		if (projects) {
 			const imgBuilder = imageUrlBuilder({
 				projectId: 'mw14nmly',
 				dataset: 'production',
+				useCdn: true,
 			});
-
 			setMappedProjects(
 				projects.map((p) => {
 					return {
 						...p,
-						imageP: imgBuilder.image(p.imageP).width(500).height(500),
+						imageP: imgBuilder.image(p.imageP),
 					};
 				})
 			);
@@ -55,6 +58,14 @@ export default function Home({ projects }) {
 		});
 	}, [projects]);
 
+	/*const configuredSanityClient = sanityClient({
+		projectId: 'mw14nmly',
+		dataset: 'production',
+		useCdn: true,
+	});
+
+	const imageProps = useNextSanityImage(configuredSanityClient, projects.image);*/
+
 	return (
 		<div>
 			<main className={styles.main}>
@@ -64,14 +75,14 @@ export default function Home({ projects }) {
 				<Services />
 				<section className={styles.projects}>
 					<div className={styles.triangleContainer}>
-						<Image src={svgTriangle} width={700} height={550} />
+						<Image src={svgTriangle} alt='' width={700} height={550} />
 					</div>
 					<div className='contaiiner'>
 						<h1>Projects </h1>
 						<h3>Recents projects: </h3>
 						<div className={styles.contentProjects}>
 							<div className={styles.contentFlecha}>
-								<Image src={flechaPNG} width={50} height={50} />
+								<Image src={flechaPNG} alt='' width={50} height={50} />
 							</div>
 							<Swiper spaceBetween={25} slidesPerView={slideCuantity}>
 								{mappedProjects.map((p, index) => (

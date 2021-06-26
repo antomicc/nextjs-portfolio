@@ -9,13 +9,13 @@ const Hero = () => {
 		<>
 			<div className={style.hero}>
 				<div className={style.dotsContainer}>
-					<Image src={svgDots} width={500} height={350} />
+					<Image alt='' src={svgDots} width={500} height={350} />
 				</div>
 				<div className={style.circleContainer}>
-					<Image src={svgCircle} width={300} height={150} />
+					<Image alt='' src={svgCircle} width={300} height={150} />
 				</div>
 				<div className={style.triangleContainer}>
-					<Image src={svgTriangle} width={500} height={350} />
+					<Image alt='' src={svgTriangle} width={500} height={350} />
 				</div>
 				<div className='container'>
 					<div className={style.intro}>

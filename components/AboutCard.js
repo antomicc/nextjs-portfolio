@@ -17,10 +17,10 @@ const AboutCard = () => {
 	return (
 		<section className={styles.aboutSection}>
 			<div className={styles.lineContainer}>
-				<Image src={svgLine} width={400} height={250} />
+				<Image alt='' src={svgLine} width={400} height={250} />
 			</div>
 			<div className={styles.triangleContainer}>
-				<Image src={svgTriangle} width={400} height={250} />
+				<Image alt='' src={svgTriangle} width={400} height={250} />
 			</div>
 			<div className='container'>
 				<div className={styles.aboutContent}>

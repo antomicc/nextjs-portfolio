@@ -18,10 +18,10 @@ const Services = () => {
 	return (
 		<div className={style.services}>
 			<div className={style.lineContainer}>
-				<Image src={svgLine} width={300} height={150} />
+				<Image alt='' src={svgLine} width={300} height={150} />
 			</div>
 			<div className={style.dotsContainer}>
-				<Image src={svgDots} width={600} height={450} />
+				<Image alt='' src={svgDots} width={600} height={450} />
 			</div>
 			<div className='container'>
 				<h2> My services </h2>

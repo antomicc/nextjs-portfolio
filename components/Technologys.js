@@ -44,10 +44,10 @@ const Technologys = () => {
 	return (
 		<section className={style.techSection}>
 			<div className={style.dotsContainer}>
-				<Image src={svgDots} width={500} height={350} />
+				<Image alt='' src={svgDots} width={500} height={350} />
 			</div>
 			<div className={style.circleContainer}>
-				<Image src={svgCircle} width={300} height={150} />
+				<Image alt='' src={svgCircle} width={300} height={150} />
 			</div>
 			<article className='container'>
 				<h2>Technologys i use </h2>

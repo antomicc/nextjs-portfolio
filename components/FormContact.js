@@ -12,13 +12,13 @@ const FormContact = () => {
 	return (
 		<section className={styles.contactSSS}>
 			<div className={styles.absContainer}>
-				<Image src={svgAbstract} width={800} height={800} />
+				<Image alt='' src={svgAbstract} width={800} height={800} />
 			</div>
 			<div className='container'>
 				<h2 className={styles.titleForm}>Get in touch!</h2>
 				<div className={styles.contactSection}>
 					<div className={styles.ilustContainer}>
-						<Image src={MacLaptop} />
+						<Image alt='mac-svg' src={MacLaptop} />
 					</div>
 					<form className={styles.formC} onSubmit={handleSubmit}>
 						<div className={styles.inputSec}>

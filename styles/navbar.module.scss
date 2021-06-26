@@ -48,10 +48,11 @@
 	transition: all 0.8s;
 	a {
 		text-align: center;
-		width: 20%;
+		width: 30%;
 		margin: 0 auto;
 		color: $color-maincolors-white;
 		position: relative;
+		font-size: 2rem;
 
 		&:after {
 			position: absolute;
@@ -74,6 +75,10 @@
 			-webkit-transform: scale(1);
 			transform: scale(1);
 		}
+
+		@include desktop {
+			font-size: initial;
+		}
 	}
 
 	@include desktop {
@@ -85,7 +90,7 @@
 		align-items: center;
 		background: transparent;
 		transform: translateX(30%);
-
+		visibility: hidden;
 		a {
 			width: unset;
 			margin: 0;
@@ -97,7 +102,7 @@
 
 .activeNav {
 	transform: translateX(0);
-
+	visibility: visible;
 	@include desktop {
 		transform: translateX(-10%);
 		a {

@@ -15,19 +15,7 @@
 	position: relative;
 	width: 100%;
 	height: 100%;
-	svg {
-		width: 100%;
-		height: 35rem;
-		position: absolute;
-		left: 0;
-		top: 12rem;
-
-		@include desktop {
-			height: 45rem;
-			top: 4rem;
-		}
-	}
-
+	margin-top: 7rem;
 	@include tablet {
 		display: initial;
 		width: 50%;
@@ -35,7 +23,7 @@
 }
 
 .titleForm {
-	margin-top: 15rem;
+	margin-top: 25rem;
 }
 
 .formC {
@@ -46,6 +34,7 @@
 	padding: 1rem;
 	background: $linear-bg-light;
 	border-radius: 1rem;
+	@include effect-style-main-shadow;
 
 	textarea {
 		resize: none;
@@ -105,5 +94,30 @@
 			outline-style: solid;
 			outline-color: $color-maincolors-second;
 		}
+	}
+}
+.contactSSS {
+	position: relative;
+	width: 100%;
+
+	h2 {
+		color: white;
+	}
+}
+
+.absContainer {
+	position: absolute;
+	top: -10rem;
+	left: 0;
+	z-index: -1;
+	width: auto;
+	@include tablet {
+		left: 0rem;
+		top: -20rem;
+	}
+
+	@include desktop {
+		left: 30rem;
+		top: -20rem;
 	}
 }

@@ -11,6 +11,9 @@ import SassIcon from '../components/svgs/tecs/Sass';
 import WebpackIcon from '../components/svgs/tecs/WebpackSVG';
 import WordpressIcon from '../components/svgs/tecs/Wordpress';
 import style from '../styles/tech.module.scss';
+import svgDots from '../public/Images/Particles/Mask-Group.svg';
+import svgCircle from '../public/Images/Particles/Polygon-4.svg';
+import Image from 'next/dist/client/image';
 
 const Technologys = () => {
 	const tecsIcons = [
@@ -40,6 +43,12 @@ const Technologys = () => {
 	const otherTecIcons = [PhpIcon, WordpressIcon, FirebaseIcon];
 	return (
 		<section className={style.techSection}>
+			<div className={style.dotsContainer}>
+				<Image src={svgDots} width={500} height={350} />
+			</div>
+			<div className={style.circleContainer}>
+				<Image src={svgCircle} width={300} height={150} />
+			</div>
 			<article className='container'>
 				<h2>Technologys i use </h2>
 				<div className={style.gridTec}>

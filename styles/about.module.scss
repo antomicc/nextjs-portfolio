@@ -4,6 +4,7 @@
 .aboutSection {
 	padding-top: 10rem;
 	width: 100%;
+	position: relative;
 }
 
 .aboutContent {
@@ -61,5 +62,28 @@
 	@include tablet {
 		width: 50%;
 		margin-top: 2rem;
+	}
+}
+
+.lineContainer {
+	left: 8rem;
+	bottom: -20rem;
+	transform: rotate(100deg);
+	position: absolute;
+	z-index: -1;
+	display: none;
+	@include desktop {
+		display: initial;
+	}
+}
+
+.triangleContainer {
+	position: absolute;
+	z-index: -1;
+	right: 15rem;
+	top: 30rem;
+	display: none;
+	@include desktop {
+		display: initial;
 	}
 }

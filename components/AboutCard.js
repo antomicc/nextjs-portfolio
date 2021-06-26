@@ -5,6 +5,8 @@ import GithubS from '../components/svgs/social/Github';
 import InstaS from '../components/svgs/social/Instagram';
 import LinkedinS from '../components/svgs/social/Linkedin';
 import BehanceS from '../components/svgs/social/Behance';
+import svgLine from '../public/Images/Particles/Mask-Group-1.svg';
+import svgTriangle from '../public/Images/Particles/Polygon-6.svg';
 
 const AboutCard = () => {
 	const git_HL = 'https://github.com/angelldeev';
@@ -14,6 +16,12 @@ const AboutCard = () => {
 
 	return (
 		<section className={styles.aboutSection}>
+			<div className={styles.lineContainer}>
+				<Image src={svgLine} width={400} height={250} />
+			</div>
+			<div className={styles.triangleContainer}>
+				<Image src={svgTriangle} width={400} height={250} />
+			</div>
 			<div className='container'>
 				<div className={styles.aboutContent}>
 					<div className={styles.imageContainer}>

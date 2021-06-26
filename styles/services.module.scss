@@ -4,6 +4,7 @@
 .services {
 	width: 100%;
 	padding-top: 7rem;
+	position: relative;
 }
 
 .cards {
@@ -37,4 +38,26 @@
 .infoContent {
 	width: 95%;
 	margin: 0 auto;
+}
+
+.lineContainer {
+	left: 10rem;
+	top: 20rem;
+	position: absolute;
+	z-index: -1;
+	display: none;
+	@include desktop {
+		display: initial;
+	}
+}
+
+.dotsContainer {
+	position: absolute;
+	z-index: -1;
+	right: 2rem;
+	top: 20rem;
+	display: none;
+	@include desktop {
+		display: initial;
+	}
 }

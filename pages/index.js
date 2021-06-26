@@ -10,10 +10,13 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import FormContact from '../components/FormContact';
 import Footer from '../components/Footer';
+import svgTriangle from '../public/Images/Particles/Polygon-6.svg';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import flechaPNG from '../public/Images/Particles/FLECHA.png';
 
 export default function Home({ projects }) {
 	const [mappedProjects, setMappedProjects] = useState([]);
-
+	const [slideCuantity, setslideCuantity] = useState(1);
 	useEffect(() => {
 		if (projects) {
 			const imgBuilder = imageUrlBuilder({
@@ -32,6 +35,24 @@ export default function Home({ projects }) {
 		} else {
 			setMappedProjects([]);
 		}
+
+		const handleViewSlider = () => {
+			if (window.matchMedia('(min-width: 768px)').matches) {
+				setslideCuantity(2);
+			}
+			if (window.matchMedia('(min-width: 1024px)').matches) {
+				setslideCuantity(2);
+			} else {
+				setslideCuantity(1);
+			}
+		};
+
+		const mql = window.matchMedia('(min-width: 1024px)');
+		handleViewSlider();
+
+		mql.addEventListener('change', () => {
+			handleViewSlider();
+		});
 	}, [projects]);
 
 	return (
@@ -42,27 +63,39 @@ export default function Home({ projects }) {
 				<Technologys />
 				<Services />
 				<section className={styles.projects}>
-					<div className='container'>
+					<div className={styles.triangleContainer}>
+						<Image src={svgTriangle} width={700} height={550} />
+					</div>
+					<div className='contaiiner'>
 						<h1>Projects </h1>
 						<h3>Recents projects: </h3>
 						<div className={styles.contentProjects}>
-							<div className={styles.scrollProjects}>
+							<div className={styles.contentFlecha}>
+								<Image src={flechaPNG} width={50} height={50} />
+							</div>
+							<Swiper spaceBetween={25} slidesPerView={slideCuantity}>
 								{mappedProjects.map((p, index) => (
-									<div key={index} className={styles.cardProject}>
-										<img src={p.imageP} alt={p.title} />
+									<SwiperSlide key={index} className={styles.cardProject}>
+										<div>
+											<img src={p.imageP} alt={p.title} />
+										</div>
 										<div className={styles.infoContent}>
 											<h3>{p.title}</h3>
-											<Link href={`project/${p.slug.current}`}>
-												<a className='btn btn-sutil'> See Project </a>
-											</Link>
+											<button className='btn btn-sutil'>
+												<Link href={`project/${p.slug.current}`}>
+													<a> See Project </a>
+												</Link>
+											</button>
 										</div>
-									</div>
+									</SwiperSlide>
 								))}
-							</div>
+							</Swiper>
 						</div>
-						<Link href='/projects'>
-							<a className='btn btn-sutil btn-out'> See more </a>
-						</Link>
+						<div className='container'>
+							<Link href='/projects'>
+								<a className='btn btn-sutil btn-out'> See more </a>
+							</Link>
+						</div>
 					</div>
 				</section>
 				<FormContact />
@@ -73,10 +106,9 @@ export default function Home({ projects }) {
 }
 
 export const getServerSideProps = async (pageContext) => {
-	const query = encodeURIComponent('*[ _type == "project"][0..1]');
+	const query = encodeURIComponent('*[ _type == "project"][0..2]');
 	const url = `https://${process.env.PROJECT_API_KEY}.api.sanity.io/v1/data/query/production?query=${query}`;
 	const result = await fetch(url).then((res) => res.json());
-	console.log(result);
 
 	if (!result.result) {
 		return {

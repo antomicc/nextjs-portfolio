@@ -237,19 +237,19 @@ button {
 
 .btn-contact {
 	background: $linear-bg-dark;
-	color: $color-maincolors-white !important;
+	color: white;
 }
 
 .btn-brand {
 	background: $linear-brand;
-	color: $color-maincolors-white !important;
+	color: white;
 }
 
 .btn-positive {
 	background: $color-maincolors-first;
 
 	a {
-		color: $color-maincolors-white !important;
+		color: white;
 	}
 }
 
@@ -259,7 +259,7 @@ button {
 	transition: all 0.3s ease-in-out;
 	font-size: 1.5rem;
 	border: 1px solid $color-maincolors-dark-1;
-	padding: 1rem;
+	padding: 1rem 0;
 	width: 100%;
 	display: inline-block;
 	&:hover {

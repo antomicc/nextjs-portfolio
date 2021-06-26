@@ -5,9 +5,17 @@
 	width: 100%;
 	padding-top: 7rem;
 	margin-bottom: 1rem;
+	position: relative;
+	h2 {
+		margin-bottom: 4rem;
+	}
 
 	h3 {
 		margin: 1rem 0;
+	}
+
+	@include desktop {
+		padding-top: 20rem;
 	}
 }
 
@@ -17,6 +25,10 @@
 
 	@include tablet {
 		@include grid(3, 1rem);
+	}
+
+	@include desktop {
+		@include grid(5, 1rem);
 	}
 }
 
@@ -32,4 +44,26 @@
 	gap: 1.5rem;
 	margin-top: 1rem;
 	text-align: center;
+}
+
+.dotsContainer {
+	left: 10rem;
+	top: 35rem;
+	position: absolute;
+	z-index: -1;
+	display: none;
+	@include desktop {
+		display: initial;
+	}
+}
+
+.circleContainer {
+	position: absolute;
+	z-index: -1;
+	right: 15rem;
+	top: 20rem;
+	display: none;
+	@include desktop {
+		display: initial;
+	}
 }

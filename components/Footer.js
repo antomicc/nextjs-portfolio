@@ -23,7 +23,7 @@ const Footer = () => {
 		<footer className={style.footer}>
 			<div className='container'>
 				<span className={style.spanF}> - or - </span>
-				<button className='btn btn-sutil'>
+				<button className='btn btn-sutil btn-out'>
 					<a href=''> Email me! </a>
 				</button>
 

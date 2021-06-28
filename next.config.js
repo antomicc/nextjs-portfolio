@@ -5,6 +5,6 @@ module.exports = {
 		domains: ['cdn.sanity.io'],
 	},
 	sassOptions: {
-		includePaths: [path.join(__dirname, 'styles')],
+		includePaths: [path.join(__dirname, 'styles/Base')],
 	},
 };

@@ -122,6 +122,7 @@ export const getServerSideProps = async (pageContext) => {
 	const result = await fetch(url).then((res) => res.json());
 
 	if (!result.result) {
+		console.log(result.result);
 		return {
 			props: {
 				projects: [],

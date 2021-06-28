@@ -29,22 +29,22 @@ const Footer = () => {
 
 				<h3>My social media!</h3>
 				<div className={style.footSocial}>
-					<a href={git_HL}>
+					<a href={git_HL} target='_blank' rel='noopener noreferrer'>
 						<Giticon />
 					</a>
-					<a href={Behance_link}>
+					<a href={Behance_link} target='_blank' rel='noopener noreferrer'>
 						<Behanceicon />
 					</a>
-					<a href={Linkedin_link}>
+					<a href={Linkedin_link} target='_blank' rel='noopener noreferrer'>
 						<Linkeicon />
 					</a>
-					<a href={Instagram_link}>
+					<a href={Instagram_link} target='_blank' rel='noopener noreferrer'>
 						<Instaicon />
 					</a>
-					<a href={codepen_link}>
+					<a href={codepen_link} target='_blank' rel='noopener noreferrer'>
 						<Codepenicon />
 					</a>
-					<a href={twitter_link}>
+					<a href={twitter_link} target='_blank' rel='noopener noreferrer'>
 						<Twittericon />
 					</a>
 				</div>

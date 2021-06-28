@@ -1,6 +1,4 @@
 import Head from 'next/head';
-import sanityClient from '@sanity/client';
-import { useNextSanityImage } from 'next-sanity-image';
 import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
 import imageUrlBuilder from '@sanity/image-url';
@@ -15,6 +13,7 @@ import Footer from '../components/Footer';
 import svgTriangle from '../public/Images/Particles/Polygon-6.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import flechaPNG from '../public/Images/Particles/FLECHA.png';
+import Reveal from 'react-reveal/Reveal';
 
 export default function Home({ projects }) {
 	const [mappedProjects, setMappedProjects] = useState([]);
@@ -69,8 +68,11 @@ export default function Home({ projects }) {
 	return (
 		<div>
 			<main className={styles.main}>
-				<Hero />
+				<Reveal>
+					<Hero />
+				</Reveal>
 				<AboutCard />
+
 				<Technologys />
 				<Services />
 				<section className={styles.projects}>
@@ -117,7 +119,7 @@ export default function Home({ projects }) {
 }
 
 export const getServerSideProps = async (pageContext) => {
-	const query = encodeURIComponent('*[ _type == "project"][0..2]');
+	const query = encodeURIComponent('*[ _type == "project"][0..3]');
 	const url = `https://${process.env.PROJECT_API_KEY}.api.sanity.io/v1/data/query/production?query=${query}`;
 	const result = await fetch(url).then((res) => res.json());
 

@@ -3,20 +3,28 @@ import Image from 'next/image';
 import svgDots from '../public/Images/Particles/Mask-Group.svg';
 import svgCircle from '../public/Images/Particles/Polygon-4.svg';
 import svgTriangle from '../public/Images/Particles/Polygon-6.svg';
+import Fade from 'react-reveal/Fade';
 
 const Hero = () => {
 	return (
 		<>
 			<div className={style.hero}>
-				<div className={style.dotsContainer}>
-					<Image alt='' src={svgDots} width={500} height={350} />
-				</div>
-				<div className={style.circleContainer}>
-					<Image alt='' src={svgCircle} width={300} height={150} />
-				</div>
-				<div className={style.triangleContainer}>
-					<Image alt='' src={svgTriangle} width={500} height={350} />
-				</div>
+				<Fade left>
+					<div className={style.dotsContainer}>
+						<Image alt='' src={svgDots} width={500} height={350} />
+					</div>
+				</Fade>
+				<Fade top>
+					<div className={style.circleContainer}>
+						<Image alt='' src={svgCircle} width={300} height={150} />
+					</div>
+				</Fade>
+				<Fade right>
+					<div className={style.triangleContainer}>
+						<Image alt='' src={svgTriangle} width={500} height={350} />
+					</div>
+				</Fade>
+
 				<div className='container'>
 					<div className={style.intro}>
 						<h3>Hi There! I am a </h3>
@@ -47,8 +55,12 @@ const Hero = () => {
 						<h3>Welcome to my website</h3>
 					</div>
 					<div className={style.buttonsGroup}>
-						<button className='btn btn-contact btn-out'>Contact me</button>
-						<button className='btn btn-brand btn-out'>About me</button>
+						<a href='#contact'>
+							<button className='btn btn-contact'>Contact</button>
+						</a>
+						<a href='#aboutme'>
+							<button className='btn btn-brand'> About me</button>{' '}
+						</a>
 					</div>
 				</div>
 			</div>

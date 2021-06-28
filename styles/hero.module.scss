@@ -28,10 +28,18 @@
 
 	@include tablet {
 		flex-direction: row;
+		justify-content: center;
+		& a {
+			width: 15rem;
+		}
 	}
 
 	@include desktop {
 		justify-content: center;
+
+		& a {
+			width: 15rem;
+		}
 	}
 }
 

@@ -10,7 +10,7 @@ const FormContact = () => {
 		return <p>Thanks for contactme!</p>;
 	}
 	return (
-		<section className={styles.contactSSS}>
+		<section id='contact' className={styles.contactSSS}>
 			<div className={styles.absContainer}>
 				<Image alt='' src={svgAbstract} width={800} height={800} />
 			</div>

@@ -2,6 +2,7 @@ html {
 	box-sizing: border-box;
 	overflow-x: hidden;
 	background: $linear-bg-light;
+	scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -28,7 +29,7 @@ p {
 	}
 
 	@include desktop {
-		width: 1024px;
+		width: 896px;
 	}
 }
 a {

@@ -7,6 +7,8 @@ import LinkedinS from '../components/svgs/social/Linkedin';
 import BehanceS from '../components/svgs/social/Behance';
 import svgLine from '../public/Images/Particles/Mask-Group-1.svg';
 import svgTriangle from '../public/Images/Particles/Polygon-6.svg';
+import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 
 const AboutCard = () => {
 	const git_HL = 'https://github.com/angelldeev';
@@ -15,45 +17,57 @@ const AboutCard = () => {
 	const Instagram_link = 'https://www.instagram.com/angell_dev/';
 
 	return (
-		<section className={styles.aboutSection}>
-			<div className={styles.lineContainer}>
-				<Image alt='' src={svgLine} width={400} height={250} />
-			</div>
-			<div className={styles.triangleContainer}>
-				<Image alt='' src={svgTriangle} width={400} height={250} />
-			</div>
-			<div className='container'>
-				<div className={styles.aboutContent}>
-					<div className={styles.imageContainer}>
-						<Image className={styles.imageProfile} src={me} />
-						<div className={styles.socialMedia}>
-							<a href={git_HL}>
-								<GithubS />
-							</a>
-							<a href={Behance_link}>
-								<BehanceS />
-							</a>
-							<a href={Linkedin_link}>
-								<LinkedinS />
-							</a>
-							<a href={Instagram_link}>
-								<InstaS />
-							</a>
+		<section id='aboutme' className={styles.aboutSection}>
+			<Fade bottom>
+				<div className={styles.lineContainer}>
+					<Image alt='' src={svgLine} width={400} height={250} />
+				</div>
+			</Fade>
+			<Fade top>
+				<div className={styles.triangleContainer}>
+					<Image alt='' src={svgTriangle} width={400} height={250} />
+				</div>
+			</Fade>
+			<Zoom cascade>
+				<div className='container'>
+					<div className={styles.aboutContent}>
+						<div className={styles.imageContainer}>
+							<Image className={styles.imageProfile} src={me} />
+							<div className={styles.socialMedia}>
+								<a href={git_HL} target='_blank' rel='noopener noreferrer'>
+									<GithubS />
+								</a>
+								<a href={Behance_link} target='_blank' rel='noopener noreferrer'>
+									<BehanceS />
+								</a>
+								<a href={Linkedin_link} target='_blank' rel='noopener noreferrer'>
+									<LinkedinS />
+								</a>
+								<a href={Instagram_link} target='_blank' rel='noopener noreferrer'>
+									<InstaS />
+								</a>
+							</div>
+						</div>
+
+						<div className={styles.textAbout}>
+							<h2> Angel Ruiz</h2>
+							<p>
+								Hello, my name is Angel, i’m from Guatemala City, i’m a technology
+								enthusiast and a lover of development and design
+							</p>
+							<button className='btn btn-positive'>
+								<a
+									href='https://drive.google.com/file/d/1Po4ActufvmIm2yy3GIk0hjQYqs7DSRUB/view?usp=sharing'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									Download CV
+								</a>
+							</button>
 						</div>
 					</div>
-
-					<div className={styles.textAbout}>
-						<h2> Angel Ruiz</h2>
-						<p>
-							Hello, my name is Angel, i’m from Guatemala City, i’m a technology
-							enthusiast and a lover of development and design
-						</p>
-						<button className='btn btn-positive'>
-							<a href=''>Download CV</a>
-						</button>
-					</div>
 				</div>
-			</div>
+			</Zoom>
 		</section>
 	);
 };

@@ -14,7 +14,9 @@ import style from '../styles/tech.module.scss';
 import svgDots from '../public/Images/Particles/Mask-Group.svg';
 import svgCircle from '../public/Images/Particles/Polygon-4.svg';
 import Image from 'next/dist/client/image';
-
+import Bounce from 'react-reveal/Bounce';
+import Reveal from 'react-reveal/Reveal';
+import Fade from 'react-reveal/Fade';
 const Technologys = () => {
 	const tecsIcons = [
 		JsIcon,
@@ -43,30 +45,40 @@ const Technologys = () => {
 	const otherTecIcons = [PhpIcon, WordpressIcon, FirebaseIcon];
 	return (
 		<section className={style.techSection}>
-			<div className={style.dotsContainer}>
-				<Image alt='' src={svgDots} width={500} height={350} />
-			</div>
-			<div className={style.circleContainer}>
-				<Image alt='' src={svgCircle} width={300} height={150} />
-			</div>
+			<Fade left>
+				<div className={style.dotsContainer}>
+					<Image alt='' src={svgDots} width={500} height={350} />
+				</div>
+			</Fade>
+			<Fade right>
+				<div className={style.circleContainer}>
+					<Image alt='' src={svgCircle} width={300} height={150} />
+				</div>
+			</Fade>
 			<article className='container'>
-				<h2>Technologys i use </h2>
-				<div className={style.gridTec}>
-					{tecsIcons.map((Tecs, index) => (
-						<div key={index}>
-							<Tecs className={style.svgTec} />
-							<h3> {tecsTitle[index]} </h3>
-						</div>
-					))}
-				</div>
-				<h3> Other technologys that i use</h3>
-				<div className={style.flexOther}>
-					{otherTecIcons.map((TecO, index) => (
-						<div key={index}>
-							<TecO />
-						</div>
-					))}
-				</div>
+				<Bounce top>
+					<h2>Technologys i use </h2>
+				</Bounce>
+				<Reveal bottom>
+					<div className={style.gridTec}>
+						{tecsIcons.map((Tecs, index) => (
+							<div key={index}>
+								<Tecs className={style.svgTec} />
+								<h3> {tecsTitle[index]} </h3>
+							</div>
+						))}
+					</div>
+
+					<h3> Other technologys that i use</h3>
+
+					<div className={style.flexOther}>
+						{otherTecIcons.map((TecO, index) => (
+							<div key={index}>
+								<TecO />
+							</div>
+						))}
+					</div>
+				</Reveal>
 			</article>
 		</section>
 	);

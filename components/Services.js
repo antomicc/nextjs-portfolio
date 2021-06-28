@@ -4,6 +4,7 @@ import style from '../styles/services.module.scss';
 import svgLine from '../public/Images/Particles/Mask-Group-1.svg';
 import svgDots from '../public/Images/Particles/Mask-Group.svg';
 import Image from 'next/dist/client/image';
+import Zoom from 'react-reveal/Zoom';
 
 const Services = () => {
 	const servicesIcon = [WebDes, WebDev];
@@ -23,23 +24,25 @@ const Services = () => {
 			<div className={style.dotsContainer}>
 				<Image alt='' src={svgDots} width={600} height={450} />
 			</div>
-			<div className='container'>
-				<h2> My services </h2>
-				<div className={style.cards}>
-					{servicesIcon &&
-						servicesIcon.map((Icon, index) => {
-							return (
-								<div key={index} className={style.card}>
-									<Icon className='icon' />
-									<div className={style.infoContent}>
-										<h3> {servicesTitle[index]} </h3>
-										<p> {servicesText[index]} </p>
+			<Zoom bottom>
+				<div className='container'>
+					<h2> My services </h2>
+					<div className={style.cards}>
+						{servicesIcon &&
+							servicesIcon.map((Icon, index) => {
+								return (
+									<div key={index} className={style.card}>
+										<Icon className='icon' />
+										<div className={style.infoContent}>
+											<h3> {servicesTitle[index]} </h3>
+											<p> {servicesText[index]} </p>
+										</div>
 									</div>
-								</div>
-							);
-						})}
+								);
+							})}
+					</div>
 				</div>
-			</div>
+			</Zoom>
 		</div>
 	);
 };

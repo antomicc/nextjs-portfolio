@@ -1,5 +1,4 @@
-import '../styles/app.scss';
-import '../styles/Base/hamburgermenu.scss';
+import '../styles/styles.scss';
 import 'swiper/swiper.scss';
 import Layout from '../components/Layout';
 

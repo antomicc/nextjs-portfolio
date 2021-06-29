@@ -7,7 +7,7 @@ import svgAbstract from '../public/Images/Particles/Ellipse-2.svg';
 const FormContact = () => {
 	const [state, handleSubmit] = useForm('xvovdrvz');
 	if (state.succeeded) {
-		return <p>Thanks for contactme!</p>;
+		return <p className={styles.thanks}>Thanks for contactme!</p>;
 	}
 	return (
 		<section id='contact' className={styles.contactSSS}>

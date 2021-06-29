@@ -22,11 +22,9 @@ const Footer = () => {
 	return (
 		<footer className={style.footer}>
 			<div className='container'>
-				<span className={style.spanF}> - or - </span>
-				<button className='btn btn-sutil btn-out'>
-					<a href=''> Email me! </a>
-				</button>
-
+				<a href='mailto: angelldev@gmail.com'>
+					<button className='btn btn-sutil btn-out'>Email me!</button>
+				</a>
 				<h3>My social media!</h3>
 				<div className={style.footSocial}>
 					<a href={git_HL} target='_blank' rel='noopener noreferrer'>

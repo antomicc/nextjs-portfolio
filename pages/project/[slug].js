@@ -1,6 +1,9 @@
 import imageUrlBuilder from '@sanity/image-url';
 import { useState, useEffect } from 'react';
-
+import styles from '../../styles/slug.module.scss';
+import Image from 'next/dist/client/image';
+import githubIcon from '../../public/Images/Illustrations/gitHubicon.svg';
+import Footer from '../../components/Footer';
 const Project = ({
 	title,
 	description,
@@ -10,7 +13,7 @@ const Project = ({
 	link,
 	repo,
 	place,
-	tags,
+	tools,
 }) => {
 	const [imageUrl, setImageUrl] = useState('');
 
@@ -24,36 +27,48 @@ const Project = ({
 	}, [image]);
 
 	return (
-		<>
+		<section className={styles.slugSection}>
 			<div className='container'>
 				<h1> {title} </h1>
-				{imageUrl && <img src={imageUrl} alt={title} />}
-				<span> {description}</span>
-				<span>
-					{' '}
-					<strong> Finished: </strong>
-					{new Date(date).toLocaleDateString()}
-				</span>
-				<h3>
-					{' '}
-					<strong> Project type: </strong> {projectType}{' '}
-				</h3>
-				<h4>
-					{' '}
-					<strong> Place: </strong> {place}
-				</h4>
-				<a href={link} rel='noopener noreferrer' target='_blank'>
-					{' '}
-					See live preview!{' '}
-				</a>
-				<a href={repo} rel='noopener noreferrer' target='_blank'>
-					{' '}
-					See the repo!{' '}
-				</a>
-				<h4>Tags</h4>
-				<ul>{tags && tags.map((el, index) => <li key={index}> {el} </li>)}</ul>
+
+				<div className={styles.imgContent}>
+					{imageUrl && <img className={styles.imgSlug} src={imageUrl} alt={title} />}
+				</div>
+
+				<div className='container-projects'>
+					<p className={styles.paragraph}> {description} </p>
+					<div className={styles.informationProjects}>
+						<span>
+							{' '}
+							<strong> Finished: </strong>
+							{new Date(date).toLocaleDateString()}
+						</span>
+						<h3>
+							{' '}
+							<strong> Project type: </strong> {projectType}{' '}
+						</h3>
+						<h4>
+							{' '}
+							<strong> Place: </strong> {place}
+						</h4>
+						<div className={styles.buttons}>
+							<a href={link} rel='noopener noreferrer' target='_blank'>
+								<button className='btn btn-positive'> See live preview! </button>
+							</a>
+							<a href={repo} rel='noopener noreferrer' target='_blank'>
+								<button className='btn btn-contact'>
+									<Image src={githubIcon} alt='' width={24} height={24} />
+									See the repo!{' '}
+								</button>
+							</a>
+						</div>
+						<h4>Tools</h4>
+						<ul>{tools && tools.map((el, index) => <li key={index}> {el} </li>)}</ul>
+					</div>
+				</div>
 			</div>
-		</>
+			<Footer />
+		</section>
 	);
 };
 
@@ -88,7 +103,7 @@ export const getServerSideProps = async (pageContext) => {
 				link: project.link,
 				repo: project.repo,
 				place: project.place,
-				tags: project.tags,
+				tools: project.tools,
 			},
 		};
 	}

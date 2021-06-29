@@ -32,6 +32,12 @@ p {
 		width: 896px;
 	}
 }
+
+.container-projects {
+	width: 95%;
+	margin: 0 auto;
+}
+
 a {
 	text-decoration: none;
 	color: unset;
@@ -248,7 +254,7 @@ button {
 
 .btn-positive {
 	background: $color-maincolors-first;
-
+	color: white;
 	a {
 		color: white;
 	}

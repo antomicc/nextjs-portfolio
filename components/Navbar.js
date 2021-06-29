@@ -45,10 +45,10 @@ const Navbar = () => {
 						<Link href='/'>
 							<a className='menu-item'> Home </a>
 						</Link>
-						<Link href='/project'>
+						<Link href='/projects'>
 							<a className='menu-item'> Projects </a>
 						</Link>
-						<a className='menu-item' href='#about'>
+						<a className='menu-item' href='#aboutme'>
 							About
 						</a>
 						<a className='menu-item' href='#contact'>

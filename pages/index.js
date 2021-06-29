@@ -56,15 +56,6 @@ export default function Home({ projects }) {
 			handleViewSlider();
 		});
 	}, [projects]);
-
-	/*const configuredSanityClient = sanityClient({
-		projectId: 'mw14nmly',
-		dataset: 'production',
-		useCdn: true,
-	});
-
-	const imageProps = useNextSanityImage(configuredSanityClient, projects.image);*/
-
 	return (
 		<div>
 			<main className={styles.main}>
@@ -79,26 +70,33 @@ export default function Home({ projects }) {
 					<div className={styles.triangleContainer}>
 						<Image src={svgTriangle} alt='' width={700} height={550} />
 					</div>
-					<div className='contaiiner'>
+					<div className='container-projects'>
 						<h1>Projects </h1>
 						<h3>Recents projects: </h3>
 						<div className={styles.contentProjects}>
 							<div className={styles.contentFlecha}>
 								<Image src={flechaPNG} alt='' width={50} height={50} />
 							</div>
-							<Swiper spaceBetween={25} slidesPerView={slideCuantity}>
+							<Swiper spaceBetween={75} slidesPerView={slideCuantity}>
 								{mappedProjects.map((p, index) => (
 									<SwiperSlide key={index} className={styles.cardProject}>
 										<div>
 											<img src={p.imageP} alt={p.title} />
 										</div>
+										<div className={styles.toolsContent}>
+											<ul>
+												{p.tools.map((tool, index) => (
+													<li key={index}> {tool} </li>
+												))}
+											</ul>
+										</div>
 										<div className={styles.infoContent}>
 											<h3>{p.title}</h3>
-											<button className='btn btn-sutil'>
-												<Link href={`project/${p.slug.current}`}>
+											<Link href={`project/${p.slug.current}`}>
+												<button className='btn btn-sutil'>
 													<a> See Project </a>
-												</Link>
-											</button>
+												</button>
+											</Link>
 										</div>
 									</SwiperSlide>
 								))}

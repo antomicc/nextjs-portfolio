@@ -57,7 +57,7 @@ const Technologys = () => {
 			</Fade>
 			<article className='container'>
 				<Bounce top>
-					<h2>Technologys i use </h2>
+					<h2>Technologys I use </h2>
 				</Bounce>
 				<Reveal bottom>
 					<div className={style.gridTec}>

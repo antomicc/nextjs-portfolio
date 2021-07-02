@@ -283,10 +283,14 @@ button {
 
 /* gradients svgs*/
 
-.theme.light {
+.theme-light {
 	fill: $color-maincolors-dark-1;
+	background: $linear-bg-light;
+	color: $color-maincolors-dark-1;
 }
 
-.theme.dark {
+.theme-dark {
 	fill: $color-maincolors-white;
+	background: $linear-bg-dark;
+	color: white;
 }

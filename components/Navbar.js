@@ -4,12 +4,22 @@ import Image from 'next/image';
 import logoMobile from '../public/Images/logo-mobile.png';
 import logoDektop from '../public/Images/logo-dektop.png';
 import { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from './context/ThemeContext';
 
 const Navbar = () => {
 	const [open, setOpen] = useState(false);
 	const [logoRes, setLogoRes] = useState(false);
 	const handleToggle = () => {
 		setOpen(!open);
+	};
+
+	const theme = useContext(ThemeContext);
+	const darkMode = theme.state.darkMode;
+
+	const onClickTheme = () => {
+		if (darkMode) theme.dispatch({ type: 'LIGHTMODE' });
+		else theme.dispatch({ type: 'DARKMODE' });
 	};
 
 	useEffect(() => {
@@ -30,7 +40,7 @@ const Navbar = () => {
 	}, []);
 
 	return (
-		<nav className={style.nav}>
+		<nav className={(style.nav, `${darkMode ? 'theme-dark' : 'theme-light'}`)}>
 			<div className='container'>
 				<div className={style.navItem}>
 					<div className={style.logo}>
@@ -64,6 +74,9 @@ const Navbar = () => {
 						<span className='hamburger-box'>
 							<span className='hamburger-inner'></span>
 						</span>
+					</button>
+					<button onClick={onClickTheme}>
+						<span>{darkMode ? 'Switch to light' : 'Switch to dark'}</span>
 					</button>
 				</div>
 			</div>

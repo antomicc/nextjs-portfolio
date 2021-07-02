@@ -14,10 +14,14 @@ import svgTriangle from '../public/Images/Particles/Polygon-6.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import flechaPNG from '../public/Images/Particles/FLECHA.png';
 import Reveal from 'react-reveal/Reveal';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../components/context/ThemeContext';
 
 export default function Home({ projects }) {
 	const [mappedProjects, setMappedProjects] = useState([]);
 	const [slideCuantity, setslideCuantity] = useState(1);
+	const theme = useContext(ThemeContext);
+	const darkMode = theme.state.darkMode;
 
 	useEffect(() => {
 		if (projects) {
@@ -56,9 +60,10 @@ export default function Home({ projects }) {
 			handleViewSlider();
 		});
 	}, [projects]);
+
 	return (
-		<div>
-			<main className={styles.main}>
+		<>
+			<main className={(styles.main, `${darkMode ? 'theme-dark' : 'theme-light'}`)}>
 				<Reveal>
 					<Hero />
 				</Reveal>
@@ -112,7 +117,7 @@ export default function Home({ projects }) {
 				<FormContact />
 				<Footer />
 			</main>
-		</div>
+		</>
 	);
 }
 

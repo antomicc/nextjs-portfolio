@@ -1,10 +1,11 @@
 import Navbar from './Navbar';
+import { ThemeProvider } from '../components/context/ThemeContext';
 const Layout = ({ children }) => {
 	return (
-		<div>
+		<ThemeProvider>
 			<Navbar />
 			{children}
-		</div>
+		</ThemeProvider>
 	);
 };
 

@@ -75,8 +75,11 @@ const Navbar = () => {
 							<span className='hamburger-inner'></span>
 						</span>
 					</button>
-					<button onClick={onClickTheme}>
-						<span>{darkMode ? 'Switch to light' : 'Switch to dark'}</span>
+					<button
+						className={`btn btn-darkmode ${darkMode ? 'btn-dark' : 'btn-light'}`}
+						onClick={onClickTheme}
+					>
+						<span>{darkMode ? '🌞' : '🌙'}</span>
 					</button>
 				</div>
 			</div>

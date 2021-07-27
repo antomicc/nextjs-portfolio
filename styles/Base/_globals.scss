@@ -133,8 +133,6 @@ button {
 					font-size: 7rem;
 				}
 			}
-			.process-step-title {
-			}
 			.process-step-title-overlay {
 				position: absolute;
 				top: 0;
@@ -145,6 +143,7 @@ button {
 				opacity: 1;
 				-webkit-text-fill-color: transparent;
 				-webkit-background-clip: text;
+				background-clip: text;
 			}
 		}
 
@@ -281,6 +280,21 @@ button {
 	}
 }
 
+.btn-darkmode {
+	width: 10%;
+	height: 75%;
+	position: absolute;
+	right: -6rem;
+	top: 0.5rem;
+}
+
+.btn-dark {
+	background: $linear-bg-dark;
+}
+
+.btn-light {
+	background: $linear-bg-light;
+}
 /* gradients svgs*/
 
 .theme-light {
@@ -293,4 +307,8 @@ button {
 	fill: $color-maincolors-white;
 	background: $linear-bg-dark;
 	color: white;
+}
+
+.text-web {
+	background: transparent;
 }

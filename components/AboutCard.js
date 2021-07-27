@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import { ThemeContext } from './context/ThemeContext';
 import styles from '../styles/about.module.scss';
 import me from '../public/Images/me.png';
 import Image from 'next/image';
@@ -15,6 +17,9 @@ const AboutCard = () => {
 	const Behance_link = 'https://www.behance.net/angeldev';
 	const Linkedin_link = 'https://www.linkedin.com/in/angeldev/';
 	const Instagram_link = 'https://www.instagram.com/angell_dev/';
+
+	const theme = useContext(ThemeContext);
+	const darkMode = theme.state.darkMode;
 
 	return (
 		<section id='aboutme' className={styles.aboutSection}>
@@ -51,7 +56,7 @@ const AboutCard = () => {
 
 						<div className={styles.textAbout}>
 							<h2> Angel Ruiz</h2>
-							<p>
+							<p className={`${darkMode ? 'theme-dark' : 'theme-light'} text-web `}>
 								Hello, my name is Angel, i’m from Guatemala City, i’m a technology
 								enthusiast and a lover of development and design
 							</p>

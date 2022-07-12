@@ -1,15 +1,14 @@
 import Link from 'next/link';
 import style from '../styles/navbar.module.scss';
 import Image from 'next/image';
-import logoMobile from '../public/Images/logo-mobile.png';
-import logoDektop from '../public/Images/logo-dektop.png';
+import logoJosbyte from '../public/Images/LogoJosbyte.png';
 import { useEffect, useState } from 'react';
 import React, { useContext } from 'react';
 import { ThemeContext } from './context/ThemeContext';
 
 const Navbar = () => {
 	const [open, setOpen] = useState(false);
-	const [logoRes, setLogoRes] = useState(false);
+	//const [logoRes, setLogoRes] = useState(false);
 	const handleToggle = () => {
 		setOpen(!open);
 	};
@@ -23,7 +22,7 @@ const Navbar = () => {
 	};
 
 	useEffect(() => {
-		const handleViewNav = () => {
+		/* const handleViewNav = () => {
 			if (window.matchMedia('(min-width: 1024px)').matches) {
 				setLogoRes(true);
 			} else {
@@ -36,19 +35,18 @@ const Navbar = () => {
 
 		mql.addEventListener('change', () => {
 			handleViewNav();
-		});
+		});*/
 	}, []);
 
 	return (
-		<nav className={(style.nav, `${darkMode ? 'theme-dark' : 'theme-light'}`)}>
+		<nav className={style.nav}>
 			<div className='container'>
 				<div className={style.navItem}>
 					<div className={style.logo}>
 						<Image
 							className={style.logoNav}
-							src={logoRes ? logoDektop : logoMobile}
+							src={logoJosbyte}
 							alt='logo-png'
-							height={logoRes ? 60 : 100}
 						/>
 					</div>
 					<div className={`${style.menuItems} ${open ? style.activeNav : ''}`}>
@@ -75,12 +73,14 @@ const Navbar = () => {
 							<span className='hamburger-inner'></span>
 						</span>
 					</button>
+					{/*
 					<button
 						className={`btn btn-darkmode ${darkMode ? 'btn-dark' : 'btn-light'}`}
 						onClick={onClickTheme}
 					>
 						<span>{darkMode ? '🌞' : '🌙'}</span>
 					</button>
+	*/}
 				</div>
 			</div>
 		</nav>

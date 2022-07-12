@@ -1,17 +1,19 @@
 @import '../styles/Base/variables';
 @import '../styles/Base/mixins';
+
 .nav {
-	background: $linear-bg-light;
+	background: $color-maincolors-white;
 	position: fixed;
 	width: 100%;
-	height: 6rem;
+	height: 98px;
 	z-index: 999;
-	@include effect-style-main-shadow;
+	//@include effect-style-main-shadow;
+	box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
 	width: 4rem;
-	margin: 0 auto;
+	margin: 0;
 	padding: 1rem 0;
 
 	@include desktop {
@@ -29,7 +31,7 @@
 .navItem {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: flex-start;
 	position: relative;
 	height: 100%;
 }
@@ -38,6 +40,8 @@
 	position: fixed;
 	width: 100%;
 	right: 0;
+	top: 0;
+	z-index: 9;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -47,6 +51,7 @@
 	background: $linear-bg-dark;
 	transform: translateX(100%);
 	transition: all 0.8s;
+
 	a {
 		text-align: center;
 		width: 30%;
@@ -71,6 +76,7 @@
 			-webkit-transform: scale(0, 1);
 			transform: scale(0, 1);
 		}
+
 		&:hover::after {
 			opacity: 1;
 			-webkit-transform: scale(1);
@@ -92,6 +98,7 @@
 		background: transparent;
 		transform: translateX(30%);
 		visibility: hidden;
+
 		a {
 			width: unset;
 			margin: 0;
@@ -104,8 +111,10 @@
 .activeNav {
 	transform: translateX(0);
 	visibility: visible;
+
 	@include desktop {
 		transform: translateX(-15%);
+
 		a {
 			color: $color-maincolors-dark-1;
 		}

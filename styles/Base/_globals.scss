@@ -4,6 +4,7 @@ html {
 	background: $linear-bg-light;
 	scroll-behavior: smooth;
 }
+
 *,
 *:before,
 *:after {
@@ -11,16 +12,19 @@ html {
 	margin: 0;
 	padding: 0;
 }
+
 body {
 	font-family: $myFont;
 	color: $color-maincolors-dark-1;
 }
+
 p {
 	color: $color-maincolors-dark-1;
 	font-size: 1.5rem;
 }
+
 .container {
-	width: 328px;
+	width: 90%;
 	height: 100%;
 	margin: 0 auto;
 
@@ -62,16 +66,19 @@ h1 {
 	font-style: normal;
 	line-height: 150%;
 }
+
 h2 {
 	font-size: 2.5rem;
 	font-weight: bolder;
 	line-height: 150%;
 }
+
 h3 {
 	font-size: 1.7rem;
 	font-weight: bolder;
 	line-height: 150%;
 }
+
 h4 {
 	font-size: 1.5rem;
 	font-weight: bold;
@@ -116,6 +123,7 @@ button {
 		.process-step-title-container {
 			margin-top: -16px; //To adjust for the line-height
 			position: relative;
+
 			.process-step-title,
 			.process-step-title-overlay {
 				font-size: 3.5rem;
@@ -133,6 +141,7 @@ button {
 					font-size: 7rem;
 				}
 			}
+
 			.process-step-title-overlay {
 				position: absolute;
 				top: 0;
@@ -149,11 +158,9 @@ button {
 
 		&.process-step-1 {
 			.process-step-title-overlay {
-				background-image: linear-gradient(
-					90deg,
-					$color-maincolors-first,
-					$color-maincolors-second
-				);
+				background-image: linear-gradient(90deg,
+						$color-maincolors-first,
+						$color-maincolors-second);
 				animation: animated-gradient-title-1 8s infinite;
 			}
 		}
@@ -167,11 +174,9 @@ button {
 
 		&.process-step-3 {
 			.process-step-title-overlay {
-				background-image: linear-gradient(
-					90deg,
-					$color-maincolors-first,
-					$color-maincolors-second
-				);
+				background-image: linear-gradient(90deg,
+						$color-maincolors-first,
+						$color-maincolors-second);
 				animation: animated-gradient-title-3 8s infinite;
 			}
 		}
@@ -179,6 +184,7 @@ button {
 }
 
 @keyframes animated-gradient-title-1 {
+
 	0%,
 	16.667%,
 	100% {
@@ -192,6 +198,7 @@ button {
 }
 
 @keyframes animated-gradient-title-2 {
+
 	0%,
 	16.667%,
 	66.667%,
@@ -206,6 +213,7 @@ button {
 }
 
 @keyframes animated-gradient-title-3 {
+
 	0%,
 	50%,
 	100% {
@@ -236,6 +244,7 @@ button {
 			transform: scale(1.05);
 		}
 	}
+
 	&:active {
 		transform: translateY(0.2rem);
 	}
@@ -254,6 +263,7 @@ button {
 .btn-positive {
 	background: $color-maincolors-first;
 	color: white;
+
 	a {
 		color: white;
 	}
@@ -268,6 +278,7 @@ button {
 	padding: 1rem 0;
 	width: 100%;
 	display: inline-block;
+
 	&:hover {
 		color: rgba($color: #000000, $alpha: 0.4);
 		border: 1px solid rgba($color: #000000, $alpha: 0.4);
@@ -295,11 +306,12 @@ button {
 .btn-light {
 	background: $linear-bg-light;
 }
+
 /* gradients svgs*/
 
 .theme-light {
 	fill: $color-maincolors-dark-1;
-	background: $linear-bg-light;
+	background: $color-maincolors-white;
 	color: $color-maincolors-dark-1;
 }
 

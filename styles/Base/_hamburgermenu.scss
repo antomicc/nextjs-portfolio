@@ -88,6 +88,22 @@
 	display: block;
 }
 
+
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+	width: 40px;
+	content: '';
+	display: block;
+}
+
+.hamburger.is-active .hamburger-inner::before {
+	right: 0;
+}
+
+.hamburger.is-active .hamburger-inner::after {
+	left: 0;
+}
+
 .hamburger-inner::before {
 	top: -14px;
 	right: 4px;

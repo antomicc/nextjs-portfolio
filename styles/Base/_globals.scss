@@ -45,6 +45,7 @@ p {
 a {
 	text-decoration: none;
 	color: unset;
+	width: 100%;
 }
 
 img,
@@ -121,17 +122,30 @@ button {
 .process-steps-container {
 	.process-step-container {
 		.process-step-title-container {
-			margin-top: -16px; //To adjust for the line-height
+			margin-top: -9px; //To adjust for the line-height
 			position: relative;
+
+			.step-title-outprocess,
+			.step-title-outprocess-overlay {
+				font-size: 1.8rem;
+				font-weight: 400;
+				margin: 0;
+				line-height: 150%; //If too short, g might get cut off
+				letter-spacing: 0;
+				color: $color-maincolors-dark-1;
+				text-align: left;
+			}
 
 			.process-step-title,
 			.process-step-title-overlay {
-				font-size: 3.5rem;
-				font-weight: 900;
+				font-family: $secondaryFont;
+				font-size: 1.7rem;
+				font-weight: 600;
 				margin: 0;
 				line-height: 150%; //If too short, g might get cut off
-				letter-spacing: -4px;
+				letter-spacing: 0;
 				color: $color-maincolors-dark-1;
+				text-align: left;
 
 				@include tablet {
 					font-size: 6rem;
@@ -142,7 +156,7 @@ button {
 				}
 			}
 
-			.process-step-title-overlay {
+			.step-title-outprocess-overlay {
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -150,6 +164,18 @@ button {
 				padding-right: 0px; //Adding some space on the right otherwise gradient may be cut off depending on the font.
 				height: 100%;
 				opacity: 1;
+			}
+
+			.process-step-title-overlay {
+				/*position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				
+				padding-right: 0px; //Adding some space on the right otherwise gradient may be cut off depending on the font.
+				height: 100%;
+				opacity: 1;*/
+				width: 100%;
 				-webkit-text-fill-color: transparent;
 				-webkit-background-clip: text;
 				background-clip: text;
@@ -174,9 +200,7 @@ button {
 
 		&.process-step-3 {
 			.process-step-title-overlay {
-				background-image: linear-gradient(90deg,
-						$color-maincolors-first,
-						$color-maincolors-second);
+				background-image: $linear-third;
 				animation: animated-gradient-title-3 8s infinite;
 			}
 		}
@@ -229,7 +253,10 @@ button {
 /* Botones */
 
 .btn {
-	width: 100%;
+	display: block;
+	font-family: $secondaryFont;
+	width: 75%;
+	margin: 0 auto;
 	padding: 1rem;
 	line-height: 100%;
 	@include effect-style-main-shadow;
@@ -270,14 +297,26 @@ button {
 }
 
 .btn-sutil {
+	position: relative;
+	border-radius: 0;
 	box-shadow: none;
-	color: $color-maincolors-dark-1;
+	color: $color-maincolors-sutil;
 	transition: all 0.3s ease-in-out;
 	font-size: 1.5rem;
-	border: 1px solid $color-maincolors-dark-1;
-	padding: 1rem 0;
-	width: 100%;
-	display: inline-block;
+	padding: 0.4rem 0;
+	border: none;
+	background-color: transparent;
+
+	&::after {
+		background-color: $color-maincolors-sutil;
+		content: '';
+		width: 40%;
+		position: absolute;
+		left: 30%;
+		bottom: 1px;
+		border-width: 0 0 1px;
+		border-style: solid;
+	}
 
 	&:hover {
 		color: rgba($color: #000000, $alpha: 0.4);

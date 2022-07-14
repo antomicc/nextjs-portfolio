@@ -2,8 +2,10 @@
 @import 'Base/variables';
 
 .aboutSection {
-	padding-top: 30rem;
+	padding-top: 2rem;
 	width: 100%;
+	margin-top: 15rem;
+	background-color: $color-maincolors-neutro;
 	position: relative;
 }
 
@@ -38,14 +40,26 @@
 		flex-direction: row;
 	}
 }
+
+.sectionImage {
+	width: 100%;
+	position: absolute;
+	top: -30%;
+}
+
 .imageContainer {
-	width: 15rem;
+	width: 50%;
 	margin: 0 auto;
 
 	@include tablet {
 		width: 15rem;
 		margin-left: 0;
 	}
+}
+
+.imageProfile {
+	width: 60%;
+	margin: 0 auto;
 }
 
 .socialMedia {
@@ -59,10 +73,21 @@
 
 .textAbout {
 	width: 100%;
+	margin-top: 5rem;
+	color: $color-maincolors-white;
+	font-size: 1.5rem;
+
+	p {
+		color: $color-maincolors-white;
+		text-align: left;
+	}
+
 	@include tablet {
 		width: 50%;
 		margin-top: 2rem;
 	}
+
+
 }
 
 .lineContainer {
@@ -72,6 +97,7 @@
 	position: absolute;
 	z-index: -1;
 	display: none;
+
 	@include desktop {
 		display: initial;
 	}
@@ -83,7 +109,13 @@
 	right: 15rem;
 	top: 30rem;
 	display: none;
+
 	@include desktop {
 		display: initial;
 	}
+}
+
+.subtitleAbout {
+	font-weight: 200;
+	font-size: 1.4rem;
 }

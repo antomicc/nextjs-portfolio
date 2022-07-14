@@ -36,31 +36,36 @@ const AboutCard = () => {
 			<Zoom cascade>
 				<div className='container'>
 					<div className={styles.aboutContent}>
-						<div className={styles.imageContainer}>
-							<Image className={styles.imageProfile} src={me} />
-							<div className={styles.socialMedia}>
-								<a href={git_HL} target='_blank' rel='noopener noreferrer'>
-									<GithubS />
-								</a>
-								<a href={Behance_link} target='_blank' rel='noopener noreferrer'>
-									<BehanceS />
-								</a>
-								<a href={Linkedin_link} target='_blank' rel='noopener noreferrer'>
-									<LinkedinS />
-								</a>
-								<a href={Instagram_link} target='_blank' rel='noopener noreferrer'>
-									<InstaS />
-								</a>
+						<div className={styles.sectionImage}>
+							<div className={styles.imageContainer}>
+								<Image className={styles.imageProfile} src={me} />
 							</div>
 						</div>
-
+						{ /*
+						<div className={styles.socialMedia}>
+							<a href={git_HL} target='_blank' rel='noopener noreferrer'>
+								<GithubS />
+							</a>
+							<a href={Behance_link} target='_blank' rel='noopener noreferrer'>
+								<BehanceS />
+							</a>
+							<a href={Linkedin_link} target='_blank' rel='noopener noreferrer'>
+								<LinkedinS />
+							</a>
+							<a href={Instagram_link} target='_blank' rel='noopener noreferrer'>
+								<InstaS />
+							</a>
+						</div>
+	*/}
 						<div className={styles.textAbout}>
-							<h2> Angel Ruiz</h2>
-							<p className={`${darkMode ? 'theme-dark' : 'theme-light'} text-web `}>
-								Hello, my name is Angel, i’m from Guatemala City, i’m a technology
-								enthusiast and a lover of development and design
+							<p>
+								Hello! My name is Josue, i’m from Guatemala City, i’m a technology enthusiast and a lover of development and design.
+								<br />
+								<br />
+								What are my specialties? The development and design.
+								That's why I'm fascinated by frontend development, ui design and little by little getting into the UX branch
 							</p>
-							<button className='btn btn-positive'>
+							<button className='btn btn-light'>
 								<a
 									href='https://drive.google.com/file/d/1Po4ActufvmIm2yy3GIk0hjQYqs7DSRUB/view?usp=sharing'
 									target='_blank'
@@ -69,6 +74,9 @@ const AboutCard = () => {
 									Download CV
 								</a>
 							</button>
+							<p className={styles.subtitleAbout}>
+								Here are a few technologies I’ve been working with recently:
+							</p>
 						</div>
 					</div>
 				</div>

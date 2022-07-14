@@ -27,39 +27,44 @@ const Hero = () => {
 
 				<div className='container'>
 					<div className={style.intro}>
-						<h3>Hi There! I am a </h3>
+						<h3>Hi There!</h3>
 						<section className='section-process'>
 							<div className='section-container'>
 								<div className='process-steps-container container-medium with-padding'>
 									<div className='process-step-container process-step-1'>
 										<div className='process-step-title-container'>
-											<h2 className='process-step-title'>FRONT-END</h2>
-											<div className='process-step-title-overlay'>FRONT-END</div>
+											<h2 className='step-title-outprocess'>My name is <span className='process-step-title' >Josue</span></h2>
+											<h2 className='step-title-outprocess-overlay'>My name is
+												<span className='process-step-title-overlay'> Josue</span>
+											</h2>
 										</div>
 									</div>
 									<div className='process-step-container process-step-2'>
 										<div className='process-step-title-container'>
-											<h2 className='process-step-title'>UI DESIGNER</h2>
-											<div className='process-step-title-overlay'>UI DESIGNER</div>
+											<h2 className='step-title-outprocess'>I’m a  <span className='process-step-title' >frontend developer</span></h2>
+											<h2 className='step-title-outprocess-overlay'>I’m a
+												<span className='process-step-title-overlay'> frontend developer</span>
+											</h2>
 										</div>
 									</div>
 									<div className='process-step-container process-step-3'>
 										<div className='process-step-title-container'>
-											<h2 className='process-step-title'>WEB DEV</h2>
-											<div className='process-step-title-overlay'>WEB DEV</div>
+											<h2 className='step-title-outprocess'>& <span className='process-step-title' >digital designer.</span></h2>
+											<h2 className='step-title-outprocess-overlay'>&
+												<span className='process-step-title-overlay'> digital designer.</span>
+											</h2>
 										</div>
 									</div>
 								</div>
 							</div>
 						</section>
-						<h3>Welcome to my website</h3>
 					</div>
 					<div className={style.buttonsGroup}>
 						<a href='#contact'>
-							<button className='btn btn-contact'>Contact</button>
+							<button className='btn btn-brand'>Contact me</button>
 						</a>
 						<a href='#aboutme'>
-							<button className='btn btn-brand'> About me</button>{' '}
+							<button className='btn btn-sutil'> About me</button>{' '}
 						</a>
 					</div>
 				</div>

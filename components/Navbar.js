@@ -16,10 +16,10 @@ const Navbar = () => {
 	const theme = useContext(ThemeContext);
 	const darkMode = theme.state.darkMode;
 
-	const onClickTheme = () => {
+	/*const onClickTheme = () => {
 		if (darkMode) theme.dispatch({ type: 'LIGHTMODE' });
 		else theme.dispatch({ type: 'DARKMODE' });
-	};
+	};*/
 
 	useEffect(() => {
 		/* const handleViewNav = () => {

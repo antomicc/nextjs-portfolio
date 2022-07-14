@@ -3,7 +3,7 @@
 /* Fuentes, estylos de fuente */
 
 $myFont: 'Outfit', sans-serif;
-$buttonFont: 'Space Grotesk', sans-serif;
+$secondaryFont: 'Space Grotesk', sans-serif;
 
 $color-maincolors-first: #DE154D;
 $color-maincolors-second: #333366;
@@ -23,11 +23,14 @@ $color-6-tcolors-primary: #DE154D50;
 $color-6-tcolors-second: #33336650;
 $color-7-tcolors-primary: #DE154D40;
 $color-7-tcolors-second: #33336640;
+$color-maincolors-sutil: #828282;
+
 
 /* Linear Gradients */
 $linear-brand: linear-gradient(255.68deg, #333366 0%, #DE154D 100%);
 $linear-primary: linear-gradient(268.62deg, #753043 0.27%, #DE154D 99.35%);
 $linear-secondary: linear-gradient(255.68deg, #333366 0%, #151433 100%);
+$linear-third: linear-gradient(268.62deg, #333366 0.27%, #5CCDFE 99.35%);
 $linear-bg-light: linear-gradient(136.18deg, #ffffff 33.84%, #e6e6e6 100%);
 $linear-bg-dark: linear-gradient(136.97deg, #2c2c2c 4.91%, #1c1c1c 100%);
 $linear-sunshine: linear-gradient(268.62deg, #FF6A72 0.27%, #FEA05C 99.35%);

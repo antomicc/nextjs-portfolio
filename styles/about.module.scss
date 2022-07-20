@@ -44,12 +44,14 @@
 .sectionImage {
 	width: 100%;
 	position: absolute;
-	top: -30%;
+	top: -22%;
 }
 
 .imageContainer {
-	width: 50%;
+	width: 100%;
 	margin: 0 auto;
+	display: grid;
+	place-content: center;
 
 	@include tablet {
 		width: 15rem;
@@ -58,7 +60,7 @@
 }
 
 .imageProfile {
-	width: 60%;
+	width: 100%;
 	margin: 0 auto;
 }
 

@@ -2,7 +2,8 @@ const path = require('path');
 module.exports = {
 	reactStrictMode: false,
 	images: {
-		domains: ['cdn.sanity.io'],
+		domains: ['cdn.sanity.io', 'i.imgur.com'],
+		minimumCacheTTL: 1500000,
 	},
 	sassOptions: {
 		includePaths: [path.join(__dirname, 'styles')],

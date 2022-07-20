@@ -17,7 +17,10 @@ import Image from 'next/dist/client/image';
 import Bounce from 'react-reveal/Bounce';
 import Reveal from 'react-reveal/Reveal';
 import Fade from 'react-reveal/Fade';
+
+
 const Technologys = () => {
+
 	const tecsIcons = [
 		JsIcon,
 		ReactIcon,
@@ -56,11 +59,25 @@ const Technologys = () => {
 				</div>
 			</Fade>
 			<article className='container'>
-				<Bounce top>
-					<h2>Technologys I use </h2>
-				</Bounce>
 				<Reveal bottom>
-					<div className={style.gridTec}>
+					<div className={style.togglersContainer}>
+						<div className={style.toggleDevelopment}>
+							<div className={style.toggleHeader}>
+								<h3>Frontend development</h3>
+								<button> Y </button>
+							</div>
+							<div className={style.toggleContent}>
+								<div className={style.toggleItem}>
+									<h4>HTML5</h4>
+									<HtmlIcon className={style.svgTec} />
+								</div>
+							</div>
+						</div>
+						<div className="toggle-development"></div>
+						<div className="toggle-development"></div>
+					</div>
+
+					{ /*<div className={style.gridTec}>
 						{tecsIcons.map((Tecs, index) => (
 							<div key={index}>
 								<Tecs className={style.svgTec} />
@@ -78,6 +95,7 @@ const Technologys = () => {
 							</div>
 						))}
 					</div>
+						*/}
 				</Reveal>
 			</article>
 		</section>

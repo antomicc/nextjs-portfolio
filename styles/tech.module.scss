@@ -6,6 +6,7 @@
 	padding-top: 7rem;
 	margin-bottom: 1rem;
 	position: relative;
+
 	h2 {
 		margin-bottom: 4rem;
 	}
@@ -33,8 +34,46 @@
 }
 
 .svgTec {
-	width: 100%;
+	width: 80%;
 	margin: 0 auto;
+}
+
+.togglersContainer {
+	width: 100%;
+}
+
+.toggleDevelopment {
+	height: 100%;
+}
+
+.toggleHeader {
+	background-color: $color-maincolors-second;
+	color: $color-maincolors-white;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.toggleContent {
+	background-color: $color-maincolors-neutro;
+	color: $color-maincolors-white;
+	display: flex;
+	flex-direction: column;
+}
+
+.toggleItem {
+	fill: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	height: 6rem;
+	align-content: center;
+	align-items: center;
+
+	h4 {
+		height: min-content;
+	}
 }
 
 .flexOther {
@@ -52,6 +91,7 @@
 	position: absolute;
 	z-index: -1;
 	display: none;
+
 	@include desktop {
 		display: initial;
 	}
@@ -63,6 +103,7 @@
 	right: 15rem;
 	top: 20rem;
 	display: none;
+
 	@include desktop {
 		display: initial;
 	}

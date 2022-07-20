@@ -308,7 +308,7 @@ button {
 	background-color: transparent;
 
 	&::after {
-		background-color: $color-maincolors-sutil;
+		background-color: transparent;
 		content: '';
 		width: 40%;
 		position: absolute;
@@ -316,11 +316,12 @@ button {
 		bottom: 1px;
 		border-width: 0 0 1px;
 		border-style: solid;
+		border-color: transparent;
+		transition: 0.5s all;
 	}
 
-	&:hover {
-		color: rgba($color: #000000, $alpha: 0.4);
-		border: 1px solid rgba($color: #000000, $alpha: 0.4);
+	&:hover &::after {
+		border-color: $color-maincolors-sutil;
 	}
 }
 
@@ -349,7 +350,7 @@ button {
 /* gradients svgs*/
 
 .theme-light {
-	fill: $color-maincolors-dark-1;
+	fill: $color-maincolors-white;
 	background: $color-maincolors-white;
 	color: $color-maincolors-dark-1;
 }

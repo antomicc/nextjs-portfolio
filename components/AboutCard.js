@@ -38,7 +38,7 @@ const AboutCard = () => {
 					<div className={styles.aboutContent}>
 						<div className={styles.sectionImage}>
 							<div className={styles.imageContainer}>
-								<Image className={styles.imageProfile} src={me} />
+								<Image width="250px" height="250px" className={styles.imageProfile} src="https://i.imgur.com/RQAqjmM.png" />
 							</div>
 						</div>
 						{ /*

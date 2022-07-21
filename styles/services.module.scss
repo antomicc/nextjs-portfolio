@@ -11,6 +11,13 @@
 	position: relative;
 }
 
+.containerIcon {
+	font-size: 100px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
 .cards {
 	width: 100%;
 	display: flex;
@@ -31,16 +38,62 @@
 	gap: 1rem;
 	flex-direction: column;
 	padding: 4rem 0;
-	border-radius: 1rem;
+	color: $color-maincolors-white;
 
 	svg {
 		width: 100%;
 	}
+
+	.contentCardContainer {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+.headerCardContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+
+	.titleContent {
+		width: min-intrinsic;
+		width: -webkit-min-content;
+		width: -moz-min-content;
+		width: min-content;
+		display: table-caption;
+		display: -ms-grid;
+		-ms-grid-columns: min-content;
+		margin-left: 0.5rem;
+
+		h3 {
+			word-spacing: 100%;
+			text-align: left;
+		}
+	}
+}
+
+.cardDev {
+	background: $linear-primary;
+}
+
+.cardDesign {
+	background: $linear-brand;
+}
+
+.cardResponsive {
+	background: $linear-secondary;
 }
 
 .infoContent {
-	width: 95%;
-	margin: 0 auto;
+	width: 100%;
+	margin-top: 1.5rem;
+	margin-bottom: 0;
+
+	p {
+		color: $color-maincolors-white;
+		text-align: left;
+	}
 }
 
 .lineContainer {

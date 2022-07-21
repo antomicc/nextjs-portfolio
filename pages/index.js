@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Document from './_document';
 import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
 import imageUrlBuilder from '@sanity/image-url';
@@ -63,6 +64,12 @@ export default function Home({ projects }) {
 
 	return (
 		<>
+			<div>
+				<Head>
+					<title>Josbyte</title>
+					<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				</Head>
+			</div>
 			<main className={(styles.main, `${darkMode ? 'theme-dark' : 'theme-light'}`)}>
 				<Reveal>
 					<Hero />

@@ -1,5 +1,3 @@
-import WebDes from '../components/svgs/tecs/WebDes';
-import WebDev from '../components/svgs/tecs/WebDev';
 import style from '../styles/services.module.scss';
 import svgLine from '../public/Images/Particles/Mask-Group-1.svg';
 import svgDots from '../public/Images/Particles/Mask-Group.svg';
@@ -7,13 +5,18 @@ import Image from 'next/dist/client/image';
 import Zoom from 'react-reveal/Zoom';
 
 const Services = () => {
-	const servicesIcon = [WebDes, WebDev];
+	const servicesIcon = ['ri-terminal-box-line', 'ri-smartphone-fill', 'ri-collage-line'];
 
-	const servicesTitle = ['Web Design', 'Web Development'];
+	const servicesTitle = ['Software Developing', 'Responsive Design', 'Design Interpretation'];
 
 	const servicesText = [
-		'Everything is influenced by the presentation, the design must be friendly and intuitive.',
-		'Development is important to do in an efficient and reusable way',
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi elit commodo feugiat sodales arcu tristique nunc ornare volutpat. ',
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi elit commodo feugiat sodales arcu tristique nunc ornare volutpat. ',
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi elit commodo feugiat sodales arcu tristique nunc ornare volutpat. '
+	];
+
+	const servicesColors = [
+		style.cardDev, style.cardResponsive, style.cardDesign
 	];
 
 	return (
@@ -30,11 +33,19 @@ const Services = () => {
 						{servicesIcon &&
 							servicesIcon.map((Icon, index) => {
 								return (
-									<div key={index} className={style.card}>
-										<Icon className='icon' />
-										<div className={style.infoContent}>
-											<h3> {servicesTitle[index]} </h3>
-											<p> {servicesText[index]} </p>
+									<div key={index} className={`${style.card} ${servicesColors[index]}`}>
+										<div className={style.contentCardContainer}>
+											<div className={style.headerCardContainer}>
+												<div className={style.containerIcon}>
+													<i className={Icon}></i>
+												</div>
+												<div className={style.titleContent}>
+													<h3> {servicesTitle[index]} </h3>
+												</div>
+											</div>
+											<div className={style.infoContent}>
+												<p> {servicesText[index]} </p>
+											</div>
 										</div>
 									</div>
 								);

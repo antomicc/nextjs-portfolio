@@ -17,9 +17,25 @@ import Image from 'next/dist/client/image';
 import Bounce from 'react-reveal/Bounce';
 import Reveal from 'react-reveal/Reveal';
 import Fade from 'react-reveal/Fade';
+import React, { useState, useEffect } from 'react';
+
 
 
 const Technologys = () => {
+
+	const [openD, setOpenD] = useState(false);
+	const [openDS, setOpenDS] = useState(false);
+	const [openB, setOpenB] = useState(false);
+	//const [logoRes, setLogoRes] = useState(false);
+	const handleToggleDev = () => {
+		setOpenD(!openD);
+	};
+	const handleToggleDes = () => {
+		setOpenDS(!openDS);
+	};
+	const handleToggleBack = () => {
+		setOpenB(!openB);
+	};
 
 	const tecsIcons = [
 		JsIcon,
@@ -64,17 +80,39 @@ const Technologys = () => {
 						<div className={style.toggleDevelopment}>
 							<div className={style.toggleHeader}>
 								<h3>Frontend development</h3>
-								<button> Y </button>
+								<button onClick={handleToggleDev} className={`btn-toggle ${openD ? 'is-active' : ''}`}> Y </button>
 							</div>
-							<div className={style.toggleContent}>
+							<div className={`${style.toggleContent} ${openD ? style.openedToggle : ''}`}>
 								<div className={style.toggleItem}>
 									<h4>HTML5</h4>
 									<HtmlIcon className={style.svgTec} />
 								</div>
 							</div>
 						</div>
-						<div className="toggle-development"></div>
-						<div className="toggle-development"></div>
+						<div className={style.toggleDesign}>
+							<div className={style.toggleHeader}>
+								<h3>Design</h3>
+								<button onClick={handleToggleDes} className={`btn-toggle ${openDS ? 'is-active' : ''}`}> Y </button>
+							</div>
+							<div className={`${style.toggleContent} ${openDS ? style.openedToggle : ''}`}>
+								<div className={style.toggleItem}>
+									<h4>HTML5</h4>
+									<HtmlIcon className={style.svgTec} />
+								</div>
+							</div>
+						</div>
+						<div className={style.toggleBackend}>
+							<div className={style.toggleHeader}>
+								<h3>Frontend development</h3>
+								<button onClick={handleToggleBack} className={`btn-toggle ${openB ? 'is-active' : ''}`}> Y </button>
+							</div>
+							<div className={`${style.toggleContent} ${openB ? 'opened-toggle' : ''}`}>
+								<div className={style.toggleItem}>
+									<h4>HTML5</h4>
+									<HtmlIcon className={style.svgTec} />
+								</div>
+							</div>
+						</div>
 					</div>
 
 					{ /*<div className={style.gridTec}>

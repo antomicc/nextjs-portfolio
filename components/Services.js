@@ -25,8 +25,7 @@ const Services = () => {
 				<Image alt='' src={svgDots} width={600} height={450} />
 			</div>
 			<Zoom bottom>
-				<div className='container'>
-					<h2> My services </h2>
+				<div className={style.containerWork}>
 					<div className={style.cards}>
 						{servicesIcon &&
 							servicesIcon.map((Icon, index) => {

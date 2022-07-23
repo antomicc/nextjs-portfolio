@@ -1,6 +1,9 @@
 @import 'Base/mixins';
 @import 'Base/variables';
+
 .projects {
+	width: 90%;
+	margin: 0 auto;
 	padding-top: 7rem;
 	text-align: center;
 	position: relative;
@@ -10,10 +13,12 @@
 	margin-bottom: 3rem;
 	position: relative;
 }
+
 .infoContent {
 	width: 100%;
 	text-align: center;
 	transition: all 0.5s ease-in-out;
+
 	@include desktop {
 		position: absolute;
 		background: $linear-bg-light;
@@ -23,6 +28,7 @@
 		opacity: 0;
 		visibility: hidden;
 		transform: translateY(3rem);
+
 		& h3 {
 			margin-top: 5rem;
 			margin-bottom: 2rem;
@@ -48,6 +54,7 @@
 	&:focus {
 		cursor: grabbing;
 	}
+
 	div {
 		display: flex;
 		flex-direction: column;
@@ -90,8 +97,22 @@
 	bottom: 10rem;
 	display: none;
 	transform: rotate(100deg);
+
 	@include desktop {
 		display: initial;
+	}
+}
+
+.titleContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 2rem;
+
+	h2 {
+		width: 60%;
+		text-align: left;
 	}
 }
 
@@ -101,12 +122,14 @@
 	right: 1rem;
 	top: 3rem;
 	animation: opacityFlecha infinite 3s;
+	visibility: hidden;
 }
 
 .toolsContent {
 	position: absolute;
 	top: 1rem;
 	left: 2rem;
+
 	ul {
 		list-style: none;
 		display: flex;

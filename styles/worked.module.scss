@@ -1,0 +1,54 @@
+.titleContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    h2 {
+        width: 60%;
+        text-align: left;
+    }
+}
+
+.toggleWorkPlaces {
+    height: 100%;
+
+    .toggleHeader {
+        position: relative;
+        background-color: $color-maincolors-second;
+        color: $color-maincolors-white;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        z-index: 2;
+
+        .toggleBtn {
+            display: block;
+            height: 20%;
+            margin: auto 0;
+        }
+    }
+
+    .toggleContent {
+        position: relative;
+        border-radius: 0 0 25px 25px;
+        background-color: $color-maincolors-neutro;
+        color: $color-maincolors-white;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-50%);
+        z-index: 1;
+        transition: 0.5s all;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .openedToggle {
+        transform: translateY(0) !important;
+        height: 100%;
+        opacity: 1;
+    }
+}

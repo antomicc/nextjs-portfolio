@@ -17,6 +17,8 @@ import flechaPNG from '../public/Images/Particles/FLECHA.png';
 import Reveal from 'react-reveal/Reveal';
 import React, { useContext } from 'react';
 import { ThemeContext } from '../components/context/ThemeContext';
+import Worked from '../components/Worked';
+import LineTitle from '../public/Images/Particles/Line.svg'
 
 export default function Home({ projects }) {
 	const [mappedProjects, setMappedProjects] = useState([]);
@@ -78,13 +80,16 @@ export default function Home({ projects }) {
 
 				<Technologys />
 				<Services />
+				<Worked />
 				<section className={styles.projects}>
 					<div className={styles.triangleContainer}>
 						<Image src={svgTriangle} alt='' width={700} height={550} />
 					</div>
 					<div className='container-projects'>
-						<h1>Projects </h1>
-						<h3>Recents projects: </h3>
+						<title className={styles.titleContainer}>
+							<h2> Projects that i build </h2>
+							<Image src={LineTitle} />
+						</title>
 						<div className={styles.contentProjects}>
 							<div className={styles.contentFlecha}>
 								<Image src={flechaPNG} alt='' width={50} height={50} />

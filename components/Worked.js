@@ -13,7 +13,7 @@ const Worked = () => {
 
     const WorkPlace = [
         {
-            'position': 'Web Developer',
+            'Position': 'Web Developer',
             'Place': 'Up Media',
             'Date': '2021 - Present',
             'Description': 'Lorem Ipsum'
@@ -23,17 +23,17 @@ const Worked = () => {
     return (
         <>
             <article className='container'>
-                <title className={style.titleContainer}>
+                <div className={style.titleContainer}>
                     <h2> Where I’ve Worked </h2>
                     <Image src={LineTitle} />
-                </title>
+                </div>
                 <div>
                     {WorkPlace && WorkPlace.map((work, index) => {
                         return (
                             <div key={index} className={style.toggleWorkPlaces}>
                                 <div className={style.toggleHeader}>
                                     <div>
-                                        <h3> {work.position} </h3>
+                                        <h3> {work.Position} </h3>
                                         <sub>{work.Place}</sub>
                                     </div>
                                     <button onClick={handleToggleWork} className={`btn-toggle ${open ? 'is-active' : ''}`}> Y </button>

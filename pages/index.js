@@ -44,7 +44,7 @@ export default function Home({ projects }) {
 		} else {
 			setMappedProjects([]);
 		}
-
+		/*
 		const handleViewSlider = () => {
 			if (window.matchMedia('(min-width: 768px)').matches) {
 				setslideCuantity(2);
@@ -56,26 +56,25 @@ export default function Home({ projects }) {
 			}
 		};
 
+		
 		const mql = window.matchMedia('(min-width: 1024px)');
 		handleViewSlider();
-
+		
 		mql.addEventListener('change', () => {
 			handleViewSlider();
-		});
+		}); */
 	}, [projects]);
 
 	return (
 		<>
-			<div>
-				<Head>
-					<title>Josbyte</title>
-					<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-				</Head>
-			</div>
+			<Head>
+				<title>
+					{"Josbyte"}
+				</title>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+			</Head>
 			<main className={(styles.main, `${darkMode ? 'theme-dark' : 'theme-light'}`)}>
-				<Reveal>
-					<Hero />
-				</Reveal>
+				<Hero />
 				<AboutCard />
 
 				<Technologys />
@@ -86,38 +85,39 @@ export default function Home({ projects }) {
 						<Image src={svgTriangle} alt='' width={700} height={550} />
 					</div>
 					<div className='container-projects'>
-						<title className={styles.titleContainer}>
+						<div className={styles.titleContainer}>
 							<h2> Projects that i build </h2>
 							<Image src={LineTitle} />
-						</title>
+						</div>
 						<div className={styles.contentProjects}>
 							<div className={styles.contentFlecha}>
 								<Image src={flechaPNG} alt='' width={50} height={50} />
 							</div>
-							<Swiper spaceBetween={75} slidesPerView={slideCuantity}>
+							<div className={styles.cardContainer}>
 								{mappedProjects.map((p, index) => (
-									<SwiperSlide key={index} className={styles.cardProject}>
-										<div>
+									<div key={index} className={styles.cardProject}>
+										<div className={styles.imageCardContainer}>
 											<img src={p.imageP} alt={p.title} />
-										</div>
-										<div className={styles.toolsContent}>
-											<ul>
-												{p.tools.map((tool, index) => (
-													<li key={index}> {tool} </li>
-												))}
-											</ul>
+											<div className={styles.toolsContent}>
+												<ul>
+													{p.tools.map((tool, index) => (
+														<li key={index}> {tool} </li>
+													))}
+												</ul>
+											</div>
 										</div>
 										<div className={styles.infoContent}>
-											<h3>{p.title}</h3>
+											<h4>{p.title}</h4>
 											<Link href={`project/${p.slug.current}`}>
 												<button className='btn btn-sutil'>
 													<a> See Project </a>
 												</button>
 											</Link>
 										</div>
-									</SwiperSlide>
+									</div>
 								))}
-							</Swiper>
+							</div>
+
 						</div>
 						<div className='container'>
 							<Link href='/projects'>
@@ -135,7 +135,7 @@ export default function Home({ projects }) {
 
 export const getServerSideProps = async (pageContext) => {
 	const query = encodeURIComponent('*[ _type == "project"][0..3]');
-	const url = `https://${process.env.PROJECT_API_KEY}.api.sanity.io/v1/data/query/production?query=${query}`;
+	const url = `https://${process.env.NEXT_PUBLIC_PROJECT_API_KEY}.api.sanity.io/v1/data/query/production?query=${query}`;
 	const result = await fetch(url).then((res) => res.json());
 
 	if (!result.result) {

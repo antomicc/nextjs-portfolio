@@ -19,6 +19,10 @@
 		line-height: 150%;
 		text-align: left;
 		font-size: 2.2rem;
+
+		@include tablet {
+			font-size: 3rem;
+		}
 	}
 }
 
@@ -30,10 +34,16 @@
 
 	@include tablet {
 		flex-direction: row;
-		justify-content: center;
+		justify-content: flex-start;
+		width: 85%;
+		margin-right: auto;
 
 		& a {
-			width: 15rem;
+			width: 100%;
+
+			& button {
+				width: 100%;
+			}
 		}
 	}
 
@@ -41,7 +51,7 @@
 		justify-content: center;
 
 		& a {
-			width: 15rem;
+			width: 50%;
 		}
 	}
 }

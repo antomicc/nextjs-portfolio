@@ -45,6 +45,14 @@
 	width: 100%;
 	position: absolute;
 	top: -22%;
+
+	@include tablet {
+		top: -30%;
+	}
+
+	@include desktop {
+		display: none;
+	}
 }
 
 .imageContainer {
@@ -54,8 +62,7 @@
 	place-content: center;
 
 	@include tablet {
-		width: 15rem;
-		margin-left: 0;
+		width: 100%;
 	}
 }
 
@@ -85,7 +92,7 @@
 	}
 
 	@include tablet {
-		width: 50%;
+		width: 100%;
 		margin-top: 2rem;
 	}
 

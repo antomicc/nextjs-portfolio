@@ -35,8 +35,11 @@ $linear-third: linear-gradient(268.62deg, #333366 0.27%, #5CCDFE 99.35%);
 $linear-bg-light: linear-gradient(136.18deg, #ffffff 33.84%, #e6e6e6 100%);
 $linear-bg-dark: linear-gradient(136.97deg, #2c2c2c 4.91%, #1c1c1c 100%);
 $linear-sunshine: linear-gradient(268.62deg, #FF6A72 0.27%, #FEA05C 99.35%);
+
+
 /* Media Querys */
 // Tamaño de Media Queries
-$telefono: 480px;
+$telefono: 410px;
 $tablet: 768px;
+$tablet-x: 810px;
 $desktop: 1024px;

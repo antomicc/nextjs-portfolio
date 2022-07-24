@@ -44,7 +44,7 @@
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-	background-color: $color-maincolors-dark-1;
+	background-color: $color-maincolors-white;
 
 	@include desktop {
 		background-color: $color-maincolors-dark-1;

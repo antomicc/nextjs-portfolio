@@ -55,13 +55,13 @@
 	position: relative;
 	margin-bottom: 2rem;
 	text-align: center;
-	background: $linear-bg-light;
+	background: $color-maincolors-white;
 	@include effect-style-main-shadow;
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
 	border-radius: 1rem;
-	z-index: 999;
+	z-index: 100;
 
 	div {
 		display: flex;

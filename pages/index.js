@@ -121,12 +121,19 @@ export default function Home({ projects }) {
 						</div>
 						<div className='container'>
 							<Link href='/projects'>
-								<a className='btn btn-sutil btn-out'> See more </a>
+								<a className='btn btn-sutil'> See more </a>
 							</Link>
 						</div>
 					</div>
 				</section>
-				<FormContact />
+				<section className='Posts'>
+					<div className="container">
+						<div className={styles.titleContainer}>
+							<h2> Latest Posts </h2>
+							<Image src={LineTitle} />
+						</div>
+					</div>
+				</section>
 				<Footer />
 			</main>
 		</>

@@ -24,7 +24,7 @@
 	flex-direction: column;
 	padding-top: 5rem;
 
-	@include tablet {
+	@include desktop {
 		flex-direction: row;
 	}
 }

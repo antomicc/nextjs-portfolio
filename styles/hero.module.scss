@@ -6,6 +6,14 @@
 	position: relative;
 }
 
+.heroLeft {
+	width: 100%;
+
+	@include desktop {
+		width: 60%;
+	}
+}
+
 .intro {
 	width: 100%;
 	display: flex;
@@ -24,6 +32,12 @@
 			font-size: 3rem;
 		}
 	}
+}
+
+.containerHero {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .buttonsGroup {
@@ -73,19 +87,43 @@
 	}
 }
 
+.heroRight {
+	display: none;
+	width: 40%;
+	position: relative;
+
+	@include desktop {
+		display: block;
+	}
+
+	.svgDotsContainer {
+		position: absolute;
+		top: 1rem;
+		right: 0;
+	}
+
+	.imageProfile {
+		position: absolute;
+		top: 14rem;
+		right: 5rem;
+	}
+}
+
+
+
+
 .particle {
 	position: absolute;
 }
 
-.dotsContainer {
-	left: 8rem;
-	top: 35rem;
+.grillaContainer {
+	right: 0rem;
+	top: 0;
 	position: absolute;
-	z-index: -1;
 	display: none;
 
 	@include desktop {
-		display: initial;
+		display: block;
 	}
 }
 

@@ -89,13 +89,13 @@ h3 {
 }
 
 h4 {
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	font-weight: 500;
 	line-height: 150%;
 }
 
-.subtitle {
-	font-size: 1.5rem;
+sub {
+	font-size: 1rem;
 	font-weight: normal;
 	font-style: normal;
 	line-height: 150%;
@@ -334,12 +334,13 @@ button {
 	box-shadow: none;
 	color: $color-maincolors-sutil;
 	transition: all 0.3s ease-in-out;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	border: none;
 	background-color: transparent;
+	padding-bottom: 0.4rem;
 
 	&::after {
-		background-color: transparent;
+		background-color: $color-maincolors-sutil;
 		content: '';
 		width: 40%;
 		position: absolute;
@@ -351,7 +352,7 @@ button {
 		transition: 0.5s all;
 	}
 
-	&:hover &:after {
+	&:hover &::after {
 		border-color: $color-maincolors-sutil;
 		background-color: $color-maincolors-sutil;
 	}

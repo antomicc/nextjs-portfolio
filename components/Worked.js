@@ -27,16 +27,18 @@ const Worked = () => {
                     <h2> Where I’ve Worked </h2>
                     <Image src={LineTitle} />
                 </div>
-                <div>
+                <div className={style.worksContainer}>
                     {WorkPlace && WorkPlace.map((work, index) => {
                         return (
                             <div key={index} className={style.toggleWorkPlaces}>
                                 <div className={style.toggleHeader}>
-                                    <div>
-                                        <h3> {work.Position} </h3>
-                                        <sub>{work.Place}</sub>
+                                    <div className={style.toggleHedContainer}>
+                                        <div>
+                                            <h4> {work.Position} </h4>
+                                            <sub>{work.Place}</sub>
+                                        </div>
+                                        <button onClick={handleToggleWork} className={`btn btn-toggle ${open ? 'is-active' : ''}`}> <i className={open ? 'ri-subtract-line' : "ri-add-line"}></i> </button>
                                     </div>
-                                    <button onClick={handleToggleWork} className={`btn-toggle ${open ? 'is-active' : ''}`}> Y </button>
                                 </div>
                                 <div className={`${style.toggleContent} ${open ? style.openedToggle : ''}`}>
                                     <div className={style.toggleItem}>

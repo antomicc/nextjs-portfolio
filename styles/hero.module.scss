@@ -56,6 +56,23 @@
 	}
 }
 
+.socialButtom {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	left: 0;
+	bottom: 25%;
+	@include effect-style-main-shadow;
+	border-radius: 35px;
+	z-index: 120;
+	background-color: $color-maincolors-white;
+
+	a {
+		font-size: 2rem;
+		padding: 0.2rem 0.6rem;
+	}
+}
+
 .particle {
 	position: absolute;
 }

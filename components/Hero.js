@@ -69,6 +69,19 @@ const Hero = () => {
 					</div>
 				</div>
 			</div>
+			<Fade>
+				<div className={style.socialButtom}>
+					<a href="https://github.com/josbyte-dev">
+						<i className="ri-github-fill"></i>
+					</a>
+					<a href="https://www.instagram.com/_josbyte/">
+						<i className="ri-instagram-fill"></i>
+					</a>
+					<a href="https://www.behance.net/josbyte">
+						<i className="ri-behance-fill"></i>
+					</a>
+				</div>
+			</Fade>
 		</>
 	);
 };

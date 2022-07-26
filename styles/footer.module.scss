@@ -46,6 +46,25 @@
 			opacity: 0.7;
 		}
 	}
+
+	ul {
+		list-style: none;
+		font-size: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		li {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 0.5rem;
+
+			i {
+				font-size: 2rem;
+			}
+		}
+	}
 }
 
 .footerCopy {

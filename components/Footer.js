@@ -1,51 +1,38 @@
 import style from '../styles/footer.module.scss';
-import Giticon from '../components/svgs/social/Github';
-import Behanceicon from '../components/svgs/social/Behance';
-import Linkeicon from '../components/svgs/social/Linkedin';
-import Instaicon from '../components/svgs/social/Instagram';
-import Codepenicon from '../components/svgs/social/Codepen';
-import Twittericon from '../components/svgs/social/Twitter';
+
 
 /* Techs for Footer */
 
-import NextIcon from '../components/svgs/tecs/Next';
-import SassIcon from '../components/svgs/tecs/Sass';
 
 const Footer = () => {
-	const git_HL = 'https://github.com/angelldeev';
-	const Behance_link = 'https://www.behance.net/angeldev';
-	const Linkedin_link = 'https://www.linkedin.com/in/angeldev/';
-	const Instagram_link = 'https://www.instagram.com/angell_dev/';
-	const codepen_link = 'https://codepen.io/your-work/';
-	const twitter_link = 'https://twitter.com/angeldevjs';
-
 	return (
 		<footer className={style.footer}>
 			<div className='container'>
-				<h3>My social media</h3>
+				<h3>Contact</h3>
 				<div className={style.footSocial}>
-					<a href={git_HL} target='_blank' rel='noopener noreferrer'>
-						<Giticon />
-					</a>
-					<a href={Behance_link} target='_blank' rel='noopener noreferrer'>
-						<Behanceicon />
-					</a>
-					<a href={Linkedin_link} target='_blank' rel='noopener noreferrer'>
-						<Linkeicon />
-					</a>
-					<a href={Instagram_link} target='_blank' rel='noopener noreferrer'>
-						<Instaicon />
-					</a>
-					<a href={codepen_link} target='_blank' rel='noopener noreferrer'>
-						<Codepenicon />
-					</a>
-					<a href={twitter_link} target='_blank' rel='noopener noreferrer'>
-						<Twittericon />
-					</a>
+					<ul className={style.socialList}>
+						<li>
+							<i class="ri-twitter-fill"></i>
+							<a href="https://twitter.com/_josbyte">
+								· @_josbyte
+							</a>
+						</li>
+						<li>
+							<i class="ri-linkedin-fill"></i>
+							<a href="">· Josue Ruiz </a>
+						</li>
+						<li>
+							<a href='mailto: angelldev@gmail.com'>
+								Email me!
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Get in touch!
+							</a>
+						</li>
+					</ul>
 				</div>
-				<a href='mailto: angelldev@gmail.com'>
-					<button className='btn btn-sutil btn-out'>Email me!</button>
-				</a>
 			</div>
 			<div className={style.footerCopy}>
 				<div className='container'>

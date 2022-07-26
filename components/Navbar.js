@@ -13,6 +13,10 @@ const Navbar = () => {
 		setOpen(!open);
 	};
 
+	const handleNav = () => {
+		setOpen(false);
+	}
+
 	const theme = useContext(ThemeContext);
 	const darkMode = theme.state.darkMode;
 
@@ -22,15 +26,7 @@ const Navbar = () => {
 	};*/
 
 	useEffect(() => {
-		/* const handleViewNav = () => {
-			if (window.matchMedia('(min-width: 1024px)').matches) {
-				setLogoRes(true);
-			} else {
-				setLogoRes(false);
-			}
-		};
-
-		const mql = window.matchMedia('(min-width: 1024px)');
+		/* const mql = window.matchMedia('(min-width: 1024px)');
 		handleViewNav();
 
 		mql.addEventListener('change', () => {
@@ -51,15 +47,15 @@ const Navbar = () => {
 					</div>
 					<div className={`${style.menuItems} ${open ? style.activeNav : ''}`}>
 						<Link href='/'>
-							<a className='menu-item'> Home </a>
+							<a onClick={handleNav} className='menu-item'> Home </a>
 						</Link>
 						<Link href='/projects'>
-							<a className='menu-item'> Projects </a>
+							<a onClick={handleNav} className='menu-item'> Projects </a>
 						</Link>
-						<a className='menu-item' href='#aboutme'>
+						<a onClick={handleNav} className='menu-item' href='#aboutme'>
 							About
 						</a>
-						<a className='menu-item' href='#contact'>
+						<a onClick={handleNav} className='menu-item' href='#contact'>
 							{' '}
 							Contact
 						</a>

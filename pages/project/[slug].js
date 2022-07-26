@@ -28,13 +28,11 @@ const Project = ({
 
 	return (
 		<section className={styles.slugSection}>
+			<div className={styles.imgContent}>
+				{imageUrl && <img className={styles.imgSlug} src={imageUrl} alt={title} />}
+			</div>
 			<div className='container'>
-				<h1> {title} </h1>
-
-				<div className={styles.imgContent}>
-					{imageUrl && <img className={styles.imgSlug} src={imageUrl} alt={title} />}
-				</div>
-
+				<h2> {title} </h2>
 				<div className='container-projects'>
 					<p className={styles.paragraph}> {description} </p>
 					<div className={styles.informationProjects}>
@@ -45,7 +43,8 @@ const Project = ({
 						</span>
 						<h3>
 							{' '}
-							<strong> Project type: </strong> {projectType}{' '}
+							Project type: {projectType}
+							{' '}
 						</h3>
 						<h4>
 							{' '}
@@ -57,7 +56,7 @@ const Project = ({
 							</a>
 							<a href={repo} rel='noopener noreferrer' target='_blank'>
 								<button className='btn btn-contact'>
-									<Image src={githubIcon} alt='' width={24} height={24} />
+									<i className='ri-github-fill'></i>
 									See the repo!{' '}
 								</button>
 							</a>
@@ -84,7 +83,7 @@ export const getServerSideProps = async (pageContext) => {
 	const query = encodeURIComponent(
 		`*[ _type == "project" && slug.current == "${pageSlug}"]`
 	);
-	const url = `https://${process.env.PROJECT_API_KEY}.api.sanity.io/v1/data/query/production?query=${query}`;
+	const url = `https://${process.env.NEXT_PUBLIC_PROJECT_API_KEY}.api.sanity.io/v1/data/query/production?query=${query}`;
 	const result = await fetch(url).then((res) => res.json());
 	const project = result.result[0];
 

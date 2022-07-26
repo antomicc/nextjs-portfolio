@@ -1,4 +1,4 @@
-import styles from '../styles/projectshome.module.scss';
+import styles from '../styles/Home.module.scss';
 import Footer from '../components/Footer';
 import Image from 'next/image';
 import imageUrlBuilder from '@sanity/image-url';
@@ -51,24 +51,25 @@ export default function Projects({ projects }) {
 	}, [projects]);
 	return (
 		<main className={styles.projectMain}>
-			<h1>Projects</h1>
+			<div className={styles.headerProjects}>
+				<h1>Projects</h1>
+			</div>
 			<section className={styles.projects}>
-				<div className={styles.triangleContainer}>
-					<Image src={svgTriangle} alt='' width={700} height={550} />
-				</div>
 				<div className={styles.projectsSection}>
 					<div className={styles.contentProjects}>
 						{mappedProjects.map((p, index) => (
 							<div key={index} className={styles.cardProject}>
-								<div>
-									<img src={p.imageP} alt={p.title} />
-								</div>
-								<div className={styles.toolsContent}>
-									<ul>
-										{p.tools.map((tool, index) => (
-											<li key={index}> {tool} </li>
-										))}
-									</ul>
+								<div className={styles.imageCardContainer}>
+									<div>
+										<img src={p.imageP} alt={p.title} />
+									</div>
+									<div className={styles.toolsContent}>
+										<ul>
+											{p.tools.map((tool, index) => (
+												<li key={index}> {tool} </li>
+											))}
+										</ul>
+									</div>
 								</div>
 								<div className={styles.infoContent}>
 									<h3>{p.title}</h3>
@@ -90,7 +91,7 @@ export default function Projects({ projects }) {
 
 export const getServerSideProps = async (pageContext) => {
 	const query = encodeURIComponent('*[ _type == "project"]');
-	const url = `https://${process.env.PROJECT_API_KEY}.api.sanity.io/v1/data/query/production?query=${query}`;
+	const url = `https://${process.env.NEXT_PUBLIC_PROJECT_API_KEY}.api.sanity.io/v1/data/query/production?query=${query}`;
 	const result = await fetch(url).then((res) => res.json());
 
 	if (!result.result) {

@@ -12,13 +12,13 @@ const Footer = () => {
 				<div className={style.footSocial}>
 					<ul className={style.socialList}>
 						<li>
-							<i class="ri-twitter-fill"></i>
+							<i className="ri-twitter-fill"></i>
 							<a href="https://twitter.com/_josbyte">
 								· @_josbyte
 							</a>
 						</li>
 						<li>
-							<i class="ri-linkedin-fill"></i>
+							<i className="ri-linkedin-fill"></i>
 							<a href="">· Josue Ruiz </a>
 						</li>
 						<li>

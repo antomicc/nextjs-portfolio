@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import style from '../styles/footer.module.scss';
 
 
@@ -12,24 +13,48 @@ const Footer = () => {
 				<div className={style.footSocial}>
 					<ul className={style.socialList}>
 						<li>
-							<i className="ri-twitter-fill"></i>
-							<a href="https://twitter.com/_josbyte">
-								· @_josbyte
-							</a>
+							<button class="learn-more">
+								<span class="circle" aria-hidden="true">
+									<span class="icon arrow">
+									</span>
+								</span>
+								<a class="button-text" href="https://twitter.com/_josbyte">
+									<i className='icon-footer ri-twitter-line'></i>
+									@_josbyte
+								</a>
+							</button>
 						</li>
 						<li>
-							<i className="ri-linkedin-fill"></i>
-							<a href="">· Josue Ruiz </a>
+							<button class="learn-more">
+								<span class="circle" aria-hidden="true">
+									<span class="icon arrow">
+									</span>
+								</span>
+								<a class="button-text" href="https://twitter.com/_josbyte">
+									<i className='icon-footer ri-linkedin-fill'></i>
+									Josue Ruiz
+								</a>
+							</button>
+						</li>
+					</ul>
+					<ul className={style.listContact}>
+						<li>
+							<button class="learn-more">
+								<span class="circle" aria-hidden="true">
+									<span class="icon arrow"></span>
+								</span>
+								<a href='mailto: angelldev@gmail.com' class="button-text">Email me!</a>
+							</button>
 						</li>
 						<li>
-							<a href='mailto: angelldev@gmail.com'>
-								Email me!
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								Get in touch!
-							</a>
+							<button class="learn-more">
+								<span class="circle" aria-hidden="true">
+									<span class="icon arrow"></span>
+								</span>
+								<Link href={'/contact'}>
+									<a class="button-text">Get in touch!</a>
+								</Link>
+							</button>
 						</li>
 					</ul>
 				</div>

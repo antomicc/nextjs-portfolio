@@ -32,37 +32,46 @@ const Project = ({
 				{imageUrl && <img className={styles.imgSlug} src={imageUrl} alt={title} />}
 			</div>
 			<div className='container'>
-				<h2> {title} </h2>
-				<div className='container-projects'>
-					<p className={styles.paragraph}> {description} </p>
-					<div className={styles.informationProjects}>
-						<span>
-							{' '}
-							<strong> Finished: </strong>
-							{new Date(date).toLocaleDateString()}
-						</span>
-						<h3>
-							{' '}
-							Project type: {projectType}
-							{' '}
-						</h3>
-						<h4>
-							{' '}
-							<strong> Place: </strong> {place}
-						</h4>
-						<div className={styles.buttons}>
-							<a href={link} rel='noopener noreferrer' target='_blank'>
-								<button className='btn btn-positive'> See live preview! </button>
-							</a>
-							<a href={repo} rel='noopener noreferrer' target='_blank'>
-								<button className='btn btn-contact'>
-									<i className='ri-github-fill'></i>
-									See the repo!{' '}
-								</button>
-							</a>
+				<div className={styles.proyectContainer}>
+					<div className={styles.imageContent}>
+						<div className={styles.imageContainerProyect}>
+							{imageUrl && <img className={styles.imgSlug} src={imageUrl} alt={title} />}
 						</div>
-						<h4>Tools</h4>
-						<ul>{tools && tools.map((el, index) => <li key={index}> {el} </li>)}</ul>
+					</div>
+					<div className={styles.contentDescription}>
+						<h2> {title} </h2>
+						<div className='container-projects'>
+							<p className={styles.paragraph}> {description} </p>
+							<div className={styles.informationProjects}>
+								<span>
+									{' '}
+									<strong> Finished: </strong>
+									{new Date(date).toLocaleDateString()}
+								</span>
+								<h3>
+									{' '}
+									Project type: {projectType}
+									{' '}
+								</h3>
+								<h4>
+									{' '}
+									<strong> Place: </strong> {place}
+								</h4>
+								<div className={styles.buttons}>
+									<a href={link} rel='noopener noreferrer' target='_blank'>
+										<button className='btn btn-positive'> See live preview! </button>
+									</a>
+									<a href={repo} rel='noopener noreferrer' target='_blank'>
+										<button className='btn btn-contact'>
+											<i className='ri-github-fill'></i>
+											See the repo!{' '}
+										</button>
+									</a>
+								</div>
+								<h4>Tools</h4>
+								<ul>{tools && tools.map((el, index) => <li key={index}> {el} </li>)}</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

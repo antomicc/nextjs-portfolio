@@ -138,29 +138,36 @@ const Technologys = () => {
 			</Fade>
 			<article className='container'>
 				<Reveal bottom>
-					<div className={style.togglersContainer}>
-						{
-							technologys.map((tecs, index) => (
-								<div key={index} className={tecs.cssClass}>
-									<div className={style.toggleHeader}>
-										<div className={style.toggleHedContainer}>
-											<h4>{tecs.title}</h4>
-											<button onClick={tecs.handler} className={`btn btn-toggle ${tecs.toggler ? 'is-active' : ''}`}> <i className={tecs.toggler ? 'ri-subtract-line' : "ri-add-line"}></i> </button>
+					<div className={style.tecsContainer}>
+						<div className={style.imageTecs}>
+							<div className={style.imageContainerTechRobot}>
+								<Image alt='' src='https://i.imgur.com/nrFCgQS.png' width={500} height={400} />
+							</div>
+						</div>
+						<div className={style.togglersContainer}>
+							{
+								technologys.map((tecs, index) => (
+									<div key={index} className={tecs.cssClass}>
+										<div className={style.toggleHeader}>
+											<div className={style.toggleHedContainer}>
+												<h4>{tecs.title}</h4>
+												<button onClick={tecs.handler} className={`btn btn-toggle ${tecs.toggler ? 'is-active' : ''}`}> <i className={tecs.toggler ? 'ri-subtract-line' : "ri-add-line"}></i> </button>
+											</div>
+										</div>
+										<div className={`${style.toggleContent} ${tecs.toggler ? style.openedToggle : ''}`}>
+											{
+												tecs.tools.map((tool, index) => (
+													<div key={index} className={style.toggleItem}>
+														<i className={tool.icon}></i>
+														<h4>{tool.name}</h4>
+													</div>
+												))
+											}
 										</div>
 									</div>
-									<div className={`${style.toggleContent} ${tecs.toggler ? style.openedToggle : ''}`}>
-										{
-											tecs.tools.map((tool, index) => (
-												<div key={index} className={style.toggleItem}>
-													<i className={tool.icon}></i>
-													<h4>{tool.name}</h4>
-												</div>
-											))
-										}
-									</div>
-								</div>
-							))
-						}
+								))
+							}
+						</div>
 					</div>
 				</Reveal>
 			</article>

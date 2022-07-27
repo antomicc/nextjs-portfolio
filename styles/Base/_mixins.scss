@@ -15,6 +15,25 @@
 		@content;
 	}
 }
+
+@mixin desktop-l {
+	@media (min-width: #{$desktop-l}) {
+		@content;
+	}
+}
+
+@mixin desktop-xl {
+	@media (min-width: #{$desktop-xl}) {
+		@content;
+	}
+}
+
+@mixin desktop-fhd {
+	@media (min-width: #{$desktop-fhd}) {
+		@content;
+	}
+}
+
 @mixin grid($columnas, $espaciado) {
 	display: grid;
 	gap: $espaciado;

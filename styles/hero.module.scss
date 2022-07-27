@@ -100,12 +100,32 @@
 		position: absolute;
 		top: 1rem;
 		right: 0;
+
+		@include desktop-fhd {
+			right: 5rem;
+			top: 0;
+			width: 75%;
+		}
 	}
 
 	.imageProfile {
 		position: absolute;
 		top: 14rem;
 		right: 5rem;
+
+		@include desktop-l {
+			right: 4rem;
+		}
+
+		@include desktop-xl {
+			right: 5.5rem;
+			top: 16rem;
+		}
+
+		@include desktop-fhd {
+			right: 10rem;
+			top: 16rem;
+		}
 	}
 }
 

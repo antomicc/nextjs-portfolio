@@ -7,6 +7,10 @@
 	h2 {
 		text-align: left;
 	}
+
+	@include desktop {
+		padding-top: 10rem;
+	}
 }
 
 .imgContent {
@@ -16,6 +20,29 @@
 	margin-bottom: 3rem;
 	border-radius: 1rem;
 	background-color: $color-maincolors-white;
+
+	@include desktop {
+		display: none;
+	}
+}
+
+.proyectContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.imageContent {
+	display: none;
+	width: 45%;
+
+	@include desktop {
+		display: block;
+	}
+}
+
+.contentDescription {
+	width: 50%;
 }
 
 .imgSlug {

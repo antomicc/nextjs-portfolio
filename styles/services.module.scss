@@ -1,14 +1,26 @@
 @import 'Base/mixins';
 @import 'Base/variables';
 
-.containerWork {
-	width: 100%;
-}
-
 .services {
 	width: 100%;
 	position: relative;
+
+	@include desktop {
+		width: 75%;
+		margin: 0 auto;
+	}
 }
+
+.containerWork {
+	width: 100%;
+
+
+	@include desktop {
+		position: absolute;
+		bottom: -25rem;
+	}
+}
+
 
 .containerIcon {
 	font-size: 100px;
@@ -39,12 +51,21 @@
 	padding: 4rem 0;
 	color: $color-maincolors-white;
 
+	@include desktop {
+		padding: 2rem 0;
+	}
+
 	svg {
 		width: 100%;
 	}
 
 	.contentCardContainer {
 		width: 90%;
+		margin: 0 auto;
+	}
+
+	@include desktop {
+		width: 33.33%;
 		margin: 0 auto;
 	}
 }
@@ -54,6 +75,7 @@
 	flex-direction: row;
 	justify-content: left;
 	align-items: center;
+
 
 	.titleContent {
 		width: min-intrinsic;
@@ -65,9 +87,18 @@
 		-ms-grid-columns: min-content;
 		margin-left: 0.5rem;
 
+		@include desktop {
+			margin-left: 0.1rem;
+		}
+
 		h3 {
 			word-spacing: 100%;
 			text-align: left;
+
+
+			@include desktop {
+				font-size: 1.6rem;
+			}
 		}
 	}
 }
@@ -92,6 +123,14 @@
 	p {
 		color: $color-maincolors-white;
 		text-align: left;
+
+		@include desktop {
+			font-size: 1.3rem;
+		}
+	}
+
+	@include desktop {
+		margin-top: 0.5rem;
 	}
 }
 

@@ -21,12 +21,6 @@ const Services = () => {
 
 	return (
 		<div className={style.services}>
-			<div className={style.lineContainer}>
-				<Image alt='' src={svgLine} width={300} height={150} />
-			</div>
-			<div className={style.dotsContainer}>
-				<Image alt='' src={svgDots} width={600} height={450} />
-			</div>
 			<Zoom bottom>
 				<div className={style.containerWork}>
 					<div className={style.cards}>

@@ -18,7 +18,7 @@ import Reveal from 'react-reveal/Reveal';
 import React, { useContext } from 'react';
 import { ThemeContext } from '../components/context/ThemeContext';
 import Worked from '../components/Worked';
-import LineTitle from '../public/Images/Particles/Line.svg'
+import LineTitle from '../public/Images/Particles/LineDark.svg'
 
 export default function Home({ projects }) {
 	const [mappedProjects, setMappedProjects] = useState([]);

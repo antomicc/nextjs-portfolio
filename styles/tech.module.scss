@@ -21,8 +21,10 @@
 }
 
 .tecsContainer {
+	width: 100%;
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 }
 
 .imageTecs {
@@ -102,13 +104,23 @@
 		opacity: 0;
 		height: 0;
 		overflow: hidden;
+
+		@include desktop {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(5, 1fr);
+		}
 	}
 
 	.openedToggle {
 		//transform: translateY(0) !important;
 		height: 100%;
 		opacity: 1;
-		padding: 2rem 0;
+		margin-bottom: 1rem;
+
+		@include desktop {
+			height: 18rem;
+		}
 	}
 }
 
@@ -158,6 +170,12 @@
 		opacity: 0;
 		height: 0;
 		overflow: hidden;
+
+		@include desktop {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+		}
 	}
 
 	.openedToggle {
@@ -165,6 +183,10 @@
 		height: 100%;
 		opacity: 1;
 		padding-bottom: 2rem;
+
+		@include desktop {
+			height: 10rem;
+		}
 	}
 }
 
@@ -216,6 +238,12 @@
 		height: 0;
 		overflow: hidden;
 		border: 0.5px solid $color-maincolors-sutil;
+
+		@include desktop {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+		}
 	}
 
 	.openedToggle {
@@ -223,6 +251,10 @@
 		height: 100%;
 		opacity: 1;
 		padding-bottom: 2rem;
+
+		@include desktop {
+			height: 10rem;
+		}
 	}
 }
 

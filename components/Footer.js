@@ -13,24 +13,24 @@ const Footer = () => {
 				<div className={style.footSocial}>
 					<ul className={style.socialList}>
 						<li>
-							<button class="learn-more">
-								<span class="circle" aria-hidden="true">
-									<span class="icon arrow">
+							<button className="learn-more">
+								<span className="circle" aria-hidden="true">
+									<span className="icon arrow">
 									</span>
 								</span>
-								<a class="button-text" href="https://twitter.com/_josbyte">
+								<a className="button-text" href="https://twitter.com/_josbyte">
 									<i className='icon-footer ri-twitter-line'></i>
 									@_josbyte
 								</a>
 							</button>
 						</li>
 						<li>
-							<button class="learn-more">
-								<span class="circle" aria-hidden="true">
-									<span class="icon arrow">
+							<button className="learn-more">
+								<span className="circle" aria-hidden="true">
+									<span className="icon arrow">
 									</span>
 								</span>
-								<a class="button-text" href="https://twitter.com/_josbyte">
+								<a className="button-text" href="https://www.linkedin.com/in/josbyte">
 									<i className='icon-footer ri-linkedin-fill'></i>
 									Josue Ruiz
 								</a>
@@ -39,20 +39,20 @@ const Footer = () => {
 					</ul>
 					<ul className={style.listContact}>
 						<li>
-							<button class="learn-more">
-								<span class="circle" aria-hidden="true">
-									<span class="icon arrow"></span>
+							<button className="learn-more">
+								<span className="circle" aria-hidden="true">
+									<span className="icon arrow"></span>
 								</span>
-								<a href='mailto: angelldev@gmail.com' class="button-text">Email me!</a>
+								<a href='mailto: angelldev@gmail.com' className="button-text">Email me!</a>
 							</button>
 						</li>
 						<li>
-							<button class="learn-more">
-								<span class="circle" aria-hidden="true">
-									<span class="icon arrow"></span>
+							<button className="learn-more">
+								<span className="circle" aria-hidden="true">
+									<span className="icon arrow"></span>
 								</span>
 								<Link href={'/contact'}>
-									<a class="button-text">Get in touch!</a>
+									<a className="button-text">Get in touch!</a>
 								</Link>
 							</button>
 						</li>

@@ -5,6 +5,8 @@
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
+	padding-bottom: 3rem;
+
 	@include tablet {
 		flex-direction: row;
 	}
@@ -15,7 +17,7 @@
 	position: relative;
 	width: 100%;
 	height: 100%;
-	margin-top: 7rem;
+
 	@include tablet {
 		display: initial;
 		width: 50%;
@@ -23,7 +25,11 @@
 }
 
 .titleForm {
-	margin-top: 25rem;
+	color: $color-maincolors-white  !important;
+
+	@include desktop {
+		display: none;
+	}
 }
 
 .formC {
@@ -39,9 +45,15 @@
 	textarea {
 		resize: none;
 	}
+}
+
+.inputNames {
+	display: flex;
+	flex-direction: column;
 
 	@include tablet {
-		width: 50%;
+		flex-direction: row;
+		gap: 1rem;
 	}
 }
 
@@ -57,6 +69,7 @@
 		border: 1px solid $color-maincolors-dark-1;
 		background-color: #fff;
 		outline-color: $color-maincolors-second;
+
 		&::placeholder {
 			color: rgba($color: #000000, $alpha: 0.6);
 		}
@@ -96,6 +109,7 @@
 		}
 	}
 }
+
 .contactSSS {
 	position: relative;
 	width: 100%;
@@ -111,6 +125,7 @@
 	left: 0;
 	z-index: -1;
 	width: auto;
+
 	@include tablet {
 		left: 0rem;
 		top: -20rem;

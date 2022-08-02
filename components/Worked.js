@@ -16,7 +16,7 @@ const Worked = () => {
             'Position': 'Web Developer',
             'Place': 'Up Media',
             'Date': '2021 - Present',
-            'Description': 'Lorem Ipsum'
+            'Description': 'At UpMedia I currently work as a Web Developer developing landing pages, e-commerce for different clients, I have also worked on corporate email layout, CSS layout, WordPress development subject to Custom Themes.'
         }
     ]
 

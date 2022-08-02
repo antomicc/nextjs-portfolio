@@ -100,6 +100,13 @@
 		position: absolute;
 		top: 1rem;
 		right: 0;
+		z-index: 2;
+		animation: animateDotsHero 15s linear infinite;
+
+		@include desktop-xl {
+			right: 1rem;
+			top: 0;
+		}
 
 		@include desktop-fhd {
 			right: 5rem;
@@ -110,16 +117,18 @@
 
 	.imageProfile {
 		position: absolute;
-		top: 14rem;
-		right: 5rem;
+		width: 90%;
+		top: 12rem;
+		right: 3rem;
+		z-index: 1;
 
 		@include desktop-l {
-			right: 4rem;
+			right: 2rem;
 		}
 
 		@include desktop-xl {
-			right: 5.5rem;
-			top: 16rem;
+			right: 3rem;
+			top: 12rem;
 		}
 
 		@include desktop-fhd {
@@ -171,6 +180,10 @@
 	}
 }
 
+.animationDot {
+	animation: animateDotsHero 5s linear infinite;
+}
+
 /*
 
 @keyframes animatedGradient {
@@ -186,3 +199,18 @@
 	}
 }
 */
+/* Animation Dots */
+
+@keyframes animateDotsHero {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+
+	0% {
+		transform: rotate(0);
+	}
+}

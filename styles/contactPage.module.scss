@@ -1,0 +1,70 @@
+@import 'Base/mixins';
+@import 'Base/variables';
+
+.mainContact {
+    background-color: $color-maincolors-second;
+    height: 100vh;
+}
+
+.contactContent {
+    display: flex;
+    flex-direction: column;
+    padding-top: 7rem;
+
+    @include desktop {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.contactParraf {
+    display: none;
+
+    @include desktop {
+        display: block;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .textContent {
+        width: 85%;
+
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .svgLineContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            width: 100%;
+        }
+
+        .faceContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            width: 100%;
+        }
+    }
+
+    h2 {
+        text-align: left;
+        color: $color-maincolors-white;
+        font-size: 2.5rem;
+    }
+
+    span {
+        text-align: left;
+    }
+
+    p {
+        color: $color-maincolors-white;
+    }
+
+}

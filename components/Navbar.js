@@ -55,10 +55,12 @@ const Navbar = () => {
 						<a onClick={handleNav} className='menu-item' href='#aboutme'>
 							About
 						</a>
-						<a onClick={handleNav} className='menu-item' href='#contact'>
-							{' '}
-							Contact
-						</a>
+						<Link href='/contact'>
+							<a onClick={handleNav} className='menu-item'>
+								{' '}
+								Contact
+							</a>
+						</Link>
 					</div>
 					<button
 						onClick={handleToggle}

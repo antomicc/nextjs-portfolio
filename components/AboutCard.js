@@ -1,14 +1,7 @@
 import { useContext } from 'react';
 import { ThemeContext } from './context/ThemeContext';
 import styles from '../styles/about.module.scss';
-import me from '../public/Images/me.png';
 import Image from 'next/image';
-import GithubS from '../components/svgs/social/Github';
-import InstaS from '../components/svgs/social/Instagram';
-import LinkedinS from '../components/svgs/social/Linkedin';
-import BehanceS from '../components/svgs/social/Behance';
-import svgLine from '../public/Images/Particles/Mask-Group-1.svg';
-import svgTriangle from '../public/Images/Particles/Polygon-6.svg';
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 
@@ -28,7 +21,7 @@ const AboutCard = () => {
 					<div className={styles.aboutContent}>
 						<div className={styles.sectionImage}>
 							<div className={styles.imageContainer}>
-								<Image width="250px" height="250px" className={styles.imageProfile} src="https://i.imgur.com/RQAqjmM.png" />
+								<Image width="250px" height="250px" className={styles.imageProfile} src="https://i.imgur.com/0xC1ejw.png" />
 							</div>
 						</div>
 						<div className={styles.textAbout}>

@@ -11,7 +11,6 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import FormContact from '../components/FormContact';
 import Footer from '../components/Footer';
-import svgTriangle from '../public/Images/Particles/Polygon-6.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import flechaPNG from '../public/Images/Particles/FLECHA.png';
 import Reveal from 'react-reveal/Reveal';
@@ -81,9 +80,6 @@ export default function Home({ projects }) {
 				<Services />
 				<Worked />
 				<section className={styles.projects}>
-					<div className={styles.triangleContainer}>
-						<Image src={svgTriangle} alt='' width={700} height={550} />
-					</div>
 					<div className='container-projects'>
 						<div className={styles.titleContainer}>
 							<h2> Projects that i build </h2>

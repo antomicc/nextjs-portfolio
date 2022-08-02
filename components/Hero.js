@@ -2,8 +2,8 @@ import style from '../styles/hero.module.scss';
 import Image from 'next/image';
 import SvgGrilla from '../public/Images/Particles/Grilla.svg';
 import SvgDots from '../public/Images/Particles/dots-home.svg';
-import svgTriangle from '../public/Images/Particles/Polygon-6.svg';
 import Fade from 'react-reveal/Fade';
+import Link from 'next/link';
 
 const Hero = () => {
 	return (
@@ -51,9 +51,9 @@ const Hero = () => {
 								</section>
 							</div>
 							<div className={style.buttonsGroup}>
-								<a href='#contact'>
+								<Link href='/contact'>
 									<button className='btn btn-brand'>Contact me</button>
-								</a>
+								</Link>
 								<a href='#aboutme'>
 									<button className='btn btn-sutil'> About me</button>{' '}
 								</a>
@@ -64,7 +64,7 @@ const Hero = () => {
 								<Image className={style.svgDots} alt='' src={SvgDots} width={800} height={1500} />
 							</div>
 							<div className={style.imageProfile} >
-								<Image width="250px" height="250px" src="https://i.imgur.com/RQAqjmM.png" />
+								<Image width="650px" height="650px" src="https://i.imgur.com/0xC1ejw.png" />
 							</div>
 						</div>
 					</div>

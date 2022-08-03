@@ -105,15 +105,12 @@ export default function Home({ projects }) {
 										<div className={styles.infoContent}>
 											<h4>{p.title}</h4>
 											<Link href={`project/${p.slug.current}`}>
-												<button className='btn btn-sutil'>
-													<a> See Project </a>
-												</button>
+												<i className='ri-arrow-right-line'></i>
 											</Link>
 										</div>
 									</div>
 								))}
 							</div>
-
 						</div>
 						<div className='container'>
 							<Link href='/projects'>

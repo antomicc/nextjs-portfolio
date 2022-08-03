@@ -4,7 +4,6 @@ import Image from 'next/image';
 import imageUrlBuilder from '@sanity/image-url';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import svgTriangle from '../public/Images/Particles/Polygon-6.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Reveal from 'react-reveal/Reveal';
 
@@ -55,33 +54,27 @@ export default function Projects({ projects }) {
 				<h1>Projects</h1>
 			</div>
 			<section className={styles.projects}>
-				<div className={styles.projectsSection}>
-					<div className={styles.contentProjects}>
-						{mappedProjects.map((p, index) => (
-							<div key={index} className={styles.cardProject}>
-								<div className={styles.imageCardContainer}>
-									<div>
-										<img src={p.imageP} alt={p.title} />
-									</div>
-									<div className={styles.toolsContent}>
-										<ul>
-											{p.tools.map((tool, index) => (
-												<li key={index}> {tool} </li>
-											))}
-										</ul>
-									</div>
-								</div>
-								<div className={styles.infoContent}>
-									<h3>{p.title}</h3>
-									<Link href={`project/${p.slug.current}`}>
-										<button className='btn btn-sutil'>
-											<a> See Project </a>
-										</button>
-									</Link>
+				<div className={styles.cardContainer}>
+					{mappedProjects.map((p, index) => (
+						<div key={index} className={styles.cardProject}>
+							<div className={styles.imageCardContainer}>
+								<img src={p.imageP} alt={p.title} />
+								<div className={styles.toolsContent}>
+									<ul>
+										{p.tools.map((tool, index) => (
+											<li key={index}> {tool} </li>
+										))}
+									</ul>
 								</div>
 							</div>
-						))}
-					</div>
+							<div className={styles.infoContent}>
+								<h4>{p.title}</h4>
+								<Link href={`project/${p.slug.current}`}>
+									<i className='ri-arrow-right-line'></i>
+								</Link>
+							</div>
+						</div>
+					))}
 				</div>
 			</section>
 			<Footer />

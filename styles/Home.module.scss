@@ -34,26 +34,47 @@
 	margin: 0 auto;
 	text-align: center;
 	transition: all 0.5s ease-in-out;
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	height: 15rem;
+	background: rgb(2, 2, 4);
+	background: linear-gradient(0deg, rgba(2, 2, 4, 1) 11%, rgba(0, 212, 255, 0) 100%);
 
 	@include desktop {
-		position: absolute;
-		background: rgba(0, 0, 0, 0.9);
-		height: 18rem;
+		height: 15rem;
 		bottom: 0rem;
-		border-radius: 1rem;
-		filter: blur(1);
-		visibility: hidden;
-		transform: translateY(3rem);
-
-		& h4 {
-			margin-top: 5rem;
-			margin-bottom: 2rem;
-			color: $color-maincolors-white;
-		}
+		opacity: 0;
 	}
 
 	h4 {
 		text-align: center;
+		width: 60%;
+		color: white;
+		padding-bottom: 1rem;
+		margin-left: 1rem;
+		/*animation hover*/
+		opacity: 0;
+		transform: translateY(1rem);
+		transition: all 0.5s ease-in-out;
+		transition-delay: 0.3s;
+	}
+
+	i {
+		font-size: 54px;
+		color: white;
+		padding-bottom: 1rem;
+		padding-right: 1.5rem;
+		cursor: pointer;
+
+		/*animation hover*/
+		opacity: 0;
+		transform: translateX(1rem);
+		transition: all 0.5s ease-in-out;
+		transition-delay: 0.6s;
 	}
 }
 
@@ -72,7 +93,7 @@
 
 .cardProject {
 	width: 100%;
-	height: 100%;
+	height: 25rem;
 	position: relative;
 	margin-bottom: 2rem;
 	text-align: center;
@@ -81,18 +102,10 @@
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
-	border-radius: 1rem;
-	z-index: 100;
-
-	div {
-		display: flex;
-		flex-direction: column;
-		//gap: 1rem;
-	}
-
+	z-index: 200;
 
 	img {
-		object-fit: contain !important;
+		object-fit: cover !important;
 		border-radius: 1rem;
 		margin-top: 1rem;
 		width: 100%;
@@ -117,8 +130,16 @@
 
 	&:hover .infoContent {
 		opacity: 1;
-		visibility: visible;
+	}
+
+	&:hover .infoContent h4 {
+		opacity: 1;
 		transform: translateY(0);
+	}
+
+	&:hover .infoContent i {
+		opacity: 1;
+		transform: translateX(0);
 	}
 }
 
@@ -160,12 +181,12 @@
 .imageCardContainer {
 	width: 100%;
 	position: relative;
-	height: 15rem;
+	height: 100%;
 }
 
 .toolsContent {
 	position: absolute;
-	bottom: 0.5rem;
+	top: 1rem;
 	left: 2rem;
 
 	ul {

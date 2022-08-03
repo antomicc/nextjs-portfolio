@@ -18,7 +18,9 @@ const Hero = () => {
 					<div className={style.containerHero}>
 						<div className={style.heroLeft}>
 							<div className={style.intro}>
-								<h3>Hi There!</h3>
+								<Fade left cascade>
+									<h3>Hi There!</h3>
+								</Fade>
 								<section className='section-process'>
 									<div className='section-container'>
 										<div className='process-steps-container container-medium with-padding'>
@@ -63,9 +65,11 @@ const Hero = () => {
 							<div className={style.svgDotsContainer}>
 								<Image className={style.svgDots} alt='' src={SvgDots} width={800} height={1500} />
 							</div>
-							<div className={style.imageProfile} >
-								<Image width="650px" height="650px" src="https://i.imgur.com/0xC1ejw.png" />
-							</div>
+							<Fade top cascade>
+								<div className={style.imageProfile} >
+									<Image width="650px" height="650px" src="https://i.imgur.com/0xC1ejw.png" />
+								</div>
+							</Fade>
 						</div>
 					</div>
 

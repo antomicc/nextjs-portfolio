@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Document from './_document';
 import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
 import imageUrlBuilder from '@sanity/image-url';
@@ -9,11 +8,9 @@ import AboutCard from '../components/AboutCard';
 import Services from '../components/Services';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import FormContact from '../components/FormContact';
 import Footer from '../components/Footer';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import flechaPNG from '../public/Images/Particles/FLECHA.png';
-import Reveal from 'react-reveal/Reveal';
+import { Fade } from 'react-reveal';
 import React, { useContext } from 'react';
 import { ThemeContext } from '../components/context/ThemeContext';
 import Worked from '../components/Worked';
@@ -89,28 +86,30 @@ export default function Home({ projects }) {
 							<div className={styles.contentFlecha}>
 								<Image src={flechaPNG} alt='' width={50} height={50} />
 							</div>
-							<div className={styles.cardContainer}>
-								{mappedProjects.map((p, index) => (
-									<div key={index} className={styles.cardProject}>
-										<div className={styles.imageCardContainer}>
-											<img src={p.imageP} alt={p.title} />
-											<div className={styles.toolsContent}>
-												<ul>
-													{p.tools.map((tool, index) => (
-														<li key={index}> {tool} </li>
-													))}
-												</ul>
+							<Fade bottom big cascade>
+								<div className={styles.cardContainer}>
+									{mappedProjects.map((p, index) => (
+										<div key={index} className={styles.cardProject}>
+											<div className={styles.imageCardContainer}>
+												<img src={p.imageP} alt={p.title} />
+												<div className={styles.toolsContent}>
+													<ul>
+														{p.tools.map((tool, index) => (
+															<li key={index}> {tool} </li>
+														))}
+													</ul>
+												</div>
+											</div>
+											<div className={styles.infoContent}>
+												<h4>{p.title}</h4>
+												<Link href={`project/${p.slug.current}`}>
+													<i className='ri-arrow-right-line'></i>
+												</Link>
 											</div>
 										</div>
-										<div className={styles.infoContent}>
-											<h4>{p.title}</h4>
-											<Link href={`project/${p.slug.current}`}>
-												<i className='ri-arrow-right-line'></i>
-											</Link>
-										</div>
-									</div>
-								))}
-							</div>
+									))}
+								</div>
+							</Fade>
 						</div>
 						<div className='container'>
 							<Link href='/projects'>

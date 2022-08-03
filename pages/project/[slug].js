@@ -2,7 +2,6 @@ import imageUrlBuilder from '@sanity/image-url';
 import { useState, useEffect } from 'react';
 import styles from '../../styles/slug.module.scss';
 import Image from 'next/dist/client/image';
-import githubIcon from '../../public/Images/Illustrations/gitHubicon.svg';
 import Footer from '../../components/Footer';
 const Project = ({
 	title,

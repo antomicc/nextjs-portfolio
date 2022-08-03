@@ -1,6 +1,7 @@
 import style from '../styles/services.module.scss';
 import Image from 'next/dist/client/image';
 import Zoom from 'react-reveal/Zoom';
+import { Slide } from 'react-reveal';
 
 const Services = () => {
 	const servicesIcon = ['ri-terminal-box-line', 'ri-smartphone-fill', 'ri-collage-line'];
@@ -19,8 +20,8 @@ const Services = () => {
 
 	return (
 		<div className={style.services}>
-			<Zoom bottom>
-				<div className={style.containerWork}>
+			<div className={style.containerWork}>
+				<Slide bottom cascade>
 					<div className={style.cards}>
 						{servicesIcon &&
 							servicesIcon.map((Icon, index) => {
@@ -43,8 +44,8 @@ const Services = () => {
 								);
 							})}
 					</div>
-				</div>
-			</Zoom>
+				</Slide>
+			</div>
 		</div>
 	);
 };

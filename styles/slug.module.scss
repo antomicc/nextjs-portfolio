@@ -42,7 +42,11 @@
 }
 
 .contentDescription {
-	width: 50%;
+	width: 100%;
+
+	@include desktop {
+		width: 50%;
+	}
 }
 
 .imgSlug {

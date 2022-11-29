@@ -39,11 +39,15 @@ const Navbar = () => {
 			<div className='container'>
 				<div className={style.navItem}>
 					<div className={style.logo}>
-						<Image
-							className={style.logoNav}
-							src={logoJosbyte}
-							alt='logo-png'
-						/>
+						<Link href={'/'}>
+							<a>
+								<Image
+									className={style.logoNav}
+									src={logoJosbyte}
+									alt='logo-png'
+								/>
+							</a>
+						</Link>
 					</div>
 					<div className={`${style.menuItems} ${open ? style.activeNav : ''}`}>
 						<Link href='/'>

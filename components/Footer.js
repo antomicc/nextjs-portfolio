@@ -19,8 +19,7 @@ const Footer = () => {
 									</span>
 								</span>
 								<a className="button-text" href="https://twitter.com/_josbyte">
-									<i className='icon-footer ri-twitter-line'></i>
-									@_josbyte
+									TWITTER
 								</a>
 							</button>
 						</li>
@@ -31,8 +30,7 @@ const Footer = () => {
 									</span>
 								</span>
 								<a className="button-text" href="https://www.linkedin.com/in/josbyte">
-									<i className='icon-footer ri-linkedin-fill'></i>
-									Josue Ruiz
+									LINKEDIN
 								</a>
 							</button>
 						</li>

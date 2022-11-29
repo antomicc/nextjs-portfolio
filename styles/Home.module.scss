@@ -2,25 +2,18 @@
 @import 'Base/variables';
 
 .projectMain {
-	padding-top: 5rem;
-}
+	padding-top: 10rem;
 
-.headerProjects {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 10rem;
-	background-image: url(https://i.imgur.com/BHM9k4U.png);
-	background-position: center;
-	background-size: cover;
-	color: white;
-	position: sticky;
+	h1 {
+		text-align: left;
+		text-decoration: underline;
+	}
 }
 
 .projects {
 	width: 90%;
 	margin: 0 auto;
-	padding-top: 7rem;
+	padding-top: 2rem;
 	text-align: center;
 	position: relative;
 }
@@ -190,12 +183,15 @@
 
 .toolsContent {
 	margin-bottom: 1rem;
+	width: 20rem;
 
 	ul {
 		list-style: none;
 		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
 		gap: 1rem;
+		width: 100%;
 
 		li {
 			background: rgba(255, 255, 255, 0.925);

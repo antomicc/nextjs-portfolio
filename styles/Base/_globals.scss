@@ -60,13 +60,13 @@ picture {
 h1,
 h2,
 h3 {
-	font-family: $myFont;
+	font-family: $secondaryFont;
 	text-align: center;
 }
 
 h1 {
-	font-size: 3rem;
-	font-weight: 900;
+	font-size: 4rem;
+	font-weight: 700;
 	font-style: normal;
 	line-height: 150%;
 }
@@ -414,7 +414,7 @@ button.learn-more {
 	padding: 0;
 	font-size: inherit;
 	font-family: inherit;
-	width: 14rem;
+	width: 13rem;
 	height: auto;
 }
 
@@ -466,16 +466,16 @@ button.learn-more .button-text {
 	right: 0;
 	bottom: 0;
 	padding: 0.75rem 0;
-	margin: 0 0 0 1.55rem;
+	margin: 0 0 0 3.5rem;
 	color: $color-maincolors-white;
 	font-weight: 700;
 	line-height: 1.6;
-	text-align: center;
+	text-align: left;
 	text-transform: uppercase;
 	font-size: 1rem;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	gap: 0.2rem;
 }

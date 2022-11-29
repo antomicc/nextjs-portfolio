@@ -29,22 +29,13 @@ export default function Projects({ projects }) {
 	}, [projects]);
 	return (
 		<main className={styles.projectMain}>
-			<div className={styles.headerProjects}>
-				<h1>Projects</h1>
-			</div>
 			<section className={styles.projects}>
+				<h1>Projects</h1>
 				<div className={styles.cardContainer}>
 					{mappedProjects.map((p, index) => (
 						<div key={index} className={styles.cardProject}>
 							<div className={styles.imageCardContainer}>
 								<img src={p.imageP} alt={p.title} />
-								<div className={styles.toolsContent}>
-									<ul>
-										{p.tools.map((tool, index) => (
-											<li key={index}> {tool} </li>
-										))}
-									</ul>
-								</div>
 							</div>
 							<div className={styles.infoContent}>
 								<div className={styles.containerInfo}>

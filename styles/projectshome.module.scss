@@ -2,7 +2,7 @@
 @import 'Base/variables';
 
 .projectMain {
-	padding-top: 10rem;
+	padding-top: 20rem;
 }
 
 .projects {
@@ -10,6 +10,7 @@
 	text-align: center;
 	position: relative;
 }
+
 .contentProjects {
 	@include grid(1, 2);
 
@@ -36,9 +37,11 @@
 	border-radius: 1rem;
 	cursor: grab;
 	position: relative;
+
 	&:focus {
 		cursor: grabbing;
 	}
+
 	div {
 		display: flex;
 		flex-direction: column;
@@ -78,6 +81,7 @@
 	position: absolute;
 	top: 1rem;
 	left: 2rem;
+
 	ul {
 		list-style: none;
 		display: flex;
@@ -97,10 +101,12 @@
 	margin-bottom: 3rem;
 	position: relative;
 }
+
 .infoContent {
 	width: 100%;
 	text-align: center;
 	transition: all 0.5s ease-in-out;
+
 	@include desktop {
 		position: absolute;
 		background: $linear-bg-light;
@@ -110,12 +116,14 @@
 		opacity: 0;
 		visibility: hidden;
 		transform: translateY(3rem);
+
 		& h3 {
 			margin-top: 5rem;
 			margin-bottom: 2rem;
 		}
 	}
 }
+
 .triangleContainer {
 	position: absolute;
 	z-index: -1;
@@ -123,6 +131,7 @@
 	bottom: 10rem;
 	display: none;
 	transform: rotate(100deg);
+
 	@include desktop {
 		display: initial;
 	}

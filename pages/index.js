@@ -92,19 +92,23 @@ export default function Home({ projects }) {
 										<div key={index} className={styles.cardProject}>
 											<div className={styles.imageCardContainer}>
 												<img src={p.imageP} alt={p.title} />
-												<div className={styles.toolsContent}>
-													<ul>
-														{p.tools.map((tool, index) => (
-															<li key={index}> {tool} </li>
-														))}
-													</ul>
-												</div>
 											</div>
 											<div className={styles.infoContent}>
-												<h4>{p.title}</h4>
-												<Link href={`project/${p.slug.current}`}>
-													<i className='ri-arrow-right-line'></i>
-												</Link>
+												<div className={styles.containerInfo}>
+													<h4>{p.title}</h4>
+													<Link href={`project/${p.slug.current}`}>
+														<a>
+															<i className='ri-arrow-right-line'></i>
+														</a>
+													</Link>
+													<div className={styles.toolsContent}>
+														<ul>
+															{p.tools.map((tool, index) => (
+																<li key={index}> {tool} </li>
+															))}
+														</ul>
+													</div>
+												</div>
 											</div>
 										</div>
 									))}
@@ -133,7 +137,7 @@ export default function Home({ projects }) {
 }
 
 export const getServerSideProps = async (pageContext) => {
-	const query = encodeURIComponent('*[ _type == "project"][0..3]');
+	const query = encodeURIComponent('*[ _type == "project"][0..2]');
 	const url = `https://${process.env.NEXT_PUBLIC_PROJECT_API_KEY}.api.sanity.io/v1/data/query/production?query=${query}`;
 	const result = await fetch(url).then((res) => res.json());
 

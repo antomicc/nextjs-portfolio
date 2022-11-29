@@ -4,12 +4,9 @@ import Image from 'next/image';
 import imageUrlBuilder from '@sanity/image-url';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import Reveal from 'react-reveal/Reveal';
 
 export default function Projects({ projects }) {
 	const [mappedProjects, setMappedProjects] = useState([]);
-	const [slideCuantity, setslideCuantity] = useState(1);
 
 	useEffect(() => {
 		if (projects) {
@@ -29,24 +26,6 @@ export default function Projects({ projects }) {
 		} else {
 			setMappedProjects([]);
 		}
-
-		const handleViewSlider = () => {
-			if (window.matchMedia('(min-width: 768px)').matches) {
-				setslideCuantity(2);
-			}
-			if (window.matchMedia('(min-width: 1024px)').matches) {
-				setslideCuantity(2);
-			} else {
-				setslideCuantity(1);
-			}
-		};
-
-		const mql = window.matchMedia('(min-width: 1024px)');
-		handleViewSlider();
-
-		mql.addEventListener('change', () => {
-			handleViewSlider();
-		});
 	}, [projects]);
 	return (
 		<main className={styles.projectMain}>
@@ -68,10 +47,21 @@ export default function Projects({ projects }) {
 								</div>
 							</div>
 							<div className={styles.infoContent}>
-								<h4>{p.title}</h4>
-								<Link href={`project/${p.slug.current}`}>
-									<i className='ri-arrow-right-line'></i>
-								</Link>
+								<div className={styles.containerInfo}>
+									<h4>{p.title}</h4>
+									<Link href={`project/${p.slug.current}`}>
+										<a>
+											<i className='ri-arrow-right-line'></i>
+										</a>
+									</Link>
+									<div className={styles.toolsContent}>
+										<ul>
+											{p.tools.map((tool, index) => (
+												<li key={index}> {tool} </li>
+											))}
+										</ul>
+									</div>
+								</div>
 							</div>
 						</div>
 					))}

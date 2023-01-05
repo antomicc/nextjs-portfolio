@@ -4,6 +4,7 @@ import styles from '../styles/about.module.scss';
 import Image from 'next/image';
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
+import PrimaryButton from './buttons/PrimaryButton';
 
 const AboutCard = () => {
 	const git_HL = 'https://github.com/angelldeev';
@@ -35,18 +36,7 @@ const AboutCard = () => {
 								What are my specialties? The development and design.
 								That's why I'm fascinated by frontend development, ui design and little by little getting into the UX branch
 							</p>
-							<button className='btn btn-light'>
-								<a
-									href='https://drive.google.com/file/d/1Po4ActufvmIm2yy3GIk0hjQYqs7DSRUB/view?usp=sharing'
-									target='_blank'
-									rel='noopener noreferrer'
-								>
-									Download CV
-								</a>
-							</button>
-							<p className={styles.subtitleAbout}>
-								Here are a few technologies I’ve been working with recently:
-							</p>
+							<PrimaryButton text={'Download CV'} color={'#FFF'} link={'https://drive.google.com/file/d/1Po4ActufvmIm2yy3GIk0hjQYqs7DSRUB/view?usp=sharing'} noLinkPage={true} />
 						</div>
 						<div className={styles.aboutImage}>
 							<div className={styles.imageSecondContainer}>

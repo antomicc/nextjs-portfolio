@@ -79,7 +79,7 @@ export default function Home({ projects }) {
 				<section className={styles.projects}>
 					<div className='container-projects'>
 						<div className={styles.titleContainer}>
-							<h2> Projects that i build </h2>
+							<h2> Projects </h2>
 							<Image src={LineTitle} />
 						</div>
 						<div className={styles.contentProjects}>

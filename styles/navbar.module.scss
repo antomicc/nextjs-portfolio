@@ -8,19 +8,19 @@
 	height: 98px;
 	z-index: 999;
 	//@include effect-style-main-shadow;
-	box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
 	width: 4rem;
 	margin: 0;
 	padding: 1rem 0;
+	margin-right: auto;
 
 	@include desktop {
 		width: 18rem;
 		height: 100%;
 		padding: 1.5rem 0;
-		margin: 0;
+		margin-right: auto;
 	}
 }
 
@@ -31,9 +31,10 @@
 .navItem {
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: flex-end;
 	position: relative;
 	height: 100%;
+	width: 100;
 }
 
 .menuItems {
@@ -67,7 +68,7 @@
 			content: '';
 			width: 100%;
 			height: 3px;
-			background: $color-maincolors-second;
+			background: #000;
 			opacity: 0;
 			transform-origin: left;
 			transition: all 0.6s;
@@ -77,6 +78,10 @@
 			transform: scale(0, 1);
 		}
 
+		&:hover {
+			font-weight: bold;
+		}
+
 		&:hover::after {
 			opacity: 1;
 			-webkit-transform: scale(1);
@@ -84,7 +89,7 @@
 		}
 
 		@include desktop {
-			font-size: initial;
+			font-size: 1.5rem;
 		}
 	}
 
@@ -113,7 +118,7 @@
 	visibility: visible;
 
 	@include desktop {
-		transform: translateX(-15%);
+		transform: translateX(-25%);
 
 		a {
 			color: $color-maincolors-dark-1;

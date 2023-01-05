@@ -21,6 +21,7 @@
 		"react-dom": "^18.2.0",
 		"react-reveal": "^1.2.2",
 		"sass": "^1.35.1",
+		"styled-components": "^5.3.6",
 		"swiper": "^6.7.1"
 	},
 	"devDependencies": {

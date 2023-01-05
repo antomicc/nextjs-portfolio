@@ -1,10 +1,6 @@
 import Link from 'next/link';
 import style from '../styles/footer.module.scss';
 
-
-/* Techs for Footer */
-
-
 const Footer = () => {
 	return (
 		<footer className={style.footer}>

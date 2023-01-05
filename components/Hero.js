@@ -1,22 +1,29 @@
 import style from '../styles/hero.module.scss';
 import Image from 'next/image';
-import SvgGrilla from '../public/Images/Particles/Grilla.svg';
-import SvgDots from '../public/Images/Particles/dots-home.svg';
 import Fade from 'react-reveal/Fade';
 import Link from 'next/link';
+import PrimaryButton from './buttons/PrimaryButton';
 
 const Hero = () => {
 	return (
 		<>
 			<div className={style.hero}>
-				<Fade left>
-					<div className={style.grillaContainer}>
-						<Image alt='' src={SvgGrilla} width={650} height={1100} />
-					</div>
-				</Fade>
 				<div className='container'>
 					<div className={style.containerHero}>
 						<div className={style.heroLeft}>
+							<Fade>
+								<div className={style.socialButtom}>
+									<a href="https://github.com/josbyte-dev">
+										<i className="ri-github-fill"></i>
+									</a>
+									<a href="https://www.instagram.com/_josbyte/">
+										<i className="ri-instagram-fill"></i>
+									</a>
+									<a href="https://www.behance.net/josbyte">
+										<i className="ri-behance-fill"></i>
+									</a>
+								</div>
+							</Fade>
 							<div className={style.intro}>
 								<Fade left cascade>
 									<h3>Hi There!</h3>
@@ -53,18 +60,11 @@ const Hero = () => {
 								</section>
 							</div>
 							<div className={style.buttonsGroup}>
-								<Link href='/contact'>
-									<button className='btn btn-brand'>Contact me</button>
-								</Link>
-								<a href='#aboutme'>
-									<button className='btn btn-sutil'> About me</button>{' '}
-								</a>
+								<PrimaryButton link={'/contact'} text="Contat Me" color={'#DE154D'} noLinkPage={false} />
+								<PrimaryButton link={'#aboutme'} text={'About Me'} color={'#FFF'} noLinkPage={true} />
 							</div>
 						</div>
 						<div className={style.heroRight}>
-							<div className={style.svgDotsContainer}>
-								<Image className={style.svgDots} alt='' src={SvgDots} width={800} height={1500} />
-							</div>
 							<Fade top cascade>
 								<div className={style.imageProfile} >
 									<Image width="650px" height="650px" src="https://i.imgur.com/0xC1ejw.png" />
@@ -75,19 +75,7 @@ const Hero = () => {
 
 				</div>
 			</div>
-			<Fade>
-				<div className={style.socialButtom}>
-					<a href="https://github.com/josbyte-dev">
-						<i className="ri-github-fill"></i>
-					</a>
-					<a href="https://www.instagram.com/_josbyte/">
-						<i className="ri-instagram-fill"></i>
-					</a>
-					<a href="https://www.behance.net/josbyte">
-						<i className="ri-behance-fill"></i>
-					</a>
-				</div>
-			</Fade>
+
 		</>
 	);
 };

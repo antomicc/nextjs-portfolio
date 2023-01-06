@@ -6,6 +6,7 @@
 	padding-top: 4rem;
 	margin-bottom: 1rem;
 	position: relative;
+	background-color: $color-maincolors-neutro;
 
 	h2 {
 		margin-bottom: 4rem;
@@ -23,16 +24,42 @@
 .tecsContainer {
 	width: 100%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: row-reverse;
 	justify-content: space-between;
+	position: relative;
+	background-color: transparent;
 }
 
 .imageTecs {
-	display: none;
+	.imageContainerTechRobot {
+		display: none;
 
-	@include desktop {
-		display: block;
+		@include desktop {
+			display: block;
+			z-index: 10;
+			position: relative;
+
+			img {
+				z-index: 0;
+			}
+		}
 	}
+
+	.imageSector {
+		width: 500px;
+		height: 500px;
+		background-color: $color-maincolors-first;
+		position: absolute;
+		right: -28%;
+		top: -80%;
+		display: none;
+		z-index: 1;
+
+		@include desktop {
+			display: block;
+		}
+	}
+
 }
 
 

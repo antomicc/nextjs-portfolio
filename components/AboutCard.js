@@ -7,17 +7,11 @@ import Zoom from 'react-reveal/Zoom';
 import PrimaryButton from './buttons/PrimaryButton';
 
 const AboutCard = () => {
-	const git_HL = 'https://github.com/angelldeev';
-	const Behance_link = 'https://www.behance.net/angeldev';
-	const Linkedin_link = 'https://www.linkedin.com/in/angeldev/';
-	const Instagram_link = 'https://www.instagram.com/angell_dev/';
-
 	const theme = useContext(ThemeContext);
 	const darkMode = theme.state.darkMode;
 
 	return (
 		<section id='aboutme' className={styles.aboutSection}>
-
 			<div className='container'>
 				<div className={styles.aboutContent}>
 					<div className={styles.sectionImage}>
@@ -29,6 +23,7 @@ const AboutCard = () => {
 					</div>
 					<div className={styles.textAbout}>
 						<div className={styles.aboutText}>
+							<h3>About me</h3>
 							<p>
 								Hello! My name is Josue, i’m from Guatemala City, i’m a technology enthusiast and a lover of development and design.
 								<br />
@@ -46,10 +41,6 @@ const AboutCard = () => {
 					</div>
 				</div>
 			</div>
-			<Zoom cascade>
-				<div className={styles.imageSector}>
-				</div>
-			</Zoom>
 		</section>
 	);
 };

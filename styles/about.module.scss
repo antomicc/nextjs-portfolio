@@ -13,7 +13,7 @@
 	flex-direction: column;
 	gap: 1rem;
 	position: relative;
-	z-index: 2;
+	z-index: 1;
 
 	h2 {
 		position: relative;
@@ -45,7 +45,7 @@
 .sectionImage {
 	width: 100%;
 	position: absolute;
-	top: -22%;
+	top: -30%;
 
 	@include tablet {
 		top: -30%;
@@ -101,6 +101,20 @@
 	}
 
 	.aboutText {
+		h3 {
+			text-align: left;
+			font-size: 3.5rem;
+		}
+
+		a {
+			width: 100%;
+			display: block;
+
+			@include tablet {
+				width: fit-content
+			}
+		}
+
 		@include desktop {
 			width: 45%;
 		}
@@ -121,21 +135,6 @@
 
 	.imageSecondContainer {
 		width: 100%;
-	}
-}
-
-.imageSector {
-	width: 632px;
-	height: 555px;
-	background-color: $color-maincolors-first;
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	z-index: 1;
-	display: none;
-
-	@include desktop {
-		display: block;
 	}
 }
 

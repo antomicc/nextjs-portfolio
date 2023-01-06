@@ -132,13 +132,14 @@ button {
 		.process-step-title-container {
 			margin-top: -9px; //To adjust for the line-height
 			position: relative;
+			z-index: 25;
 
 			.step-title-outprocess,
 			.step-title-outprocess-overlay {
 				font-size: 1.55rem;
 				font-weight: 400;
 				margin: 0;
-				line-height: 150%; //If too short, g might get cut off
+				line-height: 125%; //If too short, g might get cut off
 				letter-spacing: 0;
 				color: $color-maincolors-dark-1;
 				text-align: left;
@@ -152,7 +153,7 @@ button {
 				}
 
 				@include desktop {
-					font-size: 2.5rem;
+					font-size: 5rem;
 				}
 			}
 
@@ -160,9 +161,9 @@ button {
 			.process-step-title-overlay {
 				font-family: $secondaryFont;
 				font-size: 1.55rem;
-				font-weight: 600;
+				font-weight: bold;
 				margin: 0;
-				line-height: 150%; //If too short, g might get cut off
+				line-height: 125%; //If too short, g might get cut off
 				letter-spacing: 0;
 				color: $color-maincolors-dark-1;
 				text-align: left;
@@ -176,7 +177,7 @@ button {
 				}
 
 				@include desktop {
-					font-size: 2.5rem;
+					font-size: 5rem;
 				}
 			}
 

@@ -21,9 +21,10 @@
 
 .heroLeft {
 	width: 100%;
+	position: relative;
 
 	@include desktop {
-		width: 50%;
+		width: 100%;
 	}
 }
 
@@ -60,7 +61,12 @@
 	}
 
 	a {
-		display: inline;
+		display: block;
+		width: 100%;
+
+		@include tablet {
+			width: fit-content;
+		}
 	}
 }
 
@@ -94,7 +100,9 @@
 .heroRight {
 	display: none;
 	width: 40%;
-	position: relative;
+	position: absolute;
+	right: 5%;
+	top: 15%;
 
 	@include desktop {
 		display: block;
@@ -105,7 +113,12 @@
 		top: 12rem;
 		right: 3rem;
 		z-index: 1;
-		filter: grayscale(1.1);
+		filter: grayscale(1);
+		transition: filter 0.5s ease-in-out;
+
+		&:hover {
+			filter: grayscale(0);
+		}
 
 		@include desktop-l {
 			right: 2rem;

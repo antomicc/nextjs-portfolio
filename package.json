@@ -20,6 +20,7 @@
 		"react-burger-menu": "^3.0.6",
 		"react-dom": "^18.2.0",
 		"react-reveal": "^1.2.2",
+		"react-wavify": "^1.7.0",
 		"sass": "^1.35.1",
 		"styled-components": "^5.3.6",
 		"swiper": "^6.7.1"

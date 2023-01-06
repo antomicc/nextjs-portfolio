@@ -13,6 +13,7 @@ const PrimaryButton = ({ text, color, link, noLinkPage }) => {
     }
 
     const Button = styled.button`
+        width: 100%;
         font-size: 24px;
         font-weight: bold;
         border: none;

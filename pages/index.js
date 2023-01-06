@@ -15,6 +15,7 @@ import React, { useContext } from 'react';
 import { ThemeContext } from '../components/context/ThemeContext';
 import Worked from '../components/Worked';
 import LineTitle from '../public/Images/Particles/LineDark.svg'
+import SutilButton from '../components/buttons/SutilButton';
 
 export default function Home({ projects }) {
 	const [mappedProjects, setMappedProjects] = useState([]);
@@ -78,21 +79,12 @@ export default function Home({ projects }) {
 				<Worked />
 				<section className={styles.projects}>
 					<div className='container-projects'>
-						<div className={styles.titleContainer}>
-							<h2> Projects </h2>
-							<Image src={LineTitle} />
-						</div>
+						<h2> Projects </h2>
 						<div className={styles.contentProjects}>
-							<div className={styles.contentFlecha}>
-								<Image src={flechaPNG} alt='' width={50} height={50} />
-							</div>
 							<Fade bottom big cascade>
 								<div className={styles.cardContainer}>
 									{mappedProjects.map((p, index) => (
-										<div key={index} className={styles.cardProject}>
-											<div className={styles.imageCardContainer}>
-												<img src={p.imageP} alt={p.title} />
-											</div>
+										<div key={index} className={styles.cardProject} style={{ backgroundImage: `url(${p.imageP})` }} >
 											<div className={styles.infoContent}>
 												<div className={styles.containerInfo}>
 													<h4>{p.title}</h4>
@@ -115,19 +107,17 @@ export default function Home({ projects }) {
 								</div>
 							</Fade>
 						</div>
-						<div className='container'>
+						<div className={styles.buttonContent}>
 							<Link href='/projects'>
-								<a className='btn btn-sutil'> See more </a>
+								<a>
+									<SutilButton text={'See more'} />
+								</a>
 							</Link>
 						</div>
 					</div>
 				</section>
 				<section className='Posts'>
 					<div className="container">
-						<div className={styles.titleContainer}>
-							<h2> Latest Posts </h2>
-							<Image src={LineTitle} />
-						</div>
 					</div>
 				</section>
 				<Footer />
@@ -137,7 +127,7 @@ export default function Home({ projects }) {
 }
 
 export const getServerSideProps = async (pageContext) => {
-	const query = encodeURIComponent('*[ _type == "project"][0..2]');
+	const query = encodeURIComponent('*[ _type == "project"][0..7]');
 	const url = `https://${process.env.NEXT_PUBLIC_PROJECT_API_KEY}.api.sanity.io/v1/data/query/production?query=${query}`;
 	const result = await fetch(url).then((res) => res.json());
 

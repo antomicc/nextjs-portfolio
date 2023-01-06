@@ -1,48 +1,64 @@
 import style from '../styles/services.module.scss';
-import Image from 'next/dist/client/image';
-import Zoom from 'react-reveal/Zoom';
 import { Slide } from 'react-reveal';
+import Wave from 'react-wavify';
+import { FiFigma } from 'react-icons/fi';
+import { FaReact, FaSass } from 'react-icons/fa';
+import { SiAdobephotoshop, SiNextdotjs, SiAdobeillustrator, SiNotion } from 'react-icons/si';
 
 const Services = () => {
-	const servicesIcon = ['ri-terminal-box-line', 'ri-smartphone-fill', 'ri-collage-line'];
 
-	const servicesTitle = ['Software Developing', 'Responsive Design', 'Design Interpretation'];
-
-	const servicesText = [
-		'I work in different development languages, but more importantly, I focus on problem solving methods.',
-		'As a frontend developer, I am aware that the vast majority of technologies are consumed through mobile phones, which is why all my work is fully responsive.',
-		'I have worked hard on developing my ability to interpret layouts for development as well as developing my designer view to provide the best user experience.'
-	];
-
-	const servicesColors = [
-		style.cardDev, style.cardResponsive, style.cardDesign
-	];
+	const tools = [
+		{
+			icon: FiFigma,
+			color: '#F24D1D',
+			title: 'Figma'
+		},
+		{
+			icon: FaReact,
+			color: '#61DBFB',
+			title: 'React JS'
+		},
+		{
+			icon: FaSass,
+			color: '#C26191',
+			title: 'Sass'
+		},
+		{
+			icon: SiNextdotjs,
+			color: '#000000',
+			title: 'Next Js'
+		},
+		{
+			icon: SiAdobephotoshop,
+			color: '#001833',
+			title: 'Photoshop'
+		},
+		{
+			icon: SiAdobeillustrator,
+			color: '#F29200',
+			title: 'Illustrator'
+		},
+		{
+			icon: SiNotion,
+			color: '#000',
+			title: 'Notion'
+		}
+	]
 
 	return (
 		<div className={style.services}>
-			<div className={style.containerWork}>
+			<div className='container'>
+				<h2>Tools</h2>
 				<Slide bottom cascade>
-					<div className={style.cards}>
-						{servicesIcon &&
-							servicesIcon.map((Icon, index) => {
-								return (
-									<div key={index} className={`${style.card} ${servicesColors[index]}`}>
-										<div className={style.contentCardContainer}>
-											<div className={style.headerCardContainer}>
-												<div className={style.containerIcon}>
-													<i className={Icon}></i>
-												</div>
-												<div className={style.titleContent}>
-													<h3> {servicesTitle[index]} </h3>
-												</div>
-											</div>
-											<div className={style.infoContent}>
-												<p> {servicesText[index]} </p>
-											</div>
-										</div>
-									</div>
-								);
-							})}
+					<div className={style.tools}>
+						{
+							tools.map((tool, index) => (
+								<div key={index} className={style.tool}>
+									<tool.icon size={'3rem'} color={tool.color} />
+									<span>{tool.title}</span>
+								</div>
+							))
+						}
 					</div>
 				</Slide>
 			</div>

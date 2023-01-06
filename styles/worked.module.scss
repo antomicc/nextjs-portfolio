@@ -3,31 +3,26 @@
 
 .sectionWorks {
     width: 100%;
-    background-color: $color-maincolors-neutro;
+    background-color: $color-maincolors-white;
     height: 100%;
-
-    @include desktop {
-        margin-top: 15rem;
-    }
-}
-
-.titleContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color: $color-maincolors-white;
-    padding-top: 2rem;
-
-    @include desktop {
-        padding-top: 15rem;
-    }
+    margin-top: 4rem;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    background-size: contain;
+    background-position: top;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='800' preserveAspectRatio='none' viewBox='0 0 1440 800'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1043%26quot%3b)' fill='none'%3e%3cpath d='M1281.62 79.71L1306.81 79.71L1306.81 115.6L1281.62 115.6z' fill='rgba(222%2c 21%2c 77%2c 1)'%3e%3c/path%3e%3cpath d='M241.07 202.45 a6.4 6.4 0 1 0 12.8 0 a6.4 6.4 0 1 0 -12.8 0z' fill='rgba(51%2c 51%2c 102%2c 1)'%3e%3c/path%3e%3cpath d='M275.3 218.9L331.79 218.9L331.79 275.39L275.3 275.39z' fill='rgba(51%2c 51%2c 102%2c 1)'%3e%3c/path%3e%3cpath d='M236.06 377.92 a33.47 33.47 0 1 0 66.94 0 a33.47 33.47 0 1 0 -66.94 0z' fill='rgba(222%2c 21%2c 77%2c 1)'%3e%3c/path%3e%3cpath d='M15.92 355.59L89.26 355.59L89.26 357.18L15.92 357.18z' stroke='rgba(222%2c 21%2c 77%2c 1)'%3e%3c/path%3e%3cpath d='M1374.13 345.61L1418.41 345.61L1418.41 389.89L1374.13 389.89z' fill='rgba(222%2c 21%2c 77%2c 1)'%3e%3c/path%3e%3cpath d='M725.23 679.74L746.97 679.74L746.97 701.48L725.23 701.48z' stroke='rgba(51%2c 51%2c 102%2c 1)'%3e%3c/path%3e%3cpath d='M-30.28 506.55 a44.06 44.06 0 1 0 88.12 0 a44.06 44.06 0 1 0 -88.12 0z' stroke='rgba(51%2c 51%2c 102%2c 1)'%3e%3c/path%3e%3cpath d='M1003.31 385.34L1006.19 385.34L1006.19 388.22L1003.31 388.22z' stroke='rgba(222%2c 21%2c 77%2c 1)'%3e%3c/path%3e%3cpath d='M1180.98 409.22L1191.24 409.22L1191.24 421.44L1180.98 421.44z' stroke='rgba(51%2c 51%2c 102%2c 1)'%3e%3c/path%3e%3cpath d='M1162.25 630.33L1201.77 630.33L1201.77 644.66L1162.25 644.66z' fill='rgba(222%2c 21%2c 77%2c 1)'%3e%3c/path%3e%3cpath d='M257.13 63.87 a52.26 52.26 0 1 0 104.52 0 a52.26 52.26 0 1 0 -104.52 0z' fill='rgba(51%2c 51%2c 102%2c 1)'%3e%3c/path%3e%3cpath d='M1248.34 150.42L1314.99 150.42L1314.99 164.42L1248.34 164.42z' fill='rgba(51%2c 51%2c 102%2c 1)'%3e%3c/path%3e%3cpath d='M958.04 99.95L981.3 99.95L981.3 153.67L958.04 153.67z' stroke='rgba(51%2c 51%2c 102%2c 1)'%3e%3c/path%3e%3cpath d='M156.15 467.21a22.28 22.28 0 1 0 20.07-39.78z' fill='rgba(51%2c 51%2c 102%2c 1)'%3e%3c/path%3e%3cpath d='M496.44 203.68L554.6 203.68L554.6 243.96L496.44 243.96z' fill='rgba(51%2c 51%2c 102%2c 1)'%3e%3c/path%3e%3cpath d='M188.47 594.3L253.22 594.3L253.22 659.05L188.47 659.05z' stroke='rgba(222%2c 21%2c 77%2c 1)'%3e%3c/path%3e%3cpath d='M1054.1 208.71L1100.78 208.71L1100.78 226.24L1054.1 226.24z' stroke='rgba(51%2c 51%2c 102%2c 1)'%3e%3c/path%3e%3cpath d='M102.97 425.06a54.6 54.6 0 1 0 61.36-90.33z' stroke='rgba(222%2c 21%2c 77%2c 1)'%3e%3c/path%3e%3cpath d='M128.68 332.06L180 332.06L180 383.38L128.68 383.38z' fill='rgba(51%2c 51%2c 102%2c 1)'%3e%3c/path%3e%3cpath d='M531.52 584.5L600.19 584.5L600.19 653.17L531.52 653.17z' stroke='rgba(51%2c 51%2c 102%2c 1)'%3e%3c/path%3e%3cpath d='M385.81 763.01 a46.93 46.93 0 1 0 93.86 0 a46.93 46.93 0 1 0 -93.86 0z' stroke='rgba(51%2c 51%2c 102%2c 1)'%3e%3c/path%3e%3cpath d='M1039.15 126.55a4.88 4.88 0 1 0 7.01-6.8z' fill='rgba(51%2c 51%2c 102%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1043'%3e%3crect width='1440' height='800' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
 
     h2 {
-        width: 60%;
-        text-align: left;
+        text-align: right;
+        font-size: 3.2rem;
+        padding: 6rem 0;
+
+        @include tablet {
+            font-size: 5rem;
+        }
     }
 }
+
 
 .workedSection {
     display: flex;
@@ -55,11 +50,17 @@
 
     .toggleHeader {
         position: relative;
-        background-color: $color-maincolors-white;
-        color: $color-maincolors-dark-1;
+        background-color: $color-maincolors-neutro;
+        color: $color-maincolors-white;
         width: 100%;
         z-index: 2;
-        border: 0.5px solid transparent;
+        transition: transform 0.5s ease-in-out;
+        border-radius: 25px;
+        padding: 0.5rem 0.88rem;
+
+        &:hover {
+            transform: scale(1.03);
+        }
 
         .toggleHedContainer {
             display: flex;
@@ -76,7 +77,7 @@
             padding: 1rem 0;
             width: 15%;
             margin: 0;
-            color: $color-maincolors-dark-1;
+            color: $color-maincolors-white;
         }
 
         h3 {
@@ -89,7 +90,7 @@
     .toggleContent {
         position: relative;
         border-radius: 0 0 25px 25px;
-        background-color: $color-maincolors-white;
+        background-color: $color-maincolors-second;
         color: $color-maincolors-dark-1;
         display: flex;
         flex-direction: column;
@@ -99,17 +100,18 @@
         opacity: 0;
         height: 0;
         overflow: hidden;
+        transform: translateY(-8%);
     }
 
     .openedToggle {
         //transform: translateY(0) !important;
-        height: 82%;
+        height: fit-content;
         opacity: 1;
     }
 }
 
 .toggleItem {
-    color: $color-maincolors-dark-1;
+    color: $color-maincolors-white;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -119,18 +121,23 @@
     width: 95%;
     margin: 0 auto;
     gap: 0.5rem;
-    padding: 0.5rem 0;
+    padding: 2rem 0;
     text-align: left;
+
+    @include tablet {
+        width: 80%;
+    }
 
     h4 {
         height: min-content;
         text-align: left;
         width: 100%;
+
     }
 
     p {
         width: 100%;
-        color: $color-maincolors-dark-1;
+        color: $color-maincolors-white;
         font-size: 1.3rem;
         font-weight: 300;
     }

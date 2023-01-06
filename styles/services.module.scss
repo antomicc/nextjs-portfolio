@@ -5,21 +5,65 @@
 	width: 100%;
 	position: relative;
 
+	h2 {
+		font-size: 5rem;
+		padding-bottom: 3rem;
+		text-align: left;
+	}
+
 	@include desktop {
-		width: 75%;
+		width: 100%;
 		margin: 0 auto;
 	}
-}
 
-.containerWork {
-	width: 100%;
+	.tools {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto;
+		gap: 1.5rem;
 
+		@include tablet {
+			grid-template-columns: repeat(5, 1fr);
+			gap: 1.4rem;
+		}
 
-	@include desktop {
-		position: absolute;
-		bottom: -25rem;
+		@include desktop {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 2rem;
+		}
+
+		.tool {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 1rem;
+
+			span {
+				font-size: 1.2rem;
+				font-weight: 600;
+
+				@include desktop {
+					font-size: 1.5rem;
+				}
+			}
+
+			@include tablet {
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+
+			@include desktop {
+				flex-wrap: nowrap;
+				gap: 0.7rem
+			}
+		}
 	}
 }
+
 
 
 .containerIcon {

@@ -48,7 +48,7 @@
 	top: -30%;
 
 	@include tablet {
-		top: -30%;
+		top: -45%;
 	}
 
 	@include desktop {
@@ -135,31 +135,6 @@
 
 	.imageSecondContainer {
 		width: 100%;
-	}
-}
-
-.lineContainer {
-	left: 8rem;
-	bottom: -20rem;
-	transform: rotate(100deg);
-	position: absolute;
-	z-index: -1;
-	display: none;
-
-	@include desktop {
-		display: initial;
-	}
-}
-
-.triangleContainer {
-	position: absolute;
-	z-index: -1;
-	right: 15rem;
-	top: 30rem;
-	display: none;
-
-	@include desktop {
-		display: initial;
 	}
 }
 

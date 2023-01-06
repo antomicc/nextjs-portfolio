@@ -2,7 +2,7 @@ import style from '../styles/hero.module.scss';
 import Image from 'next/image';
 import Fade from 'react-reveal/Fade';
 import Link from 'next/link';
-import PrimaryButton from './buttons/PrimaryButton';
+import FirstButton from './buttons/PrimaryButton';
 
 const Hero = () => {
 	return (
@@ -60,8 +60,8 @@ const Hero = () => {
 								</section>
 							</div>
 							<div className={style.buttonsGroup}>
-								<PrimaryButton link={'/contact'} text="Contat Me" color={'#DE154D'} noLinkPage={false} />
-								<PrimaryButton link={'#aboutme'} text={'About Me'} color={'#FFF'} noLinkPage={true} />
+								<FirstButton link={'/contact'} text="Contat Me" color={'#DE154D'} noLinkPage={false} />
+								<FirstButton link={'#aboutme'} text={'About Me'} color={'#FFF'} noLinkPage={true} />
 							</div>
 						</div>
 						<div className={style.heroRight}>

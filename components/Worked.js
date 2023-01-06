@@ -23,10 +23,7 @@ const Worked = () => {
     return (
         <section className={style.sectionWorks}>
             <article className='container'>
-                <div className={style.titleContainer}>
-                    <h2> Where I’ve Worked </h2>
-                    <Image src={LineTitle} />
-                </div>
+                <h2> Laboral Experience </h2>
                 <div className={style.workedSection}>
                     <div className={style.worksContainer}>
                         {WorkPlace && WorkPlace.map((work, index) => {

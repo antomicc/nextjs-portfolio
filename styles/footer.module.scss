@@ -4,7 +4,7 @@
 .footer {
 	text-align: left;
 	padding: 5rem 0;
-	background-color: $color-maincolors-second;
+	background-color: $color-maincolors-neutro;
 	margin-top: 1.5rem;
 	color: white;
 
@@ -20,7 +20,7 @@
 		color: white;
 		display: flex;
 		flex-direction: column;
-		padding: 3rem 2rem;
+		padding: 3rem 3rem;
 		height: 100%;
 		justify-content: center;
 		align-items: center;
@@ -41,6 +41,7 @@
 
 			@include tablet {
 				width: 25%;
+				font-size: 2rem;
 			}
 		}
 
@@ -77,28 +78,47 @@
 	width: 100%;
 	margin-top: -6rem;
 
-	a {
-		display: block;
+	.logoContent {
 		width: 100%;
 		height: 100%;
 		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
 		justify-content: center;
 		align-items: center;
 		padding-bottom: 2rem;
 
-		svg {
-			width: 85%;
-			height: 85%;
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-			@include tablet {
-				width: 55%;
-			}
+			svg {
+				width: 85%;
+				height: 85%;
 
-			@include desktop {
-				width: 35%;
+				@include tablet {
+					width: 55%;
+				}
+
+				@include desktop {
+					width: 25%;
+				}
 			}
 		}
+
+		p {
+			font-size: 1.4rem;
+			font-style: italic;
+			text-align: center;
+			color: white;
+			font-weight: 200;
+		}
 	}
+
 
 	@include desktop {
 		flex-direction: column;
@@ -129,27 +149,36 @@
 			}
 		}
 	}
+
+
 }
 
-.footerCopy {
-	width: 100%;
-	background: black;
-	color: #fff;
-	margin-top: 2rem;
+.copy {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 3rem 0;
 
-	h4 {
-		padding: 1rem 0;
-		text-align: center;
+	p {
+		color: rgb(220, 220, 220);
+		font-size: 1.2rem;
+		padding-bottom: 1.2rem;
+	}
 
-		a {
-			text-decoration: underline;
-			font-weight: 200;
-			color: white;
-			transition: 0.5s;
-		}
+	span {
+		color: rgb(220, 220, 220);
+		font-size: 1.2rem;
+		font-weight: 200;
+		gap: 0.5rem;
+		padding: 0.6rem 0;
+	}
 
-		a:hover {
-			color: $color-maincolors-first;
-		}
+	a {
+		color: rgb(220, 220, 220);
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+		font-size: 1.2rem;
 	}
 }

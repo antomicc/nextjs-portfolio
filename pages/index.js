@@ -75,51 +75,53 @@ export default function Home({ projects }) {
 				<AboutCard />
 
 				<Technologys />
-				<Services />
-				<Worked />
-				<section className={styles.projects}>
-					<div className='container-projects'>
-						<h2> Projects </h2>
-						<div className={styles.contentProjects}>
-							<Fade bottom big cascade>
-								<div className={styles.cardContainer}>
-									{mappedProjects.map((p, index) => (
-										<div key={index} className={styles.cardProject} style={{ backgroundImage: `url(${p.imageP})` }} >
-											<div className={styles.infoContent}>
-												<div className={styles.containerInfo}>
-													<h4>{p.title}</h4>
-													<Link href={`project/${p.slug.current}`}>
-														<a>
-															<i className='ri-arrow-right-line'></i>
-														</a>
-													</Link>
-													<div className={styles.toolsContent}>
-														<ul>
-															{p.tools.map((tool, index) => (
-																<li key={index}> {tool} </li>
-															))}
-														</ul>
+				<div className={styles.secondSectionWithBack}>
+					<Services />
+					<Worked />
+					<section className={styles.projects}>
+						<div className='container-projects'>
+							<h2> Projects </h2>
+							<div className={styles.contentProjects}>
+								<Fade bottom big cascade>
+									<div className={styles.cardContainer}>
+										{mappedProjects.map((p, index) => (
+											<div key={index} className={styles.cardProject} style={{ backgroundImage: `url(${p.imageP})` }} >
+												<div className={styles.infoContent}>
+													<div className={styles.containerInfo}>
+														<h4>{p.title}</h4>
+														<Link href={`project/${p.slug.current}`}>
+															<a>
+																<i className='ri-arrow-right-line'></i>
+															</a>
+														</Link>
+														<div className={styles.toolsContent}>
+															<ul>
+																{p.tools.map((tool, index) => (
+																	<li key={index}> {tool} </li>
+																))}
+															</ul>
+														</div>
 													</div>
 												</div>
 											</div>
-										</div>
-									))}
-								</div>
-							</Fade>
+										))}
+									</div>
+								</Fade>
+							</div>
+							<div className={styles.buttonContent}>
+								<Link href='/projects'>
+									<a>
+										<SutilButton text={'See more'} />
+									</a>
+								</Link>
+							</div>
 						</div>
-						<div className={styles.buttonContent}>
-							<Link href='/projects'>
-								<a>
-									<SutilButton text={'See more'} />
-								</a>
-							</Link>
+					</section>
+					<section className='Posts'>
+						<div className="container">
 						</div>
-					</div>
-				</section>
-				<section className='Posts'>
-					<div className="container">
-					</div>
-				</section>
+					</section>
+				</div>
 				<Footer />
 			</main>
 		</>

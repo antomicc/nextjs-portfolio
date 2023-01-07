@@ -4,7 +4,7 @@ const SocialButton = ({ icon: Icon, text, color }) => {
     return (
         <button className='button'>
             <div className='icon'>
-                <Icon size={'26px'} color={color} />
+                <Icon size={'1.3rem'} color={color} />
             </div>
             <p>{text}</p>
             <style jsx>
@@ -44,8 +44,8 @@ const SocialButton = ({ icon: Icon, text, color }) => {
 .button p {
     color: white;
     width: 100%;
-    font-size: 1.5rem;
-    font-weight: 800;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 .icon svg {

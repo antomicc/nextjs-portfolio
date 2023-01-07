@@ -1,8 +1,8 @@
 import style from '../styles/hero.module.scss';
 import Image from 'next/image';
 import Fade from 'react-reveal/Fade';
-import Link from 'next/link';
 import FirstButton from './buttons/PrimaryButton';
+import Wave from 'react-wavify';
 
 const Hero = () => {
 	return (
@@ -72,10 +72,17 @@ const Hero = () => {
 							</Fade>
 						</div>
 					</div>
-
 				</div>
 			</div>
-
+			<Wave fill='#151433'
+				paused={false}
+				style={{ zIndex: '10', borderBottom: 'none', transform: 'translateY(5px)', paddingTop: '10px' }}
+				options={{
+					height: 22,
+					amplitude: 65,
+					speed: 0.15,
+					points: 3
+				}} />
 		</>
 	);
 };

@@ -3,6 +3,11 @@ import { useState, useEffect } from 'react';
 import styles from '../../styles/slug.module.scss';
 import Image from 'next/dist/client/image';
 import Footer from '../../components/Footer';
+import PrimaryButton from '../../components/buttons/PrimaryButton';
+import { Fade } from 'react-reveal';
+import { useRouter } from 'next/router'
+import { BiArrowBack } from 'react-icons/bi'
+
 const Project = ({
 	title,
 	description,
@@ -10,11 +15,12 @@ const Project = ({
 	projectType,
 	image,
 	link,
-	repo,
+	repo = null,
 	place,
 	tools,
 }) => {
 	const [imageUrl, setImageUrl] = useState('');
+	const router = useRouter()
 
 	useEffect(() => {
 		const imgBuilder = imageUrlBuilder({
@@ -24,53 +30,56 @@ const Project = ({
 
 		setImageUrl(imgBuilder.image(image));
 	}, [image]);
-
+	console.log(image);
 	return (
 		<section className={styles.slugSection}>
+			<div className="container">
+				<button className={styles.backButton} type="button" onClick={() => router.back()}>
+					<BiArrowBack /> BACK
+				</button>
+			</div>
 			<div className={styles.imgContent}>
 				{imageUrl && <img className={styles.imgSlug} src={imageUrl} alt={title} />}
 			</div>
 			<div className='container'>
 				<div className={styles.proyectContainer}>
-					<div className={styles.imageContent}>
-						<div className={styles.imageContainerProyect}>
-							{imageUrl && <img className={styles.imgSlug} src={imageUrl} alt={title} />}
-						</div>
-					</div>
-					<div className={styles.contentDescription}>
-						<h2> {title} </h2>
-						<div className='container-projects'>
-							<p className={styles.paragraph}> {description} </p>
-							<div className={styles.informationProjects}>
-								<span>
-									{' '}
-									<strong> Finished: </strong>
-									{new Date(date).toLocaleDateString()}
-								</span>
-								<h3>
-									{' '}
-									Project type: {projectType}
-									{' '}
-								</h3>
-								<h4>
-									{' '}
-									<strong> Place: </strong> {place}
-								</h4>
-								<div className={styles.buttons}>
-									<a href={link} rel='noopener noreferrer' target='_blank'>
-										<button className='btn btn-positive'> See live preview! </button>
-									</a>
-									<a href={repo} rel='noopener noreferrer' target='_blank'>
-										<button className='btn btn-contact'>
-											<i className='ri-github-fill'></i>
-											See the repo!{' '}
-										</button>
-									</a>
-								</div>
-								<h4>Tools</h4>
-								<ul>{tools && tools.map((el, index) => <li key={index}> {el} </li>)}</ul>
+					<Fade left>
+						<div className={styles.imageContent}>
+							<div className={styles.imageContainerProyect}>
+								{imageUrl && <img className={styles.imgSlug} src={imageUrl} alt={title} />}
 							</div>
 						</div>
+					</Fade>
+					<Fade right>
+						<div className={styles.contentDescription}>
+							<h2> {title} </h2>
+						</div>
+					</Fade>
+				</div>
+				<div className={styles.containerProject}>
+					<p className={styles.paragraph}> {description} </p>
+					<div className={styles.informationProjects}>
+						<span>
+							<strong> Finished: </strong>
+							{new Date(date).toLocaleDateString('es-GT')}
+						</span>
+						<h3>
+							Project type: {projectType}
+						</h3>
+						<h4>
+							<strong> Place: </strong> {place}
+						</h4>
+						<div className={styles.buttons}>
+							<PrimaryButton text={'See live preview!'} color={'#DE154D'} link={link} noLinkPage={true} />
+							{
+								!repo ?
+									<div></div>
+									:
+									<PrimaryButton text={'See repo'} color={'#FFF'} link={repo} noLinkPage={true} />
+							}
+						</div>
+						<h4>Tools</h4>
+						<ul>{tools && tools.map((el, index) => <li key={index}> {el} </li>)}</ul>
 					</div>
 				</div>
 			</div>
@@ -94,6 +103,8 @@ export const getServerSideProps = async (pageContext) => {
 	const url = `https://${process.env.NEXT_PUBLIC_PROJECT_API_KEY}.api.sanity.io/v1/data/query/production?query=${query}`;
 	const result = await fetch(url).then((res) => res.json());
 	const project = result.result[0];
+	let repo = project.repo;
+	repo = JSON.parse(JSON.stringify(repo));
 
 	if (!project) {
 		return {
@@ -108,7 +119,7 @@ export const getServerSideProps = async (pageContext) => {
 				image: project.imageP,
 				projectType: project.projectType,
 				link: project.link,
-				repo: project.repo,
+				repo: repo,
 				place: project.place,
 				tools: project.tools,
 			},

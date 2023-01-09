@@ -49,52 +49,55 @@
 	position: absolute;
 	bottom: 0;
 	display: flex;
-	gap: 0.5rem;
+	gap: 1rem;
 	flex-direction: column;
-	justify-content: flex-end;
-	align-items: flex-start;
+	justify-content: center;
+	align-items: center;
 	height: 100%;
-	cursor: pointer;
-	background: rgb(2, 2, 4);
-	background: linear-gradient(0deg, rgba(2, 2, 4, 1) 15%, rgba(0, 212, 255, 0) 100%);
+	background: rgba(1, 1, 49, 0.8);
 	border-radius: 2rem;
 
 	@include desktop {
-		height: 15rem;
-		bottom: 0rem;
 		opacity: 0;
 	}
 
 	h4 {
-		text-align: left;
+		text-align: center;
 		width: 100%;
-		color: white;
+		color: $color-maincolors-white;
 		padding-bottom: 1rem;
+		font-size: 2rem;
+		line-height: 1.6rem;
 	}
 
-	a {
-		position: absolute;
-		right: 0.5rem;
-		bottom: 0.5rem;
-		display: block;
-		width: 64px;
-		height: 64px;
-		opacity: 0;
-		/*animation hover*/
-		transform: translateX(1rem);
-		transition: all 0.5s ease-in-out;
-		transition-delay: 0.6s;
-	}
-
-	i {
-		font-size: 64px;
-		color: white;
+	p {
+		width: 100%;
+		line-height: 1.2em;
+		height: 2.6em;
+		font-size: 1rem;
+		color: $color-maincolors-white;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
 	}
 }
 
 .containerInfo {
-	width: 90%;
+	width: 95%;
 	margin: 0 auto;
+
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	@include tablet {
+		width: 80%;
+	}
+
+	@include desktop {
+		width: 85%;
+	}
 }
 
 .cardContainer {

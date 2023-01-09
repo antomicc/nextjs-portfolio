@@ -2,7 +2,7 @@
 @import '../styles/Base/mixins';
 
 .slugSection {
-	padding-top: 1rem;
+	padding-top: 7rem;
 	height: 100%;
 
 	h2 {
@@ -39,7 +39,7 @@
 .imgContent {
 	width: 100%;
 	height: 20rem;
-	margin-top: 5rem;
+	margin-top: 1rem;
 	margin-bottom: 3rem;
 	border-radius: 1rem;
 
@@ -70,17 +70,22 @@
 
 .contentDescription {
 	width: 100%;
-	height: 75vh;
+	height: 100%;
 	display: flex;
 	align-items: center;
 
 	@include desktop {
 		width: 35%;
+		height: 75vh;
 	}
 
 	h2 {
 		font-size: 5rem;
 		line-height: 75%;
+
+		@include tablet {
+			font-size: 6rem;
+		}
 	}
 }
 
@@ -94,16 +99,18 @@
 }
 
 .containerProject {
-	padding: 28rem 0;
+	padding: 5rem 0;
 	width: 95%;
 	margin: 0 auto;
 
 	@include tablet {
 		width: 75%;
+		padding: 8rem 0;
 	}
 
 	@include desktop {
 		width: 50%;
+		padding: 28rem 0;
 	}
 }
 
@@ -127,15 +134,16 @@
 		list-style: none;
 		display: flex;
 		flex-direction: row;
-		justify-content: center;
-		gap: 1rem;
+		justify-content: flex-start;
+		gap: 0.7rem;
+		flex-wrap: wrap;
 
 		li {
-			background-color: rgba($color: #000000, $alpha: 0.6);
-			width: 100%;
-			padding: 0.5rem;
+			background-color: rgba($color: #000000, $alpha: 0.9);
+			width: fit-content;
+			padding: 0.55rem 0.99rem;
 			font-size: 1.5rem;
-			border-radius: 1rem;
+			border-radius: 2rem;
 			color: white;
 		}
 	}
@@ -144,20 +152,9 @@
 .buttons {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	gap: 1rem;
 	width: 100%;
-
-	a {
-		button {
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
-			gap: 0.5rem;
-			width: 100%;
-		}
-	}
 
 	@include desktop {
 		flex-direction: row;

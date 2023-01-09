@@ -16,6 +16,8 @@ import { ThemeContext } from '../components/context/ThemeContext';
 import Worked from '../components/Worked';
 import LineTitle from '../public/Images/Particles/LineDark.svg'
 import SutilButton from '../components/buttons/SutilButton';
+import PrimaryButton from '../components/buttons/PrimaryButton';
+import ProjectsButton from '../components/buttons/ProjectsButton';
 
 export default function Home({ projects }) {
 	const [mappedProjects, setMappedProjects] = useState([]);
@@ -82,25 +84,19 @@ export default function Home({ projects }) {
 						<div className='container-projects'>
 							<h2> Projects </h2>
 							<div className={styles.contentProjects}>
-								<Fade bottom big cascade>
+								<Fade bottom cascade>
 									<div className={styles.cardContainer}>
 										{mappedProjects.map((p, index) => (
 											<div key={index} className={styles.cardProject} style={{ backgroundImage: `url(${p.imageP})` }} >
 												<div className={styles.infoContent}>
 													<div className={styles.containerInfo}>
 														<h4>{p.title}</h4>
+														<p>{p.description}</p>
 														<Link href={`project/${p.slug.current}`}>
 															<a>
-																<i className='ri-arrow-right-line'></i>
+																<ProjectsButton text={'See Project'} color={'#fff'} backG={'#333366'} />
 															</a>
 														</Link>
-														<div className={styles.toolsContent}>
-															<ul>
-																{p.tools.map((tool, index) => (
-																	<li key={index}> {tool} </li>
-																))}
-															</ul>
-														</div>
 													</div>
 												</div>
 											</div>

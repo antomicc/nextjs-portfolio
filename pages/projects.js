@@ -1,9 +1,10 @@
-import styles from '../styles/Home.module.scss';
+import styles from '../styles/projects.module.scss';
 import Footer from '../components/Footer';
-import Image from 'next/image';
 import imageUrlBuilder from '@sanity/image-url';
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
+import ProjectCard from '../components/cards/ProjectCard';
+import { Fade } from 'react-reveal';
+import Head from 'next/head';
 
 export default function Projects({ projects }) {
 	const [mappedProjects, setMappedProjects] = useState([]);
@@ -28,38 +29,24 @@ export default function Projects({ projects }) {
 		}
 	}, [projects]);
 	return (
-		<main className={styles.projectMain}>
-			<section className={styles.projects}>
-				<h1>Projects</h1>
-				<div className={styles.cardContainer}>
-					{mappedProjects.map((p, index) => (
-						<div key={index} className={styles.cardProject}>
-							<div className={styles.imageCardContainer}>
-								<img src={p.imageP} alt={p.title} />
-							</div>
-							<div className={styles.infoContent}>
-								<div className={styles.containerInfo}>
-									<h4>{p.title}</h4>
-									<Link href={`project/${p.slug.current}`}>
-										<a>
-											<i className='ri-arrow-right-line'></i>
-										</a>
-									</Link>
-									<div className={styles.toolsContent}>
-										<ul>
-											{p.tools.map((tool, index) => (
-												<li key={index}> {tool} </li>
-											))}
-										</ul>
-									</div>
-								</div>
-							</div>
+		<>
+			<Head>
+				<title> Projects | Josybte </title>
+			</Head>
+			<main className={styles.projectMain}>
+				<section className={styles.projects}>
+					<h1>Projects</h1>
+					<Fade bottom cascade>
+						<div className={styles.cardContainer}>
+							{mappedProjects.map((p, index) => (
+								<ProjectCard index={index} title={p.title} imageP={p.imageP} description={p.description} slug={p.slug.current} />
+							))}
 						</div>
-					))}
-				</div>
-			</section>
-			<Footer />
-		</main>
+					</Fade>
+				</section>
+				<Footer />
+			</main>
+		</>
 	);
 }
 

@@ -1,0 +1,47 @@
+@import 'Base/mixins';
+@import 'Base/variables';
+
+.projectMain {
+	padding-top: 15rem;
+	width: 100%;
+}
+
+.projects {
+	padding-bottom: 10rem;
+	text-align: center;
+	position: relative;
+	width: 95%;
+	margin: 0 auto;
+
+	@include tablet {
+		width: 80%;
+	}
+
+	@include desktop {
+		width: 75%;
+	}
+
+	h1 {
+		font-size: 6rem;
+		text-align: left;
+
+		@include desktop {
+			font-size: 9rem;
+		}
+	}
+}
+
+.cardContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-top: 1.5rem;
+	padding: 1rem 0;
+
+	@include desktop {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+		row-gap: 2rem;
+	}
+}

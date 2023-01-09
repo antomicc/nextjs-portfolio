@@ -18,6 +18,7 @@ import LineTitle from '../public/Images/Particles/LineDark.svg'
 import SutilButton from '../components/buttons/SutilButton';
 import PrimaryButton from '../components/buttons/PrimaryButton';
 import ProjectsButton from '../components/buttons/ProjectsButton';
+import ProjectCard from '../components/cards/ProjectCard';
 
 export default function Home({ projects }) {
 	const [mappedProjects, setMappedProjects] = useState([]);
@@ -87,19 +88,7 @@ export default function Home({ projects }) {
 								<Fade bottom cascade>
 									<div className={styles.cardContainer}>
 										{mappedProjects.map((p, index) => (
-											<div key={index} className={styles.cardProject} style={{ backgroundImage: `url(${p.imageP})` }} >
-												<div className={styles.infoContent}>
-													<div className={styles.containerInfo}>
-														<h4>{p.title}</h4>
-														<p>{p.description}</p>
-														<Link href={`project/${p.slug.current}`}>
-															<a>
-																<ProjectsButton text={'See Project'} color={'#fff'} backG={'#333366'} />
-															</a>
-														</Link>
-													</div>
-												</div>
-											</div>
+											<ProjectCard index={index} title={p.title} imageP={p.imageP} description={p.description} slug={p.slug.current} />
 										))}
 									</div>
 								</Fade>
@@ -125,7 +114,7 @@ export default function Home({ projects }) {
 }
 
 export const getServerSideProps = async (pageContext) => {
-	const query = encodeURIComponent('*[ _type == "project"][0..7]');
+	const query = encodeURIComponent('*[ _type == "project"][0..5]');
 	const url = `https://${process.env.NEXT_PUBLIC_PROJECT_API_KEY}.api.sanity.io/v1/data/query/production?query=${query}`;
 	const result = await fetch(url).then((res) => res.json());
 

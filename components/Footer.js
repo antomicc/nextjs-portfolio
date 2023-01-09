@@ -15,9 +15,11 @@ const Footer = () => {
 				<span> Do you want to start a project? </span>
 				<p> Are you interested in working together? Message me, i will respond. </p>
 				<div className={style.buttonIcon}>
-					<a href="#">
-						<SocialButton icon={GrSend} text={"Why not?"} color={'#333366'} />
-					</a>
+					<Link href="/contact">
+						<a>
+							<SocialButton icon={GrSend} text={"Why not?"} color={'#333366'} />
+						</a>
+					</Link>
 				</div>
 			</div>
 			<div className='container'>

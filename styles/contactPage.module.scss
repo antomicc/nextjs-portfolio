@@ -3,12 +3,20 @@
 
 .mainContact {
     background-color: $color-maincolors-second;
-    height: 100vh;
+    height: 100%;
+    padding-bottom: 10rem;
+    padding-top: 5rem;
+
+    @include desktop {
+        height: 100vh;
+        padding-bottom: 1rem;
+    }
 }
 
 .contactContent {
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
     padding-top: 7rem;
 
     @include desktop {
@@ -18,22 +26,21 @@
 }
 
 .contactParraf {
-    display: none;
+    width: 100%;
 
     @include desktop {
-        display: block;
-        width: 100%;
+        width: 65%;
         display: flex;
         align-items: center;
     }
 
     .textContent {
-        width: 85%;
+        width: 100%;
 
         @include desktop {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
             gap: 1rem;
         }
@@ -43,6 +50,7 @@
             flex-direction: row;
             justify-content: left;
             width: 100%;
+            margin: 1rem 0;
         }
 
         .faceContainer {
@@ -50,13 +58,15 @@
             flex-direction: row;
             justify-content: left;
             width: 100%;
+            margin-top: 1rem;
         }
     }
 
     h2 {
         text-align: left;
         color: $color-maincolors-white;
-        font-size: 2.5rem;
+        font-size: 5rem;
+        line-height: 4.5rem;
     }
 
     span {
@@ -64,7 +74,16 @@
     }
 
     p {
+        text-align: left;
         color: $color-maincolors-white;
     }
 
+}
+
+.formContainer {
+    width: 100%;
+
+    @include desktop {
+        width: 45%;
+    }
 }

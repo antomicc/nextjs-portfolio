@@ -12,20 +12,8 @@
 	}
 }
 
-.ilustContainer {
-	display: none;
-	position: relative;
-	width: 100%;
-	height: 100%;
-
-	@include tablet {
-		display: initial;
-		width: 50%;
-	}
-}
-
 .titleForm {
-	color: $color-maincolors-white  !important;
+	color: $color-maincolors-white !important;
 
 	@include desktop {
 		display: none;
@@ -53,7 +41,7 @@
 
 	@include tablet {
 		flex-direction: row;
-		gap: 1rem;
+		gap: 0.5rem;
 	}
 }
 
@@ -69,6 +57,7 @@
 		border: 1px solid $color-maincolors-dark-1;
 		background-color: #fff;
 		outline-color: $color-maincolors-second;
+		width: 100%;
 
 		&::placeholder {
 			color: rgba($color: #000000, $alpha: 0.6);

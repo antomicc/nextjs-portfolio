@@ -51,7 +51,7 @@ const Hero = () => {
 												<div className='process-step-title-container'>
 													<h2 className='step-title-outprocess'>& <span className='process-step-title' >digital designer.</span></h2>
 													<h2 className='step-title-outprocess-overlay'>&
-														<span className='process-step-title-overlay'> digital designer.</span>
+														<span className='process-step-title-overlay'> ui designer.</span>
 													</h2>
 												</div>
 											</div>

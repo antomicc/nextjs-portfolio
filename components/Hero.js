@@ -67,7 +67,7 @@ const Hero = () => {
 						<div className={style.heroRight}>
 							<Fade top cascade>
 								<div className={style.imageProfile} >
-									<Image width="650px" height="650px" src="https://i.imgur.com/0xC1ejw.png" />
+									<Image width="650px" height="650px" src="https://i.imgur.com/MFWdQru.png" />
 								</div>
 							</Fade>
 						</div>

@@ -1,7 +1,7 @@
 html {
 	box-sizing: border-box;
 	overflow-x: hidden;
-	background: $linear-bg-light;
+	background: #fff;
 	scroll-behavior: smooth;
 }
 
@@ -136,7 +136,7 @@ button {
 
 			.step-title-outprocess,
 			.step-title-outprocess-overlay {
-				font-size: 1.55rem;
+				font-size: 1.25rem;
 				font-weight: 400;
 				margin: 0;
 				line-height: 125%; //If too short, g might get cut off
@@ -153,14 +153,14 @@ button {
 				}
 
 				@include desktop {
-					font-size: 5rem;
+					font-size: 4rem;
 				}
 			}
 
 			.process-step-title,
 			.process-step-title-overlay {
 				font-family: $secondaryFont;
-				font-size: 1.55rem;
+				font-size: 1.25rem;
 				font-weight: bold;
 				margin: 0;
 				line-height: 125%; //If too short, g might get cut off
@@ -177,7 +177,7 @@ button {
 				}
 
 				@include desktop {
-					font-size: 5rem;
+					font-size: 4rem;
 				}
 			}
 
@@ -385,7 +385,7 @@ button {
 
 .theme-light {
 	fill: $color-maincolors-white;
-	background: $color-maincolors-white;
+	background: #fff;
 	color: $color-maincolors-dark-1;
 }
 

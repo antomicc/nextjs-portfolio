@@ -68,7 +68,7 @@ const Technologys = () => {
 					</div>
 				</Reveal>
 			</article>
-			<Wave fill='#F7F4F4'
+			<Wave fill='#fff'
 				paused={false}
 				style={{ zIndex: '10', borderBottom: 'none', transform: 'translateY(5px)', paddingTop: '10px' }}
 				options={{

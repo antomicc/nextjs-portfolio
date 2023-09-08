@@ -1,6 +1,6 @@
 import style from '../styles/worked.module.scss';
 import LineTitle from '../public/Images/Particles/Line.svg'
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import React, { useState, useEffect } from 'react';
 
 

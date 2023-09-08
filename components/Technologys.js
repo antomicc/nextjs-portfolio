@@ -1,5 +1,5 @@
 import style from '../styles/tech.module.scss';
-import Image from 'next/dist/client/image';
+import Image from "next/legacy/image";
 import Reveal from 'react-reveal/Reveal';
 import { Zoom } from 'react-reveal';
 import React, { useState, useEffect } from 'react';

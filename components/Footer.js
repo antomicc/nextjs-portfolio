@@ -16,9 +16,9 @@ const Footer = () => {
 				<p> Are you interested in working together? Message me, i will respond. </p>
 				<div className={style.buttonIcon}>
 					<Link href="/contact">
-						<a>
+					
 							<SocialButton icon={GrSend} text={"Why not?"} color={'#333366'} />
-						</a>
+					
 					</Link>
 				</div>
 			</div>
@@ -26,9 +26,9 @@ const Footer = () => {
 				<div className={style.footSocial}>
 					<div className={style.logoContent}>
 						<Link href={'/'}>
-							<a>
+						
 								<LogoWhite />
-							</a>
+							
 						</Link>
 						<p> If you can imagine it, you can create it. </p>
 					</div>

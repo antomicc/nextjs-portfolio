@@ -1,5 +1,5 @@
 import style from '../styles/hero.module.scss';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Fade from 'react-reveal/Fade';
 import FirstButton from './buttons/PrimaryButton';
 import Wave from 'react-wavify';
@@ -49,9 +49,8 @@ const Hero = () => {
 											</div>
 											<div className='process-step-container process-step-3'>
 												<div className='process-step-title-container'>
-													<h2 className='step-title-outprocess'>& <span className='process-step-title' >ui designer.</span></h2>
-													<h2 className='step-title-outprocess-overlay'>&
-														<span className='process-step-title-overlay'>ui designer.</span>
+													<h2 className='step-title-outprocess'>& <span className='process-step-title'>ui designer.</span></h2>
+													<h2 className='step-title-outprocess-overlay'>& <span className='process-step-title-overlay'>ui designer.</span>
 													</h2>
 												</div>
 											</div>

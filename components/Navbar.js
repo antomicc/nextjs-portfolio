@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import style from '../styles/navbar.module.scss';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import logoJosbyte from '../public/Images/LogoJosbyte.png';
 import { useEffect, useState } from 'react';
 import React, { useContext } from 'react';
@@ -40,30 +40,27 @@ const Navbar = () => {
 				<div className={style.navItem}>
 					<div className={style.logo}>
 						<Link href={'/'}>
-							<a>
+						
 								<Image
 									className={style.logoNav}
 									src={logoJosbyte}
 									alt='logo-png'
 								/>
-							</a>
+						
 						</Link>
 					</div>
 					<div className={`${style.menuItems} ${open ? style.activeNav : ''}`}>
-						<Link href='/'>
-							<a onClick={handleNav} className='menu-item'> Home </a>
+						<Link onClick={handleNav} className='menu-item' href='/'>
+							 Home 
 						</Link>
-						<Link href='/projects'>
-							<a onClick={handleNav} className='menu-item'> Projects </a>
+						<Link onClick={handleNav} className='menu-item' href='/projects'>
+							Projects 
 						</Link>
 						<a onClick={handleNav} className='menu-item' href='#aboutme'>
 							About
 						</a>
-						<Link href='/contact'>
-							<a onClick={handleNav} className='menu-item'>
-								{' '}
+						<Link onClick={handleNav} className='menu-item' href='/contact'>
 								Contact
-							</a>
 						</Link>
 					</div>
 					<button

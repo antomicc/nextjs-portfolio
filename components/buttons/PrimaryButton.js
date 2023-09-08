@@ -41,7 +41,7 @@ const PrimaryButton = ({ text, color, link, noLinkPage, target }) => {
     return (
         !noLinkPage ? (
             <Link href={link} >
-                <a>
+              
                     <ThemeProvider theme={variables}>
                         <Button>
                             <Span>
@@ -49,7 +49,7 @@ const PrimaryButton = ({ text, color, link, noLinkPage, target }) => {
                             </Span>
                         </Button>
                     </ThemeProvider>
-                </a>
+             
             </Link>
         )
             :

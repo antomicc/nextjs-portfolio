@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import styles from '../styles/Home.module.scss';
 import imageUrlBuilder from '@sanity/image-url';
 import Hero from '../components/Hero';
@@ -95,9 +95,9 @@ export default function Home({ projects }) {
 							</div>
 							<div className={styles.buttonContent}>
 								<Link href='/projects'>
-									<a>
+								
 										<SutilButton text={'See more'} />
-									</a>
+									
 								</Link>
 							</div>
 						</div>

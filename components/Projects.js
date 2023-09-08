@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import imageUrlBuilder from '@sanity/image-url';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -58,7 +58,7 @@ export default function Projects({ projects }) {
 						<h3>{p.title}</h3>
 						<img src={p.imageP} alt={p.title} />
 						<Link href={`project/${p.slug.current}`}>
-							<a> See Project </a>
+							 See Project 
 						</Link>
 					</div>
 				))}

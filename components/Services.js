@@ -1,4 +1,4 @@
-import style from '../styles/services.module.scss';
+	import style from '../styles/services.module.scss';
 import { Slide } from 'react-reveal';
 import Wave from 'react-wavify';
 import { FiFigma } from 'react-icons/fi';

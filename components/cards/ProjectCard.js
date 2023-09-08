@@ -11,9 +11,9 @@ const ProjectCard = ({ imageP, title, description, slug, index }) => {
                     <h4>{title}</h4>
                     <p>{description}</p>
                     <Link href={`project/${slug}`}>
-                        <a>
+                    
                             <ProjectsButton text={'See Project'} color={'#fff'} backG={'#333366'} />
-                        </a>
+                     
                     </Link>
                 </div>
             </div>

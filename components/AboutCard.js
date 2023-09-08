@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { ThemeContext } from './context/ThemeContext';
 import styles from '../styles/about.module.scss';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import PrimaryButton from './buttons/PrimaryButton';

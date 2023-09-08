@@ -14,8 +14,8 @@
 		"@sanity/client": "^2.11.0",
 		"@sanity/image-url": "^0.140.19",
 		"hamburgers": "^1.1.3",
-		"next": "^12.2.0",
-		"next-sanity-image": "^3.1.2",
+		"next": "^13.4.19",
+		"next-sanity-image": "^3.2.1",
 		"react": "^18.2.0",
 		"react-burger-menu": "^3.0.6",
 		"react-dom": "^18.2.0",
@@ -29,6 +29,6 @@
 	"devDependencies": {
 		"@svgr/webpack": "^6.5.1",
 		"eslint": "7.29.0",
-		"eslint-config-next": "11.0.0"
+		"eslint-config-next": "^13.4.19"
 	}
 }

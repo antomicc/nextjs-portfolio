@@ -1,7 +1,5 @@
 import style from '../styles/tech.module.scss';
 import Image from "next/legacy/image";
-import Reveal from 'react-reveal/Reveal';
-import { Zoom } from 'react-reveal';
 import React, { useState, useEffect } from 'react';
 import Wave from 'react-wavify';
 import { AiFillCode } from 'react-icons/ai';
@@ -38,16 +36,16 @@ const Technologys = () => {
 	return (
 		<section className={style.techSection}>
 			<article className='container'>
-				<Reveal bottom>
+			
 					<div className={style.tecsContainer}>
 						<div className={style.imageTecs}>
 							<div className={style.imageContainerTechRobot}>
 								<Image alt='' src='https://i.imgur.com/nrFCgQS.png' width={900} height={700} />
 							</div>
-							<Zoom cascade>
+						
 								<div className={style.imageSector}>
 								</div>
-							</Zoom>
+						
 						</div>
 						<div className={style.skills}>
 							<h2>Skills</h2>
@@ -66,7 +64,7 @@ const Technologys = () => {
 							</div>
 						</div>
 					</div>
-				</Reveal>
+			
 			</article>
 			<Wave fill='#fff'
 				paused={false}

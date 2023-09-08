@@ -3,7 +3,6 @@ import Footer from '../components/Footer';
 import imageUrlBuilder from '@sanity/image-url';
 import { useEffect, useState } from 'react';
 import ProjectCard from '../components/cards/ProjectCard';
-import { Fade } from 'react-reveal';
 import Head from 'next/head';
 
 export default function Projects({ projects }) {
@@ -36,13 +35,13 @@ export default function Projects({ projects }) {
 			<main className={styles.projectMain}>
 				<section className={styles.projects}>
 					<h1>Projects</h1>
-					<Fade bottom cascade>
+				
 						<div className={styles.cardContainer}>
 							{mappedProjects.map((p, index) => (
 								<ProjectCard index={index} title={p.title} imageP={p.imageP} description={p.description} slug={p.slug.current} />
 							))}
 						</div>
-					</Fade>
+				
 				</section>
 				<Footer />
 			</main>

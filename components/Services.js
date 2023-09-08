@@ -1,5 +1,4 @@
-	import style from '../styles/services.module.scss';
-import { Slide } from 'react-reveal';
+import style from '../styles/services.module.scss';
 import Wave from 'react-wavify';
 import { FiFigma } from 'react-icons/fi';
 import { FaReact, FaSass } from 'react-icons/fa';
@@ -49,7 +48,7 @@ const Services = () => {
 		<div className={style.services}>
 			<div className='container'>
 				<h2>Tools</h2>
-				<Slide bottom cascade>
+		
 					<div className={style.tools}>
 						{
 							tools.map((tool, index) => (
@@ -60,7 +59,7 @@ const Services = () => {
 							))
 						}
 					</div>
-				</Slide>
+			
 			</div>
 		</div>
 	);

@@ -1,10 +1,8 @@
 import imageUrlBuilder from '@sanity/image-url';
 import { useState, useEffect } from 'react';
 import styles from '../../styles/slug.module.scss';
-import Image from 'next/dist/client/image';
 import Footer from '../../components/Footer';
 import PrimaryButton from '../../components/buttons/PrimaryButton';
-import { Fade } from 'react-reveal';
 import { useRouter } from 'next/router'
 import { BiArrowBack } from 'react-icons/bi'
 import Head from 'next/head';
@@ -48,18 +46,18 @@ const Project = ({
 				</div>
 				<div className='container'>
 					<div className={styles.proyectContainer}>
-						<Fade left>
+					
 							<div className={styles.imageContent}>
 								<div className={styles.imageContainerProyect}>
 									{imageUrl && <img className={styles.imgSlug} src={imageUrl} alt={title} />}
 								</div>
 							</div>
-						</Fade>
-						<Fade right>
+					
+						
 							<div className={styles.contentDescription}>
 								<h2> {title} </h2>
 							</div>
-						</Fade>
+					
 					</div>
 					<div className={styles.containerProject}>
 						<p className={styles.paragraph}> {description} </p>

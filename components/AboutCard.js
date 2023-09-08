@@ -2,8 +2,6 @@ import { useContext } from 'react';
 import { ThemeContext } from './context/ThemeContext';
 import styles from '../styles/about.module.scss';
 import Image from "next/legacy/image";
-import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom';
 import PrimaryButton from './buttons/PrimaryButton';
 
 const AboutCard = () => {
@@ -15,11 +13,11 @@ const AboutCard = () => {
 			<div className='container'>
 				<div className={styles.aboutContent}>
 					<div className={styles.sectionImage}>
-						<Zoom cascade>
+					
 							<div className={styles.imageContainer}>
 								<Image width="250px" height="250px" className={styles.imageProfile} src="https://i.imgur.com/0xC1ejw.png" />
 							</div>
-						</Zoom>
+					
 					</div>
 					<div className={styles.textAbout}>
 						<div className={styles.aboutText}>

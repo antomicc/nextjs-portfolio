@@ -1,6 +1,5 @@
 import style from '../styles/hero.module.scss';
 import Image from "next/legacy/image";
-import Fade from 'react-reveal/Fade';
 import FirstButton from './buttons/PrimaryButton';
 import Wave from 'react-wavify';
 
@@ -11,7 +10,7 @@ const Hero = () => {
 				<div className='container'>
 					<div className={style.containerHero}>
 						<div className={style.heroLeft}>
-							<Fade>
+						
 								<div className={style.socialButtom}>
 									<a href="https://github.com/josbyte-dev">
 										<i className="ri-github-fill"></i>
@@ -23,11 +22,11 @@ const Hero = () => {
 										<i className="ri-behance-fill"></i>
 									</a>
 								</div>
-							</Fade>
+							
 							<div className={style.intro}>
-								<Fade left cascade>
+							
 									<h3>Hi There!</h3>
-								</Fade>
+							
 								<section className='section-process'>
 									<div className='section-container'>
 										<div className='process-steps-container container-medium with-padding'>
@@ -64,11 +63,11 @@ const Hero = () => {
 							</div>
 						</div>
 						<div className={style.heroRight}>
-							<Fade top cascade>
+							
 								<div className={style.imageProfile} >
 									<Image width="650px" height="650px" src="https://i.imgur.com/MFWdQru.png" />
 								</div>
-							</Fade>
+							
 						</div>
 					</div>
 				</div>

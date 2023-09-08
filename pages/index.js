@@ -10,7 +10,6 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Footer from '../components/Footer';
 import flechaPNG from '../public/Images/Particles/FLECHA.png';
-import { Fade } from 'react-reveal';
 import React, { useContext } from 'react';
 import { ThemeContext } from '../components/context/ThemeContext';
 import Worked from '../components/Worked';
@@ -85,13 +84,13 @@ export default function Home({ projects }) {
 						<div className='container-projects'>
 							<h2> Projects </h2>
 							<div className={styles.contentProjects}>
-								<Fade bottom cascade>
+								
 									<div className={styles.cardContainer}>
 										{mappedProjects.map((p, index) => (
 											<ProjectCard index={index} title={p.title} imageP={p.imageP} description={p.description} slug={p.slug.current} />
 										))}
 									</div>
-								</Fade>
+							
 							</div>
 							<div className={styles.buttonContent}>
 								<Link href='/projects'>

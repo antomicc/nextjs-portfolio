@@ -29,7 +29,7 @@ const AboutCard = () => {
 								What are my specialties? The development and design.
 								That's why I'm fascinated by frontend development, ui design and little by little getting into the UX branch
 							</p>
-							<PrimaryButton text={'Download CV'} color={'#FFF'} link={'https://drive.google.com/file/d/1Po4ActufvmIm2yy3GIk0hjQYqs7DSRUB/view?usp=sharing'} noLinkPage={true} />
+							<PrimaryButton text={'Download CV'} color={'#FFF'} link={'https://drive.google.com/file/d/1S6w8LFpkEqOqtLhZxpfGGM1deGa55Gw6/view?usp=drive_link'} noLinkPage={true} />
 						</div>
 						<div className={styles.aboutImage}>
 							<div className={styles.imageSecondContainer}>
